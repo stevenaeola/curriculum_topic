@@ -9,6 +9,6 @@
 #SBATCH --mem=16G
 
 source /etc/profile
-source topic_env/bin/activate
+source ../topic_env/bin/activate
 
 python3 BERTopic_helloworld.py
