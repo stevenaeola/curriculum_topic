@@ -11,4 +11,4 @@
 source /etc/profile
 source ../topic_env/bin/activate
 
-python3 BERTopic_helloworld.py
+python3 BERTopic_iticse.py
