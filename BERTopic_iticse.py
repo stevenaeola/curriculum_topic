@@ -12,7 +12,7 @@ def remove_html_tags(text):
     clean = re.compile('<.*?>')
     return re.sub(clean, ' ', text)
 
-docs = map(remove_html_tags(all_electives['overview']))
+docs = map(remove_html_tag, all_electives['overview'])
 
 topic_model = BERTopic()
 topics, probs = topic_model.fit_transform(docs)
