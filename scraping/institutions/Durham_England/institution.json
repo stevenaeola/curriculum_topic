@@ -1,0 +1,14 @@
+{
+    "institution": "Durham_England",
+    "listURLs": {"2023": "https://apps.dur.ac.uk/faculty.handbook/2023/UG/search?department=Computer%20Science"},
+    "XPath": {
+        "module_id": "//*[@id='content']/h1",
+        "moduleURL": "//*[@id='content']/ul/li[*]/a",
+        "title": "//*[@id='content']/div/h3",
+        "summary": "//*[@id='fhaims']/following-sibling::ul[1]",
+        "content": "//*[@id='fhcontent']/following-sibling::ul[1]",
+        "ilo": "//*[@id='fhlearn']/following-sibling::ul[1]",
+        "level": "//*[@id='content']/div/table[1]/tbody/tr/td[2]",
+        "credits": "//*[@id='content']/div/table[1]/tbody/tr/td[3]"
+    }
+}
