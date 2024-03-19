@@ -2,7 +2,7 @@
 topic_env
 
 # install webdrivers
-# chrome
+chrome
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
