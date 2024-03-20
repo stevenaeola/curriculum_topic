@@ -1,7 +1,7 @@
 This is a quick README for the data required in the institution.json file for a given institution
 
 {
-    "institution": "NAME_REGION",
+    "institution": "NAME",
     "listURLs": {"2023": "URL OF MODULE OVERVIEW PAGE FOR THE ACADEMIC YEAR 2023-24"},
     "XPath": {
         "module_id": "XPATH TO THE MODULE CODE ON A GIVEN MODULE PAGE",
@@ -22,7 +22,7 @@ This is a quick README for the data required in the institution.json file for a 
 For example:
 
 {
-    "institution": "Edinburgh_Scotland",
+    "institution": "Edinburgh",
     "listURLs": {"2023":"http://www.drps.ed.ac.uk/23-24/dpt/cx_sb_infr.htm"},
     "XPath": {
         "module_id": "//*[@id='sitspagetitle']",                                        

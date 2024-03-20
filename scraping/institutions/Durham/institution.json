@@ -1,5 +1,5 @@
 {
-    "institution": "Durham_England",
+    "institution": "Durham",
     "listURLs": {"2023": "https://apps.dur.ac.uk/faculty.handbook/2023/UG/search?department=Computer%20Science"},
     "XPath": {
         "module_id": "//*[@id='content']/h1",
