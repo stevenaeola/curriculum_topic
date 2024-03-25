@@ -1,0 +1,16 @@
+{
+    "institution": "Bath",
+    "listURLs": {"2023": ["https://www.bath.ac.uk/catalogues/2023-2024/cm/USCM-AFM01.html",
+     "https://www.bath.ac.uk/catalogues/2023-2024/cm/USCM-AFB06.html",
+      "https://www.bath.ac.uk/catalogues/2023-2024/cm/USCM-AFB30-f.html"]},
+    "XPath": {
+        "module_id": "",
+        "moduleURL": "",
+        "title": "",
+        "summary": "",
+        "content": "",
+        "ilo": "",
+        "level": "",
+        "credits": ""
+    }
+}

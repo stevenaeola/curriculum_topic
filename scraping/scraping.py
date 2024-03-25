@@ -38,7 +38,6 @@ def scrape(institution_name):
     driver1 = webdriver.Chrome()
     driver2 = webdriver.Chrome()
     key_fields = ['institution', 'year']
-    # TODO add assessment, credits, size, etc
     overview_fields = ['module_id', 'title', 'summary', 'content', 'ilo', 'level', 'credits']
     all_fields = key_fields + overview_fields
 
