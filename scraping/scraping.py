@@ -25,6 +25,8 @@ import pprint
 
 import sys
 
+import re
+
 def heading(field):
     return "<h2>" + field + "</h2>"
     
@@ -63,6 +65,15 @@ def scrape(institution_name):
             driver1.get(listURL)
             moduleURLPath = institution_config['XPath']['moduleURL']
             moduleURLs = driver1.find_elements(By.XPATH, moduleURLPath)
+            
+            #Create a folder for module webpages of a given year. Check if folder exists already otherwise you'll get a FileExistsError
+            try:
+                dir = os.path.join(path, year)
+                if not os.path.exists(dir):  
+                    os.mkdir(dir)  
+            except OSError as error:  
+                print(error)
+
             for mURL in moduleURLs:
                 # TODO save whole index page
                 moduleURL = mURL.get_attribute('href')
@@ -82,6 +93,14 @@ def scrape(institution_name):
                         innerHTML = elt.get_attribute('innerHTML')
                         overview_dictionary[overview_field] += innerHTML
                 results[year][overview_dictionary['module_id']] = overview_dictionary
+
+                #Save the contents of this URL as a HTML file. Use the module_id as the filename
+                #Remove any whitespace and punctuation from module_id
+                page = re.sub('\W+','',overview_dictionary['module_id']) + '.html'
+                
+                with open(os.path.join(dir,page), "w", encoding='utf-8') as modFile:
+                    modFile.write(driver2.page_source)
+
         with open(Path(os.path.join(institution_name,"scrape_results.json")), "w") as outfile: 
             json.dump(results, outfile)
 
