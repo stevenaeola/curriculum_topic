@@ -101,6 +101,43 @@ def scrape(institution_name):
                 with open(os.path.join(dir,page), "w", encoding='utf-8') as modFile:
                     modFile.write(driver2.page_source)
 
+                #Consider the level information. Try to figure out the year in either SCQF or Degree Year form
+                #numbersInLevel = re.findall(r'\d+', overview_dictionary['level'])
+                #print(numbersInLevel)
+
+                degYear=""
+                SCQF = ""
+                CQFW = ""
+                #Some institutions provide SCQF, some CQFW and others degree year. Ref: https://www.sqa.org.uk/sqa/64561.html
+                #It is possible we end up with many values stored if a University provides multiple pieces of information, e.g. Edinburgh
+                #Working assumption: if we see the words SCQF or CQFW we take the next number we find as their value. If we see a number with neither of these assume it is degree year.
+                tokens = overview_dictionary['level'].split()
+                i=0
+                while i<len(tokens):
+                    if tokens[i] == "SCQF":
+                        for j in range(i, len(tokens)):
+                            if (tokens[j].isnumeric()):
+                                #This is the next number following SCQF, so assume it is the level
+                                SCQF = tokens[j]
+                                i=j+1
+                                break
+                    elif tokens[i] == "CQFW":
+                        for j in range(i, len(tokens)):
+                            if (tokens[j].isnumeric()):
+                                #This is the next number following CQFW, so assume it is the level
+                                CQFW = tokens[j]
+                                i=j+1
+                                break
+                    elif tokens[i].isnumeric():
+                        #We've found a number that wasn't preceeded by either SCQF or CQFW, so assume it is the degree level
+                        degYear = tokens[i]
+                    i=i+1
+
+
+                print("Degree Year: ", degYear)
+                print("SCQF Level: ", SCQF)
+                print("CQFW Level: ", CQFW)
+
         with open(Path(os.path.join(institution_name,"scrape_results.json")), "w") as outfile: 
             json.dump(results, outfile)
 
