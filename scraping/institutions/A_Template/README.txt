@@ -17,7 +17,7 @@ This is a quick README for the data required in the institution.json file for a 
     }
 }
 
-
+values listURLs can either be a single string for each key (year), or a list of strings 
 
 For example:
 
