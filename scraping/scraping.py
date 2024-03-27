@@ -75,8 +75,9 @@ def scrape(institution_name):
                 for URLelement in URLelements:
                     print ("URLelement", URLelement)
                     moduleURL = URLelement.get_attribute('href')
-                    print ("moduleURL",  moduleURL)
-                    yearModuleURLs.update(moduleURL)
+                    print ("adding moduleURL",  moduleURL)
+                    if(type(moduleURL) is str):
+                        yearModuleURLs.add(moduleURL)
 
             #Create a folder for module webpages of a given year. Check if folder exists already otherwise you'll get a FileExistsError
             try:
@@ -85,6 +86,8 @@ def scrape(institution_name):
                     os.mkdir(dir)  
             except OSError as error:  
                 print(error)
+
+            print("moduleURLs", yearModuleURLs)
 
             for moduleURL in yearModuleURLs:
                 print("moduleURL", moduleURL)
