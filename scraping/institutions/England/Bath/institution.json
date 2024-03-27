@@ -4,13 +4,13 @@
      "https://www.bath.ac.uk/catalogues/2023-2024/cm/USCM-AFB06.html",
       "https://www.bath.ac.uk/catalogues/2023-2024/cm/USCM-AFB30-f.html"]},
     "XPath": {
-        "module_id": "",
-        "moduleURL": "",
-        "title": "",
-        "summary": "",
-        "content": "",
-        "ilo": "",
-        "level": "",
-        "credits": ""
+        "module_id": "//*[@id='content']/h2",
+        "moduleURL": "//*[@id='content']/table[*]/tbody/tr[*]/td[1]/a",
+        "title": "//*[@id='content']/h2",
+        "summary": "//*[@id='content']/table[1]/tbody/tr[13]/td[2]",
+        "content": "//*[@id='content']/table[1]/tbody/tr[15]/td[2]",
+        "ilo": "//*[@id='content']/table[1]/tbody/tr[12]/td[2]",
+        "level": "//*[@id='content']/table[1]/tbody/tr[5]/td[2]",
+        "credits": "//*[@id='content']/table[1]/tbody/tr[3]/td[2]"
     }
 }

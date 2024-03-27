@@ -53,6 +53,7 @@ def scrape(institution_name):
 
         listURLs = institution_config['listURLs']     
         xpaths = institution_config['XPath']
+        moduleURLPath = xpaths['moduleURL']
 
 # dictionary structure: year > module code > feature
         results = {}
@@ -60,12 +61,23 @@ def scrape(institution_name):
 
         for year in listURLs:
             results[year] = {}
-            listURL = listURLs[year]
-#            print ("year ", year, "lURL", listURL)
-            driver1.get(listURL)
-            moduleURLPath = institution_config['XPath']['moduleURL']
-            moduleURLs = driver1.find_elements(By.XPATH, moduleURLPath)
-            
+# the same module may appear in different programmes, so merge them into a set
+            yearModuleURLs = set()
+
+            yearlistURLs = listURLs[year]
+            if not type(yearlistURLs) is list:
+                yearlistURLs = [yearlistURLs]
+            for yearlistURL in yearlistURLs:
+                print ("year ", year, "lURL", yearlistURL)
+                driver1.get(yearlistURL)
+                URLelements = driver1.find_elements(By.XPATH, moduleURLPath)
+                print("Found some URL elements ", len(URLelements))
+                for URLelement in URLelements:
+                    print ("URLelement", URLelement)
+                    moduleURL = URLelement.get_attribute('href')
+                    print ("moduleURL",  moduleURL)
+                    yearModuleURLs.update(moduleURL)
+
             #Create a folder for module webpages of a given year. Check if folder exists already otherwise you'll get a FileExistsError
             try:
                 dir = os.path.join(path, year)
@@ -74,9 +86,7 @@ def scrape(institution_name):
             except OSError as error:  
                 print(error)
 
-            for mURL in moduleURLs:
-                # TODO save whole index page
-                moduleURL = mURL.get_attribute('href')
+            for moduleURL in yearModuleURLs:
                 print("moduleURL", moduleURL)
                 driver2.get(moduleURL)
                 overview_dictionary = {}
