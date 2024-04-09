@@ -1,16 +1,17 @@
 {
     "institution": "Bath",
-    "listURLs": {"2023": ["https://www.bath.ac.uk/catalogues/2023-2024/cm/USCM-AFM01.html",
-     "https://www.bath.ac.uk/catalogues/2023-2024/cm/USCM-AFB06.html",
-      "https://www.bath.ac.uk/catalogues/2023-2024/cm/USCM-AFB30-f.html"]},
-    "XPath": {
-        "module_id": "//*[@id='content']/h2",
-        "moduleURL": "//*[@id='content']/table[*]/tbody/tr[*]/td[1]/a",
-        "title": "//*[@id='content']/h2",
-        "summary": "//*[@id='content']/table[1]/tbody/tr[13]/td[2]",
-        "content": "//*[@id='content']/table[1]/tbody/tr[15]/td[2]",
-        "ilo": "//*[@id='content']/table[1]/tbody/tr[12]/td[2]",
-        "level": "//*[@id='content']/table[1]/tbody/tr[5]/td[2]",
-        "credits": "//*[@id='content']/table[1]/tbody/tr[3]/td[2]"
+    "index": {"2023": [
+        {"url": "https://www.bath.ac.uk/catalogues/2023-2024/cm/USCM-AFM01.html"},
+        {"url": "https://www.bath.ac.uk/catalogues/2023-2024/cm/USCM-AFB06.html"},
+        {"url":"https://www.bath.ac.uk/catalogues/2023-2024/cm/USCM-AFB30-f.html"}]},
+    "module": {
+        "module_id": {"XPath": "//*[@id='content']/h2"},
+        "moduleContainers": {"XPath": "//*[@id='content']/table[*]/tbody/tr[*]/td[1]/a"},
+        "title": {"XPath": "//*[@id='content']/h2"},
+        "summary": {"XPath": "//*[@id='content']/table[1]/tbody/tr[13]/td[2]"},
+        "content": {"XPath": "//*[@id='content']/table[1]/tbody/tr[15]/td[2]"},
+        "ilo": {"XPath": "//*[@id='content']/table[1]/tbody/tr[12]/td[2]"},
+        "level": {"XPath": "//*[@id='content']/table[1]/tbody/tr[5]/td[2]"},
+        "credits": {"XPath": "//*[@id='content']/table[1]/tbody/tr[3]/td[2]"}
     }
 }

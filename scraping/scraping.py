@@ -42,7 +42,7 @@ def loadContent(driver, URLspec):
     else:
         loadURL = URLspec['url']
     driver.get(loadURL)
-    if type(actions := URLspec['actions']) is list:
+    if ('actions' in URLspec.keys()) and (type(actions := URLspec['actions']) is list):
         for actionSpec in actions:
             elt = None
             if xpath := actionSpec['XPath']:
@@ -97,7 +97,6 @@ def scrape(institution_name):
         for year in index:
             results[year] = {}
 # the same module may appear in different programmes, so merge them into a set
-            yearModuleLinks = set()
 
             #Create a folder for module webpages of a given year. Check if folder exists already otherwise you'll get a FileExistsError
             try:
@@ -111,6 +110,8 @@ def scrape(institution_name):
             if not type(yearIndexes) is list:
                 yearIndexes = [yearIndexes]
             for yearIndex in yearIndexes:
+                yearModuleLinks = set()
+
                 # print ("year ", year, "lURL", yearIndex)
                 loadContent(driver1, yearIndex)
                 
@@ -121,9 +122,12 @@ def scrape(institution_name):
                 # print("Found some URL elements ", len(moduleContainers))
                 for moduleContainer in moduleContainers:
                     # print ("moduleContainer", moduleContainer)
-                    moduleLinkPath = module['moduleContainers']['moduleLink']['XPath']
+                    if 'moduleLink' in module['moduleContainers'].keys():
+                        moduleLinkPath = module['moduleContainers']['moduleLink']['XPath']
                     # print ("moduleLinkPath ", moduleLinkPath)
-                    moduleLinkElt = moduleContainer.find_element(By.XPATH, moduleLinkPath)
+                        moduleLinkElt = moduleContainer.find_element(By.XPATH, moduleLinkPath)
+                    else:
+                        moduleLinkElt = moduleContainer
                     moduleLink = html.unescape(moduleLinkElt.get_attribute('innerHTML').strip())
                     if (type(moduleLink) is str) and (len(moduleLink) > 0) and  (not (moduleLink in allModuleLinks)):
                         # print ("adding moduleLink",  moduleLink)
@@ -153,6 +157,7 @@ def scrape(institution_name):
                         results[year][overview_dictionary['module_id']] = overview_dictionary
                     except:
                         print ("Could not find link " + moduleLink)
+                        print (yearIndex)
 
 
                     #Save the contents of this URL as a HTML file. Use the module_id as the filename
