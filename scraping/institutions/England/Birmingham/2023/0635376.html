@@ -1,0 +1,213 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- Display the Module Details for a Module, these are held in four different beans  --><!-- The master bean is ModuleDetailsBean --><!-- Simple Heading and Column Display --><!-- Single Source (SS) 01/11/2012  Changes   
+     Add Beans - HighestCompBean
+     Change lables: Module Lead and Reading List.
+     Remove items Short Title and Descriptor
+     Obain data for Contact hours, Description (contensis), Assessment (highest Component)
+--><!-- INC398777 The parameter passed to the Help window is now the current page name, not the help text --><head><script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_jumpMenu(targ,selObj,restore){ //v3.0
+  eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+  if (restore) selObj.selectedIndex=0;
+}
+//-->
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+<!--
+function popupWin(mylink,winname,w,h,t,l,scroll) {
+  if (!window.focus)return true;
+  var href;
+  if (typeof(mylink) == 'string')
+    href=mylink;
+  else
+    href=mylink.href;
+    window.open(href, winname, 'width=1020, height=560, scrollbars=1, resizable=yes');
+  return false;
+}
+function closepopup()   {
+  if(false == window.closed) { 
+      window.close ();      
+  } else { 
+     alert('Window already closed!');   
+  }
+}
+//-->
+</script>
+
+
+  <link type="text/css" rel="stylesheet" href="css/ScientiaCSS.css">
+  <title>Programmes and Modules - Course Details</title>
+</head>
+<body>
+<table class="pagetable">
+   <tbody><tr> <td><!--Web Handbook Img -->
+<img src="img/progmod_banner.png" alt="Programme And Module Handbook"></td> </tr>
+   <tr> <td style="height: 10px"></td> </tr>
+   <tr> <!--Content --> 
+     <td class="content">
+    
+        <div>   <!-- main -->
+          <table class="whdefault">  <!-- Default Table -->
+             <tbody><tr> <td>&nbsp;</td></tr>
+             <tr>
+                 <!-- Start INCLUDE Links to go DOWN the Lef side of the page -->   
+                 <td class="LinkPanel"> 
+                    <!--Web Handbook options -->
+<div>
+  <a id="Link_SchoolIndex" class="LinkButtonSelected" href="WebHandbooks-control-servlet?Action=getSchoolList">School Index&nbsp;</a>
+</div>
+<div>
+  <a id="Link_Search1" class="LinkButtonSelected" href="WebHandbooks-control-servlet?Action=getModuleSearchList&amp;pgDspAllOpts=N">Search&nbsp;</a>
+</div>
+<!-- Link removed 21/09/2016 INC575831 JGPD
+<div>
+  <a id="Link_Momd" class="LinkButtonSelected" href="WebHandbooks-control-servlet?Action=getMomdDeptList">Departments offering Modules Outside the Main Discipline&#160;</a>
+</div>
+-->
+
+
+                    <div>
+                       <a id="LinkBtn_Help" class="LinkButtonSelected" onclick="return popupWin(this, 'Help', '760','420','12','12','yes'); " href="WebHandbooks-control-servlet?Action=dspHelpPage&amp;pageName=SWWHCRDT" method="POST">Helplink</a>
+                    </div>
+                 </td>
+                 <!-- END Links DOWN Left side of the page -->   
+
+                 <td class="FilterPanel" style="width: 59%"> 
+                 
+                    <div id="pFilterPanel" style="width:100%;">
+                       <span id="tFilterTitle" class="FilterTitle">Course Details in 2023/24 Session</span>
+        
+                       <!-- *** Top Message Text ***  -->
+                       <div id="pInfoBox" style="width:100%;">
+                         <p><span id="tInfoBox" class="InfoCell"><br></span></p><p>If you find any data displayed on this website that should be amended, please contact the <a href="https://intranet.birmingham.ac.uk/as/registry/policy/contact/cmt.aspx">Curriculum Management Team</a>. </p> <p></p>
+                       </div>
+                    </div>
+          
+                    <!-- Start MAIN Contents of the page -->   
+                    <div id="pButton" style="width:100%;">
+                    
+                         <table class="whDefaultTab">
+                    
+                          <tbody><tr><th class="whTHDetHead">Module&nbsp;Title</th> <td class="whTDText">LM Evolutionary Computation (Extended)</td></tr>
+                          <tr><th class="whTHDetHead">School</th><td class="whTDText">Computer Science</td></tr>
+                          <tr><th class="whTHDetHead">Department</th> <td class="whTDText"> Computer Science</td></tr>
+                    <!--
+                          <tr><th class="whTHDetHead">Short Title</th> <td class="whTDText"> LM Evolution Comput (Extended) </td></tr>
+                    -->
+                          <tr><th class="whTHDetHead">Module&nbsp;Code</th> <td class="whTDText"> 06 35376 </td></tr>
+                    <!--
+                          <tr><th class="whTHDetHead">Descriptor</th>  <td class="whTDText"> </td></tr>
+                    -->
+                          <tr><th class="whTHDetHead">Module&nbsp;Lead</th> <td class="whTDText">Per Kristian Lehre and Shan He</td></tr>
+                    
+                          <tr><th class="whTHDetHead">Level</th>   <td class="whTDText"> Masters Level                 </td></tr>
+                          <tr><th class="whTHDetHead">Credits</th> <td class="whTDText"> 20 </td></tr>
+                          <tr><th class="whTHDetHead">Semester</th><td class="whTDText"> Semester 2</td></tr>
+                    
+                          <tr><th class="whTHDetHead">Pre-requisites</th>  <td class="whTDText">
+                     <a href="WebHandbooks-control-servlet?Action=getModuleDetailsList&amp;pgSubj=06&amp;pgCrse=34253&amp;searchTerm=002023" method="POST">
+                              LI Functional Programming - (06 34253) 
+                     </a> 
+                    
+                             </td>
+                          </tr>
+                    
+                          <tr>
+                             <th class="whTHDetHead">Co-requisites</th>  
+                             <td class="whTDText">
+                    
+                             </td>
+                          </tr>
+                    
+                          <tr><th class="whTHDetHead">Restrictions</th>  <td class="whTDText"> Please contact the School for information on pre-requisite learning </td></tr>
+                           
+                    <!-- SS 01/11/2012  Obtain Contact hours-->
+                    
+                          <tr>
+                             <th class="whTHDetHead">Contact Hours</th> 
+                             <td class="whTDText">
+                    
+                                Lecture-33 hours <br>
+                    
+                                Practical Classes and workshops-22 hours <br>
+                    
+                                Guided independent study-145 hours <br>
+                    
+                              
+                              <strong>Total: </strong> 200 hours
+                              
+                                  </td>
+                              </tr>
+                              
+                              
+
+                          <tr><th class="whTHDetHead">Exclusions</th>  <td class="whTDText">  </td></tr>
+                    <!--
+                          <tr>
+                             <th class="whTHDetHead">Delivery</th>    <td class="whTDText"> UoB Campus Edgbaston </td>
+                          </tr>
+                    -->
+                          <tr><th class="whTHDetHead">Description</th> <td class="whTDText"> Evolutionary algorithms (EAs) are a class of optimisation techniques drawing inspiration from principles of biological evolution. They typically involve a population of candidate solutions from which the better solutions are selected, recombined, and mutated to form a new population of candidate solutions. This continues until an acceptable solution is found. Evolutionary algorithms are popular in applications where no problem-specific method is available, or when gradient-based methods fail. They are suitable for a wide range of challenging problem domains, including dynamic and noisy optimisation problems, constrained optimisation problems, and multi-objective optimisation problems. EAs are used in a wide range of disciplines, including optimisation, engineering design, machine learning, financial technology (“fintech”), and artificial life. In this module, we will study the fundamental principles of evolutionary computation, a range of different EAs and their applications, and a selection of advanced topics which may include time-complexity analysis, neuro-evolution, co-evolution, model-based EAs, and modern multi-objective EAs. The students will also read selected recent research articles on evolutionary computation. </td></tr>
+                          <tr><th class="whTHDetHead">Learning Outcomes</th> <td class="whTDText"> By the end of the module students should be able to: <ul><li>Describe, and apply the principles of evolutionary computation </li><li>Explain and compare different evolutionary algorithms </li><li>Design and adapt evolutionary algorithms for non-trivial problems </li><li>Demonstrate an awareness of the current literature in this area </li></ul></td></tr>
+                          <tr>
+                             <th class="whTHDetHead">Assessment</th>  
+                             <td class="whTDText">
+                    <!-- SS 01/11/2012  Obtian Highest Module   -->
+                    
+                               35376-01 : Exam : Exam (Centrally Timetabled) - Written Unseen (50%)
+                               <br>
+                    
+                               35376-02 : Continuous Assessment : Coursework (50%)
+                               <br>
+                    
+                             </td>
+                          </tr>
+                          <tr><th class="whTHDetHead">Assessment Methods &amp; Exceptions</th> <td class="whTDText"> Assessment: <br>Examination (50%), <br>Continuous Assessment (50%) <br><br>Reassessment: <br>Examination (100%) </td></tr>
+                          <tr><th class="whTHDetHead">Other</th>  <td class="whTDText"> This is the Birmingham version of the module (the Dubai version has code 37205)</td></tr>
+                          <tr>
+                             <th class="whTHDetHead">Reading List</th> 
+                              <td class="whTDText">
+                    
+                              </td>
+                          </tr>
+                          </tbody></table>
+                    
+                    </div>
+
+                    <!-- Section Bottom Text -->
+                    <div>
+                        <p> </p><p>
+                    </p></div>
+                    <!-- End Main Contents of the page -->          
+              </td>
+             </tr>
+         </tbody></table>   <!-- defaul table -->
+            
+        </div>  <!-- main -->
+
+     </td> 
+   </tr>   <!-- content -->
+</tbody></table>   <!-- pagetable -->
+
+
+
+</body></html>

@@ -1,0 +1,24 @@
+{
+    "institution": "Birmingham",
+    "index": {"2023": {"url": "https://program-and-modules-handbook.bham.ac.uk/webhandbooks/WebHandbooks-control-servlet?Action=getModuleSearchList&pgDspAllOpts=Y",
+                            "actions":
+                            [{"XPath": "//*[@id='pButton']/form/table/tbody/tr[1]/td[2]/select",
+                               "action": "select",
+                               "data": "2023/24 Session"},
+                            {"XPath": "//*[@id='pButton']/form/table/tbody/tr[6]/td[2]/select",
+                            "action": "select",
+                            "data": "Computer Science"},
+                            {"XPath": "//*[@id='pButton']/form/table/tbody/tr[10]/td[2]/input[2]",
+                            "action": "click"}],
+                            "moduleContainers": {"XPath": "//*[@id='pButton']/table/tbody/tr[position()>=2]",
+                                                "moduleLink": {"XPath": "td[position()=2]/a"}}}},
+    "module": {
+        "module_id": {"XPath": "//*[@id='pButton']/table/tbody/tr[4]/td"},
+        "title": {"XPath": "//*[@id='pButton']/table/tbody/tr[1]/td"},
+        "summary": {"XPath": "//*[@id='pButton']/table/tbody/tr[13]/td"},
+        "content": "",
+        "ilo": {"XPath": "//*[@id='pButton']/table/tbody/tr[14]/td"},
+        "level": {"XPath": "//*[@id='pButton']/table/tbody/tr[6]/td"},
+        "credits": {"XPath": "//*[@id='pButton']/table/tbody/tr[7]/td"}
+    }
+}

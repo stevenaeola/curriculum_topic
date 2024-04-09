@@ -16,8 +16,11 @@ import pandas as pd
 
 import os
 
+import html
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import Select
 
 from pathlib import Path
 
@@ -29,7 +32,38 @@ import re
 
 def heading(field):
     return "<h2>" + field + "</h2>"
-    
+
+# using the given web driver load the page specified, possibly with actions to follow
+def loadContent(driver, URLspec):
+    # print ("loadContent from URLspec")
+    # print (URLspec)
+    if(type(URLspec) is str):
+        loadURL = URLspec
+    else:
+        loadURL = URLspec['url']
+    driver.get(loadURL)
+    if type(actions := URLspec['actions']) is list:
+        for actionSpec in actions:
+            elt = None
+            if xpath := actionSpec['XPath']:
+                # print ("Selecting element at xpath ", xpath)
+                elt = driver.find_element(By.XPATH, xpath)
+            
+            if type(elt) is None:
+                raise ValueError("No element found for " + loadURL + " " + xpath)
+            
+            action = actionSpec['action']
+
+            if action == "click":
+                # print ("clicking element")
+                elt.click()
+            elif action == "select":
+                option = actionSpec['data']
+                # print ("selecting element " + option)
+                select = Select(elt)
+                select.select_by_visible_text(option)
+            
+
 def scrape(institution_name):
     institution_json = "institution.json"
 
@@ -38,7 +72,7 @@ def scrape(institution_name):
     pp = pprint.PrettyPrinter(indent=4)
 
     driver1 = webdriver.Chrome()
-    driver2 = webdriver.Chrome()
+    # driver2 = webdriver.Chrome()
     key_fields = ['institution', 'year']
     overview_fields = ['module_id', 'title', 'summary', 'content', 'ilo', 'level', 'credits']
     all_fields = key_fields + overview_fields
@@ -51,33 +85,19 @@ def scrape(institution_name):
             pp.pprint(institution_config)
         electives_df = pd.DataFrame(columns=all_fields, dtype="string")
 
-        listURLs = institution_config['listURLs']     
-        xpaths = institution_config['XPath']
-        moduleURLPath = xpaths['moduleURL']
+        index = institution_config['index']     
+        module = institution_config['module']
+
 
 # dictionary structure: year > module code > feature
         results = {}
 
+        allModuleLinks = set()
 
-        for year in listURLs:
+        for year in index:
             results[year] = {}
 # the same module may appear in different programmes, so merge them into a set
-            yearModuleURLs = set()
-
-            yearlistURLs = listURLs[year]
-            if not type(yearlistURLs) is list:
-                yearlistURLs = [yearlistURLs]
-            for yearlistURL in yearlistURLs:
-                print ("year ", year, "lURL", yearlistURL)
-                driver1.get(yearlistURL)
-                URLelements = driver1.find_elements(By.XPATH, moduleURLPath)
-                print("Found some URL elements ", len(URLelements))
-                for URLelement in URLelements:
-                    print ("URLelement", URLelement)
-                    moduleURL = URLelement.get_attribute('href')
-                    print ("adding moduleURL",  moduleURL)
-                    if(type(moduleURL) is str):
-                        yearModuleURLs.add(moduleURL)
+            yearModuleLinks = set()
 
             #Create a folder for module webpages of a given year. Check if folder exists already otherwise you'll get a FileExistsError
             try:
@@ -87,69 +107,108 @@ def scrape(institution_name):
             except OSError as error:  
                 print(error)
 
-            print("moduleURLs", yearModuleURLs)
-
-            for moduleURL in yearModuleURLs:
-                print("moduleURL", moduleURL)
-                driver2.get(moduleURL)
-                overview_dictionary = {}
-
-                for overview_field in overview_fields:
-                    overview_dictionary[overview_field] = ""
-                    try:
-                        overview_elts = driver2.find_elements(By.XPATH, xpaths[overview_field])
-                    except Exception:
-    #                    print("Could not find field " + overview_field)
-                        continue
-                    for elt in overview_elts:
-    #                    print ("found elt for " + overview_field)
-                        innerHTML = elt.get_attribute('innerHTML')
-                        overview_dictionary[overview_field] += innerHTML
-                results[year][overview_dictionary['module_id']] = overview_dictionary
-
-                #Save the contents of this URL as a HTML file. Use the module_id as the filename
-                #Remove any whitespace and punctuation from module_id
-                page = re.sub('\W+','',overview_dictionary['module_id']) + '.html'
+            yearIndexes = index[year]
+            if not type(yearIndexes) is list:
+                yearIndexes = [yearIndexes]
+            for yearIndex in yearIndexes:
+                # print ("year ", year, "lURL", yearIndex)
+                loadContent(driver1, yearIndex)
                 
-                with open(os.path.join(dir,page), "w", encoding='utf-8') as modFile:
-                    modFile.write(driver2.page_source)
+                # print ("Loaded contents of index page for year ")
+
+                moduleContainers = driver1.find_elements(By.XPATH, yearIndex['moduleContainers']['XPath'])
+
+                # print("Found some URL elements ", len(moduleContainers))
+                for moduleContainer in moduleContainers:
+                    # print ("moduleContainer", moduleContainer)
+                    moduleLinkPath = yearIndex['moduleContainers']['moduleLink']['XPath']
+                    # print ("moduleLinkPath ", moduleLinkPath)
+                    moduleLinkElt = moduleContainer.find_element(By.XPATH, moduleLinkPath)
+                    moduleLink = html.unescape(moduleLinkElt.get_attribute('innerHTML').strip())
+                    if (type(moduleLink) is str) and (len(moduleLink) > 0) and  (not (moduleLink in allModuleLinks)):
+                        # print ("adding moduleLink",  moduleLink)
+                        yearModuleLinks.add(moduleLink)
+                        allModuleLinks.add(moduleLink)
+
+                # print ("yearModuleLinks[0] ", list(yearModuleLinks)[0][0:200])
+
+                for moduleLink in yearModuleLinks:
+                    loadContent(driver1, yearIndex)
+                    try:
+                        linkElt = driver1.find_element(By.PARTIAL_LINK_TEXT, moduleLink)
+                        linkElt.click()
+                        overview_dictionary = {}
+
+                        for overview_field in overview_fields:
+                            overview_dictionary[overview_field] = ""
+                            try:
+                                overview_elts = driver1.find_elements(By.XPATH, module[overview_field]['XPath'])
+                            except Exception:
+            #                    print("Could not find field " + overview_field)
+                                continue
+                            for elt in overview_elts:
+            #                    print ("found elt for " + overview_field)
+                                innerHTML = elt.get_attribute('innerHTML').strip()
+                                overview_dictionary[overview_field] += innerHTML
+                        results[year][overview_dictionary['module_id']] = overview_dictionary
+                    except:
+                        print ("Could not find link " + moduleLink)
+
+
+                    #Save the contents of this URL as a HTML file. Use the module_id as the filename
+                    #Remove any whitespace and punctuation from module_id
+                    page = re.sub('\W+','',overview_dictionary['module_id']) + '.html'
+                    
+                    with open(os.path.join(dir,page), "w", encoding='utf-8') as modFile:
+                        modFile.write(driver1.page_source)
+
+
+
+
+
+            # print("moduleURLs", yearModuleURLs)
+
+            # for yearIndex in yearIndexes:
+            # for yearModuleLink in yearModuleLinks:
+            #     print("moduleURL", moduleURL)
+            #     driver2.get(moduleURL)
 
                 #Consider the level information. Try to figure out the year in either SCQF or Degree Year form
                 #numbersInLevel = re.findall(r'\d+', overview_dictionary['level'])
                 #print(numbersInLevel)
 
-                degYear=""
-                SCQF = ""
-                CQFW = ""
+                # degYear=""
+                # SCQF = ""
+                # CQFW = ""
                 #Some institutions provide SCQF, some CQFW and others degree year. Ref: https://www.sqa.org.uk/sqa/64561.html
                 #It is possible we end up with many values stored if a University provides multiple pieces of information, e.g. Edinburgh
                 #Working assumption: if we see the words SCQF or CQFW we take the next number we find as their value. If we see a number with neither of these assume it is degree year.
-                tokens = overview_dictionary['level'].split()
-                i=0
-                while i<len(tokens):
-                    if tokens[i] == "SCQF":
-                        for j in range(i, len(tokens)):
-                            if (tokens[j].isnumeric()):
-                                #This is the next number following SCQF, so assume it is the level
-                                SCQF = tokens[j]
-                                i=j+1
-                                break
-                    elif tokens[i] == "CQFW":
-                        for j in range(i, len(tokens)):
-                            if (tokens[j].isnumeric()):
-                                #This is the next number following CQFW, so assume it is the level
-                                CQFW = tokens[j]
-                                i=j+1
-                                break
-                    elif tokens[i].isnumeric():
-                        #We've found a number that wasn't preceeded by either SCQF or CQFW, so assume it is the degree level
-                        degYear = tokens[i]
-                    i=i+1
+                # tokens = overview_dictionary['level'].split()
+                # i=0
+                # while i<len(tokens):
+                #     if tokens[i] == "SCQF":
+                #         for j in range(i, len(tokens)):
+                #             if (tokens[j].isnumeric()):
+                #                 #This is the next number following SCQF, so assume it is the level
+                #                 SCQF = tokens[j]
+                #                 i=j+1
+                #                 break
+                #     elif tokens[i] == "CQFW":
+                #         for j in range(i, len(tokens)):
+                #             if (tokens[j].isnumeric()):
+                #                 #This is the next number following CQFW, so assume it is the level
+                #                 CQFW = tokens[j]
+                #                 i=j+1
+                #                 break
+                #     elif tokens[i].isnumeric():
+                #         #We've found a number that wasn't preceeded by either SCQF or CQFW, so assume it is the degree level
+                #         degYear = tokens[i]
+                #     i=i+1
 
 
-                print("Degree Year: ", degYear)
-                print("SCQF Level: ", SCQF)
-                print("CQFW Level: ", CQFW)
+                # print("Degree Year: ", degYear)
+                # print("SCQF Level: ", SCQF)
+                # print("CQFW Level: ", CQFW)
 
         with open(Path(os.path.join(institution_name,"scrape_results.json")), "w") as outfile: 
             json.dump(results, outfile)
