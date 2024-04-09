@@ -116,12 +116,12 @@ def scrape(institution_name):
                 
                 # print ("Loaded contents of index page for year ")
 
-                moduleContainers = driver1.find_elements(By.XPATH, yearIndex['moduleContainers']['XPath'])
+                moduleContainers = driver1.find_elements(By.XPATH, module['moduleContainers']['XPath'])
 
                 # print("Found some URL elements ", len(moduleContainers))
                 for moduleContainer in moduleContainers:
                     # print ("moduleContainer", moduleContainer)
-                    moduleLinkPath = yearIndex['moduleContainers']['moduleLink']['XPath']
+                    moduleLinkPath = module['moduleContainers']['moduleLink']['XPath']
                     # print ("moduleLinkPath ", moduleLinkPath)
                     moduleLinkElt = moduleContainer.find_element(By.XPATH, moduleLinkPath)
                     moduleLink = html.unescape(moduleLinkElt.get_attribute('innerHTML').strip())

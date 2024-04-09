@@ -9,10 +9,10 @@
                             "action": "select",
                             "data": "Computer Science"},
                             {"XPath": "//*[@id='pButton']/form/table/tbody/tr[10]/td[2]/input[2]",
-                            "action": "click"}],
-                            "moduleContainers": {"XPath": "//*[@id='pButton']/table/tbody/tr[position()>=2]",
-                                                "moduleLink": {"XPath": "td[position()=2]/a"}}}},
+                            "action": "click"}]}},
     "module": {
+        "moduleContainers": {"XPath": "//*[@id='pButton']/table/tbody/tr[position()>=2]",
+            "moduleLink": {"XPath": "td[position()=2]/a"}},
         "module_id": {"XPath": "//*[@id='pButton']/table/tbody/tr[4]/td"},
         "title": {"XPath": "//*[@id='pButton']/table/tbody/tr[1]/td"},
         "summary": {"XPath": "//*[@id='pButton']/table/tbody/tr[13]/td"},
