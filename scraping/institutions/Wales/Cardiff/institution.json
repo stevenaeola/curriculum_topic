@@ -1,0 +1,27 @@
+{
+    "institution": "Cardiff",
+    "index": {"2023": [{"url": "https://www.cardiff.ac.uk/study/undergraduate/courses/course/computer-science-with-security-and-forensics-bsc",
+                        "actions": [
+                            {"XPath": "//*[@id='accept-cookie-message']",
+                             "action": "click",
+                             "when": "first"},
+                            {"XPath": "//*[@id='content']/section[4]/div/div/div/div/button/span",
+                              "action": "click"},
+                            {"XPath": "//*[@id='moduleList-module-list-2']/div[3]/div[1]/a",
+                             "action": "click"},
+                             {"XPath": "//*[@id='moduleList-module-list-3']/div[3]/div[1]/a",
+                             "action": "click"}
+                            ]}]},
+    "module": {
+        "moduleContainers": 
+            {"CSS_class": "module-information",
+            "include": ["Computational Thinking"]},
+        "module_id": {"XPath": "//*[@id='module-information']/div/div/div[2]/div/div[1]/h2"},
+        "title": {"XPath": "//*[@id='module-information']/div/div/div[2]/div/div[1]/h2"},
+        "summary": {"XPath": "//*[@id='module-information']/div/div/div[2]/div/div[2]/p"},
+        "content": {"XPath": ""},
+        "ilo": {"XPath": "//*[@id='module-modal-descriptions']/ol"},
+        "level": {"XPath": ""},
+        "credits": {"XPath": "//*[@id='module-information']/div/div/div[2]/div/div[3]/div/table/tbody/tr[1]/td"}
+    }
+}
