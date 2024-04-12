@@ -52,7 +52,8 @@ def loadContent(driver, URLspec):
     if ('actions' in URLspec.keys()) and (type(actions := URLspec['actions']) is list):
         for actionSpec in actions:
             elt = None
-
+            # print ("About to do action", json.dumps(actionSpec))
+            # input("Hit enter")
             if 'when' in actionSpec.keys():
                 if actionSpec['when'] == "first":
                     actionSpecStr = json.dumps(actionSpec)
@@ -62,14 +63,15 @@ def loadContent(driver, URLspec):
                         done_actions.append(actionSpecStr)
 
             if 'XPath' in actionSpec.keys():
-                # print ("Selecting element at xpath ", xpath)
+                print ("Selecting element at xpath ", actionSpec['XPath'])
                 elt = WebDriverWait(driver, 1).until(EC.element_to_be_clickable((By.XPATH, actionSpec['XPath'])))
 
             if 'Link' in actionSpec.keys():
+                print ("Selection element with link ", actionSpec['Link'])
                 elt = WebDriverWait(driver, 1).until(EC.element_to_be_clickable((By.PARTIAL_LINK_TEXT, actionSpec['Link'])))
             
-            if type(elt) is None:
-                raise ValueError("No element found for " + loadURL + " " + xpath)
+            if not elt:
+                raise ValueError("No element found for " + json.dumps(actionSpec))
             
             action = actionSpec['action']
 
@@ -139,7 +141,6 @@ def scrape(institution_name):
                 if 'XPath' in containerSpec.keys():
                     moduleContainers = driver1.find_elements(By.XPATH, containerSpec['XPath'])
                 elif 'CSS_class' in containerSpec.keys():
-                    print ("looking for class "+ containerSpec['CSS_class'])
                     moduleContainers = driver1.find_elements(By.CLASS_NAME, containerSpec['CSS_class'])
                 else:
                     raise ValueError("No moduleContainer specification for " + yearIndex)
@@ -188,7 +189,8 @@ def scrape(institution_name):
                 for moduleLink in yearModuleLinks:
                     loadContent(driver1, yearIndex)
                     try:
-                        linkElt = driver1.find_element(By.PARTIAL_LINK_TEXT, moduleLink)
+                        # print ("looking for link " + moduleLink)
+                        linkElt = WebDriverWait(driver1, 1).until(EC.element_to_be_clickable((By.PARTIAL_LINK_TEXT,  moduleLink)))
                         # print ("found link " + moduleLink)
                         linkElt.click()
                         overview_dictionary = {}
