@@ -118,15 +118,22 @@ def scrape(institution_name):
                 loadContent(driver1, yearIndex)
                 
                 # print ("Loaded contents of index page for year ")
+                containerSpec = module['moduleContainers']
+                if 'XPath' in containerSpec.keys():
+                    moduleContainers = driver1.find_elements(By.XPATH, containerSpec['XPath'])
+                elif 'CSS_class' in containerSpec.keys():
+                    moduleContainers = driver1.find_elements(By.CLASS_NAME, containerSpec['CSS_class'])
+                else:
+                    raise ValueError("No moduleContainer specification for " + yearIndex)
 
-                moduleContainers = driver1.find_elements(By.XPATH, module['moduleContainers']['XPath'])
+
 
                 # print("Found some URL elements ", len(moduleContainers))
                 for moduleContainer in moduleContainers:
                     # print ("moduleContainer", moduleContainer)
                     if 'moduleLink' in module['moduleContainers'].keys():
                         moduleLinkPath = module['moduleContainers']['moduleLink']['XPath']
-                        print ("moduleLinkPath ", moduleLinkPath)
+                        # print ("moduleLinkPath ", moduleLinkPath)
                         moduleLinkElt = moduleContainer.find_element(By.XPATH, moduleLinkPath)
                     else:
                         moduleLinkElt = moduleContainer

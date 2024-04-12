@@ -1,8 +1,13 @@
 {
     "institution": "Edinburgh_Scotland",
-    "index": {"2023": {"url": "http://www.drps.ed.ac.uk/23-24/dpt/cx_sb_infr.htm"}},
+    "index": {"2023": [{"url": "http://www.drps.ed.ac.uk/23-24/dpt/utaintl.htm"},
+                        {"url": "http://www.drps.ed.ac.uk/23-24/dpt/utcmpsi.htm"},
+                        {"url": "http://www.drps.ed.ac.uk/23-24/dpt/utcmpsibe.htm"},
+                        {"url": "http://www.drps.ed.ac.uk/23-24/dpt/utsweng.htm"}
+                        ]},
     "module": {
-        "moduleContainers": {"XPath": "/html/body/table[2]/tbody/tr/td[1]/table[*]/tbody/tr[*]/td[3]/a"},
+        "moduleContainers": {"CSS_class": "dpt-course-card",
+            "moduleLink": {"XPath": "span/a"}},
         "module_id": {"XPath": "//*[@id='sitspagetitle']"},                                        
         "title": {"XPath": "/html[1]/body/table[2]/tbody/tr/td[1]/h1"},
         "summary": {"XPath": "/html/body/table[2]/tbody/tr/td[1]/table[1]/tbody/tr[5]/td[2]"},
