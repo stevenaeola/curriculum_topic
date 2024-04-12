@@ -18,6 +18,8 @@ import os
 
 import html
 
+from strip_tags import strip_tags
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
@@ -124,7 +126,7 @@ def scrape(institution_name):
                     # print ("moduleContainer", moduleContainer)
                     if 'moduleLink' in module['moduleContainers'].keys():
                         moduleLinkPath = module['moduleContainers']['moduleLink']['XPath']
-                    # print ("moduleLinkPath ", moduleLinkPath)
+                        print ("moduleLinkPath ", moduleLinkPath)
                         moduleLinkElt = moduleContainer.find_element(By.XPATH, moduleLinkPath)
                     else:
                         moduleLinkElt = moduleContainer
@@ -153,6 +155,8 @@ def scrape(institution_name):
                             for elt in overview_elts:
             #                    print ("found elt for " + overview_field)
                                 innerHTML = elt.get_attribute('innerHTML').strip()
+                                if overview_field == "module_id":
+                                    innerHTML = strip_tags(innerHTML)
                                 overview_dictionary[overview_field] += innerHTML
                         results[year][overview_dictionary['module_id']] = overview_dictionary
                     except:
@@ -216,7 +220,7 @@ def scrape(institution_name):
                 # print("CQFW Level: ", CQFW)
 
         with open(Path(os.path.join(institution_name,"scrape_results.json")), "w") as outfile: 
-            json.dump(results, outfile)
+            json.dump(results, outfile, indent=2)
 
     except OSError as err:
         print("OS error:", err)

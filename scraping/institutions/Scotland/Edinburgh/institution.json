@@ -1,14 +1,14 @@
 {
     "institution": "Edinburgh_Scotland",
-    "listURLs": {"2023":"http://www.drps.ed.ac.uk/23-24/dpt/cx_sb_infr.htm"},
-    "XPath": {
-        "module_id": "//*[@id='sitspagetitle']",                                        
-        "moduleURL": "/html/body/table[2]/tbody/tr/td[1]/table[*]/tbody/tr[*]/td[3]/a",
-        "title": "/html[1]/body/table[2]/tbody/tr/td[1]/h1",
-        "summary": "/html/body/table[2]/tbody/tr/td[1]/table[1]/tbody/tr[5]/td[2]",
-        "content": "/html/body/table[2]/tbody/tr/td[1]/table[1]/tbody/tr[6]/td[2]",
-        "ilo": "",
-        "level": "/html/body/table[2]/tbody/tr/td[1]/table[1]/tbody/tr[2]/td[2]",
-        "credits": "/html/body/table[2]/tbody/tr/td[1]/table[1]/tbody/tr[3]/td[2]"
+    "index": {"2023": {"url": "http://www.drps.ed.ac.uk/23-24/dpt/cx_sb_infr.htm"}},
+    "module": {
+        "moduleContainers": {"XPath": "/html/body/table[2]/tbody/tr/td[1]/table[*]/tbody/tr[*]/td[3]/a"},
+        "module_id": {"XPath": "//*[@id='sitspagetitle']"},                                        
+        "title": {"XPath": "/html[1]/body/table[2]/tbody/tr/td[1]/h1"},
+        "summary": {"XPath": "/html/body/table[2]/tbody/tr/td[1]/table[1]/tbody/tr[5]/td[2]"},
+        "content": {"XPath": "/html/body/table[2]/tbody/tr/td[1]/table[1]/tbody/tr[6]/td[2]"},
+        "ilo": {"XPath": "/html/body/table[2]/tbody/tr/td[1]/table[5]/tbody/tr/td"},
+        "level": {"XPath": "/html/body/table[2]/tbody/tr/td[1]/table[1]/tbody/tr[2]/td[2]"},
+        "credits": {"XPath": "/html/body/table[2]/tbody/tr/td[1]/table[1]/tbody/tr[3]/td[2]"}
     }
 }

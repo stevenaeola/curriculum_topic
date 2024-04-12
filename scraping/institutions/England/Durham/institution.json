@@ -1,14 +1,14 @@
 {
     "institution": "Durham",
-    "listURLs": {"2023": "https://apps.dur.ac.uk/faculty.handbook/2023/UG/search?department=Computer%20Science"},
-    "XPath": {
-        "module_id": "//*[@id='content']/h1",
-        "moduleURL": "//*[@id='content']/ul/li[*]/a",
-        "title": "//*[@id='content']/div/h3",
-        "summary": "//*[@id='fhaims']/following-sibling::ul[1]",
-        "content": "//*[@id='fhcontent']/following-sibling::ul[1]",
-        "ilo": "//*[@id='fhlearn']/following-sibling::ul[1]",
-        "level": "//*[@id='content']/div/table[1]/tbody/tr/td[2]",
-        "credits": "//*[@id='content']/div/table[1]/tbody/tr/td[3]"
+    "index": {"2023": {"url": "https://apps.dur.ac.uk/faculty.handbook/2023/UG/search?department=Computer%20Science"}},
+    "module": {
+        "moduleContainers": {"XPath": "//*[@id='content']/ul/li[*]/a"},
+        "module_id": {"XPath": "//*[@id='content']/h1"},
+        "title": {"XPath": "//*[@id='content']/div/h3"},
+        "summary": {"XPath": "//*[@id='fhaims']/following-sibling::ul[1]"},
+        "content": {"XPath": "//*[@id='fhcontent']/following-sibling::ul[1]"},
+        "ilo": {"XPath": "//*[@id='fhlearn']/following-sibling::ul[1]"},
+        "level": {"XPath": "//*[@id='content']/div/table[1]/tbody/tr/td[2]"},
+        "credits": {"XPath": "//*[@id='content']/div/table[1]/tbody/tr/td[3]}"}
     }
 }
