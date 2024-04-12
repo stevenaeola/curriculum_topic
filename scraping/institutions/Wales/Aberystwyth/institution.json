@@ -1,0 +1,20 @@
+{
+    "institution": "Aberystwyth",
+    "index": {"2023": [{"url": "https://www.aber.ac.uk/en/modules/deptcurrent/Computer+Science/",
+                        "actions": [
+                            {"XPath": "//*[@id='CybotCookiebotDialogBodyButtonAccept']",
+                            "action": "click",
+                            "when": "first"}
+                        ]}]},
+    "module": {
+        "moduleContainers": {"XPath": "//*[@id='content-start']/article/div/div[position() >= 2 and position() <= 8]/ul/li[*]/a",
+                             "exclude": ["^C[C|X]"]},
+        "module_id": {"XPath": "//*[@id='content-start']/article/div/div[1]/div[2]"},
+        "title": {"XPath": "//*[@id='content-start']/article/div/div[1]/div[4]"},
+        "summary": {"XPath": "//*[@id='content-start']/article/div/div[3]/div[1]"},
+        "content": {"XPath": "//*[@id='content-start']/article/div/div[3]/div[3]"},
+        "ilo": {"XPath": "//*[@id='content-start']/article/div/div[2]"},
+        "level": {"XPath": "//*[@id='content-start']/article/div/div[5]/p"},
+        "credits": {"XPath": ""}
+    }
+}

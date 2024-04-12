@@ -23,6 +23,9 @@ from strip_tags import strip_tags
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
 
 from pathlib import Path
 
@@ -31,6 +34,8 @@ import pprint
 import sys
 
 import re
+
+done_actions = []
 
 def heading(field):
     return "<h2>" + field + "</h2>"
@@ -47,9 +52,21 @@ def loadContent(driver, URLspec):
     if ('actions' in URLspec.keys()) and (type(actions := URLspec['actions']) is list):
         for actionSpec in actions:
             elt = None
-            if xpath := actionSpec['XPath']:
+
+            if 'when' in actionSpec.keys():
+                if actionSpec['when'] == "first":
+                    actionSpecStr = json.dumps(actionSpec)
+                    if actionSpecStr in done_actions:
+                        continue
+                    else:
+                        done_actions.append(actionSpecStr)
+
+            if 'XPath' in actionSpec.keys():
                 # print ("Selecting element at xpath ", xpath)
-                elt = driver.find_element(By.XPATH, xpath)
+                elt = WebDriverWait(driver, 1).until(EC.element_to_be_clickable((By.XPATH, actionSpec['XPath'])))
+
+            if 'Link' in actionSpec.keys():
+                elt = WebDriverWait(driver, 1).until(EC.element_to_be_clickable((By.PARTIAL_LINK_TEXT, actionSpec['Link'])))
             
             if type(elt) is None:
                 raise ValueError("No element found for " + loadURL + " " + xpath)
@@ -57,7 +74,6 @@ def loadContent(driver, URLspec):
             action = actionSpec['action']
 
             if action == "click":
-                # print ("clicking element")
                 elt.click()
             elif action == "select":
                 option = actionSpec['data']
@@ -74,6 +90,7 @@ def scrape(institution_name):
     pp = pprint.PrettyPrinter(indent=4)
 
     driver1 = webdriver.Chrome()
+    driver1.implicitly_wait(2)
     # driver2 = webdriver.Chrome()
     key_fields = ['institution', 'year']
     overview_fields = ['module_id', 'title', 'summary', 'content', 'ilo', 'level', 'credits']
@@ -122,33 +139,57 @@ def scrape(institution_name):
                 if 'XPath' in containerSpec.keys():
                     moduleContainers = driver1.find_elements(By.XPATH, containerSpec['XPath'])
                 elif 'CSS_class' in containerSpec.keys():
+                    print ("looking for class "+ containerSpec['CSS_class'])
                     moduleContainers = driver1.find_elements(By.CLASS_NAME, containerSpec['CSS_class'])
                 else:
                     raise ValueError("No moduleContainer specification for " + yearIndex)
 
 
 
-                # print("Found some URL elements ", len(moduleContainers))
+                print("Found some URL elements ", len(moduleContainers))
                 for moduleContainer in moduleContainers:
+                    mmc = module['moduleContainers']
+
                     # print ("moduleContainer", moduleContainer)
-                    if 'moduleLink' in module['moduleContainers'].keys():
-                        moduleLinkPath = module['moduleContainers']['moduleLink']['XPath']
+                    if 'moduleLink' in mmc.keys():
+                        moduleLinkPath = mmc['moduleLink']['XPath']
                         # print ("moduleLinkPath ", moduleLinkPath)
                         moduleLinkElt = moduleContainer.find_element(By.XPATH, moduleLinkPath)
                     else:
                         moduleLinkElt = moduleContainer
                     moduleLink = html.unescape(moduleLinkElt.get_attribute('innerHTML').strip())
                     if (type(moduleLink) is str) and (len(moduleLink) > 0) and  (not (moduleLink in allModuleLinks)):
+                        if 'exclude' in mmc.keys():
+                            exclude = False
+                            for exclude_re in mmc['exclude']:
+                                if re.match(exclude_re, moduleLink):
+                                    exclude = True
+                                    break
+                            if exclude:
+                                print ("excluding " + moduleLink)
+                                continue
+                        if 'include' in mmc.keys():
+                            include = False
+                            for include_re in mmc['include']:
+                                if re.match(include_re, moduleLink):
+                                    include = True
+                                    break
+                            if not include:
+                                print ("not including " + moduleLink)
+                                continue
+
+                        
                         # print ("adding moduleLink",  moduleLink)
                         yearModuleLinks.add(moduleLink)
                         allModuleLinks.add(moduleLink)
 
-                # print ("yearModuleLinks[0] ", list(yearModuleLinks)[0][0:200])
+                # print ("yearModuleLinks[ ", list(yearModuleLinks)[0:200])
 
                 for moduleLink in yearModuleLinks:
                     loadContent(driver1, yearIndex)
                     try:
                         linkElt = driver1.find_element(By.PARTIAL_LINK_TEXT, moduleLink)
+                        # print ("found link " + moduleLink)
                         linkElt.click()
                         overview_dictionary = {}
 
@@ -166,9 +207,10 @@ def scrape(institution_name):
                                     innerHTML = strip_tags(innerHTML)
                                 overview_dictionary[overview_field] += innerHTML
                         results[year][overview_dictionary['module_id']] = overview_dictionary
-                    except:
+                    except Exception as e:
                         print ("Could not find link " + moduleLink)
                         print (yearIndex)
+                        print (e)
 
 
                     #Save the contents of this URL as a HTML file. Use the module_id as the filename
