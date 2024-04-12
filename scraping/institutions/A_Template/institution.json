@@ -1,14 +1,14 @@
 {
     "institution": "",
-    "listURLs": {"2023": ""},
-    "XPath": {
-        "module_id": "",
-        "moduleURL": "",
-        "title": "",
-        "summary": "",
-        "content": "",
-        "ilo": "",
-        "level": "",
-        "credits": ""
+    "index": {"2023": [{"url": ""}]},
+    "module": {
+        "moduleContainers": {"XPath": ""},
+        "module_id": {"XPath": ""},
+        "title": {"XPath": ""},
+        "summary": {"XPath": ""},
+        "content": {"XPath": ""},
+        "ilo": {"XPath": ""},
+        "level": {"XPath": ""},
+        "credits": {"XPath": ""}
     }
 }
