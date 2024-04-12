@@ -9,6 +9,6 @@
         "content": {"XPath": "//*[@id='fhcontent']/following-sibling::ul[1]"},
         "ilo": {"XPath": "//*[@id='fhlearn']/following-sibling::ul[1]"},
         "level": {"XPath": "//*[@id='content']/div/table[1]/tbody/tr/td[2]"},
-        "credits": {"XPath": "//*[@id='content']/div/table[1]/tbody/tr/td[3]}"}
+        "credits": {"XPath": "//*[@id='content']/div/table[1]/tbody/tr/td[3]"}
     }
 }
