@@ -25,6 +25,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.common import ElementClickInterceptedException
 
 
 from pathlib import Path
@@ -40,6 +41,21 @@ done_actions = []
 def heading(field):
     return "<h2>" + field + "</h2>"
 
+# advice from https://stackoverflow.com/questions/73525437/elementclickinterceptedexception-element-click-intercepted-element-is-not-clic
+# and https://www.lambdatest.com/blog/element-is-not-clickable-at-point-exception/
+# and https://www.scrapingbee.com/webscraping-questions/selenium/how-to-scroll-to-element-selenium/
+def click_element(driver, element_by):
+    wait = WebDriverWait(driver, 1)
+    elt = wait.until(EC.element_to_be_clickable(element_by))
+    driver.execute_script("arguments[0].scrollIntoView();", elt)
+    try:
+        elt.click()
+    except ElementClickInterceptedException:
+        try:
+            elt.click()          
+        except Exception:
+            driver.execute_script("arguments[0].click();", elt)
+
 # using the given web driver load the page specified, possibly with actions to follow
 def loadContent(driver, URLspec):
     # print ("loadContent from URLspec")
@@ -51,7 +67,7 @@ def loadContent(driver, URLspec):
     driver.get(loadURL)
     if ('actions' in URLspec.keys()) and (type(actions := URLspec['actions']) is list):
         for actionSpec in actions:
-            elt = None
+            select_by = None
             # print ("About to do action", json.dumps(actionSpec))
             # input("Hit enter")
             if 'when' in actionSpec.keys():
@@ -63,24 +79,23 @@ def loadContent(driver, URLspec):
                         done_actions.append(actionSpecStr)
 
             if 'XPath' in actionSpec.keys():
-                print ("Selecting element at xpath ", actionSpec['XPath'])
-                elt = WebDriverWait(driver, 1).until(EC.element_to_be_clickable((By.XPATH, actionSpec['XPath'])))
+                select_by = (By.XPATH, actionSpec['XPath'])
+
 
             if 'Link' in actionSpec.keys():
-                print ("Selection element with link ", actionSpec['Link'])
-                elt = WebDriverWait(driver, 1).until(EC.element_to_be_clickable((By.PARTIAL_LINK_TEXT, actionSpec['Link'])))
+                select_by = (By.PARTIAL_LINK_TEXT, actionSpec['Link'])
             
-            if not elt:
-                raise ValueError("No element found for " + json.dumps(actionSpec))
+            if not select_by:
+                raise ValueError("No select_by for " + json.dumps(actionSpec))
             
             action = actionSpec['action']
 
             if action == "click":
-                elt.click()
+                click_element(driver, select_by)
             elif action == "select":
                 option = actionSpec['data']
                 # print ("selecting element " + option)
-                select = Select(elt)
+                select = Select(driver.find_element(element_by))
                 select.select_by_visible_text(option)
             
 
@@ -92,7 +107,7 @@ def scrape(institution_name):
     pp = pprint.PrettyPrinter(indent=4)
 
     driver1 = webdriver.Chrome()
-    driver1.implicitly_wait(2)
+    # driver1.implicitly_wait(2)
     # driver2 = webdriver.Chrome()
     key_fields = ['institution', 'year']
     overview_fields = ['module_id', 'title', 'summary', 'content', 'ilo', 'level', 'credits']
@@ -149,6 +164,13 @@ def scrape(institution_name):
 
                 print("Found some URL elements ", len(moduleContainers))
                 for moduleContainer in moduleContainers:
+                    # get rid of any newly opened tabs
+                    while(len(driver1.window_handles) >1 ):
+                        remove_handle = driver1.window_handles[-1]
+                        driver1.switch_to.window(remove_handle)
+                        driver1.close()
+                    driver1.switch_to.window(driver1.window_handles[0])
+
                     mmc = module['moduleContainers']
 
                     # print ("moduleContainer", moduleContainer)
@@ -189,10 +211,9 @@ def scrape(institution_name):
                 for moduleLink in yearModuleLinks:
                     loadContent(driver1, yearIndex)
                     try:
-                        # print ("looking for link " + moduleLink)
-                        linkElt = WebDriverWait(driver1, 1).until(EC.element_to_be_clickable((By.PARTIAL_LINK_TEXT,  moduleLink)))
-                        # print ("found link " + moduleLink)
-                        linkElt.click()
+                        print ("looking for link " + moduleLink)
+                        click_element(driver1, (By.PARTIAL_LINK_TEXT,  moduleLink))
+
                         overview_dictionary = {}
 
                         for overview_field in overview_fields:
@@ -200,10 +221,10 @@ def scrape(institution_name):
                             try:
                                 overview_elts = driver1.find_elements(By.XPATH, module[overview_field]['XPath'])
                             except Exception:
-            #                    print("Could not find field " + overview_field)
+                                # print("Could not find field " + overview_field)
                                 continue
                             for elt in overview_elts:
-            #                    print ("found elt for " + overview_field)
+                                # print ("found elt for " + overview_field)
                                 innerHTML = elt.get_attribute('innerHTML').strip()
                                 if overview_field == "module_id":
                                     innerHTML = strip_tags(innerHTML)
