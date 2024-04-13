@@ -1,0 +1,14 @@
+{
+    "institution": "Strathclyde",
+    "index": {"2023": [{"url": "https://local.cis.strath.ac.uk/wp/extras/syllabus/index.php?level=ug#degree200"}]},
+    "module": {
+        "moduleContainers": {"XPath": "//*[@id='post-1483']/div/table/tbody/tr/td[1]/a"},
+        "module_id": {"XPath": "//*[@id='post-1483']/div/h1"},
+        "title": {"XPath": "//*[@id='post-1483']/div/h1"},
+        "summary": {"XPath": "//*[ preceding-sibling::h3[. = 'Aims and Objectives']  and following-sibling::h3[. = 'Learning Outcomes']]"},
+        "content": {"XPath": "//*[  preceding-sibling::h3[. = 'Syllabus']  and following-sibling::h3[. = 'Recommended Reading']]"},
+        "ilo": {"XPath": "//*[  preceding-sibling::h3[. = 'Learning Outcomes']  and following-sibling::h3[. = 'Syllabus']]"},
+        "level": {"XPath": "//*[@id='post-1483']/div/table/tbody/tr[3]/td[2]"},
+        "credits": {"XPath": "//*[@id='post-1483']/div/table/tbody/tr[2]/td[2]"}
+    }
+}
