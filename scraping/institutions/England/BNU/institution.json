@@ -1,0 +1,30 @@
+{
+    "institution": "BNU",
+    "index": {"2023": 
+        [
+            {"url": "https://www.bucks.ac.uk/courses/undergraduate/bsc-hons-computing"},
+            {"actions": 
+                [{"XPath": "//*[@id='popup-buttons']/button[1]",
+                  "action": "click"},
+                 {"XPath": "//*[@id='container']/div/div/div[1]/button",
+                  "action": "click"},
+                  {"XPath": "//*[@id='module-year-accordion-174076']/div[2]",
+                "action": "click"},
+                {"XPath": "//*[@id='module-year-accordion-174111']/div[2]",
+                "action": "click"},
+                {"XPath": "//*[@id='module-year-accordion-174161']/div[2]",
+                "action": "click"}
+                ]}
+
+        ]},
+    "module": {
+        "moduleContainers": {"XPath": ""},
+        "module_id": {"XPath": ""},
+        "title": {"XPath": ""},
+        "summary": {"XPath": ""},
+        "content": {"XPath": ""},
+        "ilo": {"XPath": ""},
+        "level": {"XPath": ""},
+        "credits": {"XPath": ""}
+    }
+}
