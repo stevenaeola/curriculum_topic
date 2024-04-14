@@ -1,0 +1,41 @@
+{
+    "institution": "Newcastle",
+    "index": {"2023": [
+        {"url": "https://www.ncl.ac.uk/undergraduate/degrees/g400/modules/",
+         "actions": [
+            {"XPath": "//*[@id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll']",
+            "action": "click",
+            "when": "first"}
+         ]},
+        {"url": "https://www.ncl.ac.uk/undergraduate/degrees/g450/modules/",
+        "actions": [
+           {"XPath": "//*[@id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll']",
+           "action": "click",
+           "when": "first"}
+        ]},
+        {"url": "https://www.ncl.ac.uk/undergraduate/degrees/g600/modules/",
+        "actions": [
+           {"XPath": "//*[@id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll']",
+           "action": "click",
+           "when": "first"}
+        ]},
+        {"url": "https://www.ncl.ac.uk/undergraduate/degrees/i195/modules/",
+         "actions": [
+            {"XPath": "//*[@id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll']",
+            "action": "click",
+            "when": "first"}
+         ]}]},
+    "module": {
+        "moduleContainers": {
+            "XPath": "//*[@id='content']//table//tr[position()>1]",
+            "moduleLink": {"XPath": "td/a"},
+            "credits": {"XPath": "td[2]"}
+            },
+        "module_id": {"XPath": "//*[@id='content']//h1"},
+        "title": {"XPath": "//*[@id='content']//h1"},
+        "summary": {"XPath": "//*[@id='content']/section[2]/div/p[2]"},
+        "content": {"XPath": "//*[@id='content']/section[2]/div/p[3]"},
+        "ilo": {"XPath": ""},
+        "level": {"XPath": "//*[@id='content']//h1"}
+    }
+}
