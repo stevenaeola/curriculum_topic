@@ -57,43 +57,43 @@ def click_element(driver, element_by):
             driver.execute_script("arguments[0].click();", elt)
 
 # using the given web driver load the page specified, possibly with actions to follow
-def loadContent(driver, URLspec):
+def load_content(driver, url_spec):
     # print ("loadContent from URLspec")
     # print (URLspec)
-    if(type(URLspec) is str):
-        loadURL = URLspec
+    if(type(url_spec) is str):
+        load_url = url_spec
     else:
-        loadURL = URLspec['url']
-    driver.get(loadURL)
-    if ('actions' in URLspec.keys()) and (type(actions := URLspec['actions']) is list):
-        for actionSpec in actions:
+        load_url = url_spec['url']
+    driver.get(load_url)
+    if ('actions' in url_spec.keys()) and (type(actions := url_spec['actions']) is list):
+        for action_spec in actions:
             select_by = None
             # print ("About to do action", json.dumps(actionSpec))
             # input("Hit enter")
-            if 'when' in actionSpec.keys():
-                if actionSpec['when'] == "first":
-                    actionSpecStr = json.dumps(actionSpec)
-                    if actionSpecStr in done_actions:
+            if 'when' in action_spec.keys():
+                if action_spec['when'] == "first":
+                    action_spec_str = json.dumps(action_spec)
+                    if action_spec_str in done_actions:
                         continue
                     else:
-                        done_actions.append(actionSpecStr)
+                        done_actions.append(action_spec_str)
 
-            if 'XPath' in actionSpec.keys():
-                select_by = (By.XPATH, actionSpec['XPath'])
+            if 'XPath' in action_spec.keys():
+                select_by = (By.XPATH, action_spec['XPath'])
 
 
-            if 'Link' in actionSpec.keys():
-                select_by = (By.PARTIAL_LINK_TEXT, actionSpec['Link'])
+            if 'Link' in action_spec.keys():
+                select_by = (By.PARTIAL_LINK_TEXT, action_spec['Link'])
             
             if not select_by:
-                raise ValueError("No select_by for " + json.dumps(actionSpec))
+                raise ValueError("No select_by for " + json.dumps(action_spec))
             
-            action = actionSpec['action']
+            action = action_spec['action']
 
             if action == "click":
                 click_element(driver, select_by)
             elif action == "select":
-                option = actionSpec['data']
+                option = action_spec['data']
                 # print ("selecting element " + option)
                 select = Select(driver.find_element(element_by))
                 select.select_by_visible_text(option)
@@ -128,7 +128,11 @@ def scrape(institution_name):
 # dictionary structure: year > module code > feature
         results = {}
 
-        allModuleLinks = set()
+# results stored during initial scan of index page
+# structure: year > module link > feature 
+        index_results = {}
+
+        all_module_links = set()
 
         for year in index:
             results[year] = {}
@@ -142,28 +146,28 @@ def scrape(institution_name):
             except OSError as error:  
                 print(error)
 
-            yearIndexes = index[year]
-            if not type(yearIndexes) is list:
-                yearIndexes = [yearIndexes]
-            for yearIndex in yearIndexes:
-                yearModuleLinks = set()
+            year_indexes = index[year]
+            if not type(year_indexes) is list:
+                year_indexes = [year_indexes]
+            for year_index in year_indexes:
+                year_module_links = set()
 
                 # print ("year ", year, "lURL", yearIndex)
-                loadContent(driver1, yearIndex)
+                load_content(driver1, year_index)
                 
                 # print ("Loaded contents of index page for year ")
-                containerSpec = module['moduleContainers']
-                if 'XPath' in containerSpec.keys():
-                    moduleContainers = driver1.find_elements(By.XPATH, containerSpec['XPath'])
-                elif 'CSS_class' in containerSpec.keys():
-                    moduleContainers = driver1.find_elements(By.CLASS_NAME, containerSpec['CSS_class'])
+                container_spec = module['moduleContainers']
+                if 'XPath' in container_spec.keys():
+                    module_containers = driver1.find_elements(By.XPATH, container_spec['XPath'])
+                elif 'CSS_class' in container_spec.keys():
+                    module_containers = driver1.find_elements(By.CLASS_NAME, container_spec['CSS_class'])
                 else:
-                    raise ValueError("No moduleContainer specification for " + yearIndex)
+                    raise ValueError("No moduleContainer specification for " + year_index)
 
 
 
-                print("Found some URL elements ", len(moduleContainers))
-                for moduleContainer in moduleContainers:
+                print("Found some URL elements ", len(module_containers))
+                for module_container in module_containers:
                     # get rid of any newly opened tabs
                     while(len(driver1.window_handles) >1 ):
                         remove_handle = driver1.window_handles[-1]
@@ -175,44 +179,44 @@ def scrape(institution_name):
 
                     # print ("moduleContainer", moduleContainer)
                     if 'moduleLink' in mmc.keys():
-                        moduleLinkPath = mmc['moduleLink']['XPath']
+                        module_link_path = mmc['moduleLink']['XPath']
                         # print ("moduleLinkPath ", moduleLinkPath)
-                        moduleLinkElt = moduleContainer.find_element(By.XPATH, moduleLinkPath)
+                        module_link_elt = module_container.find_element(By.XPATH, module_link_path)
                     else:
-                        moduleLinkElt = moduleContainer
-                    moduleLink = html.unescape(moduleLinkElt.get_attribute('innerHTML').strip())
-                    if (type(moduleLink) is str) and (len(moduleLink) > 0) and  (not (moduleLink in allModuleLinks)):
+                        module_link_elt = module_container
+                    module_link = html.unescape(module_link_elt.get_attribute('innerHTML').strip())
+                    if (type(module_link) is str) and (len(module_link) > 0) and  (not (module_link in all_module_links)):
                         if 'exclude' in mmc.keys():
                             exclude = False
                             for exclude_re in mmc['exclude']:
-                                if re.match(exclude_re, moduleLink):
+                                if re.match(exclude_re, module_link):
                                     exclude = True
                                     break
                             if exclude:
-                                print ("excluding " + moduleLink)
+                                print ("excluding " + module_link)
                                 continue
                         if 'include' in mmc.keys():
                             include = False
                             for include_re in mmc['include']:
-                                if re.match(include_re, moduleLink):
+                                if re.match(include_re, module_link):
                                     include = True
                                     break
                             if not include:
-                                print ("not including " + moduleLink)
+                                print ("not including " + module_link)
                                 continue
 
                         
                         # print ("adding moduleLink",  moduleLink)
-                        yearModuleLinks.add(moduleLink)
-                        allModuleLinks.add(moduleLink)
+                        year_module_links.add(module_link)
+                        all_module_links.add(module_link)
 
                 # print ("yearModuleLinks[ ", list(yearModuleLinks)[0:200])
 
-                for moduleLink in yearModuleLinks:
-                    loadContent(driver1, yearIndex)
+                for module_link in year_module_links:
+                    load_content(driver1, year_index)
                     try:
-                        print ("looking for link " + moduleLink)
-                        click_element(driver1, (By.PARTIAL_LINK_TEXT,  moduleLink))
+                        print ("looking for link " + module_link)
+                        click_element(driver1, (By.PARTIAL_LINK_TEXT,  module_link))
 
                         overview_dictionary = {}
 
@@ -231,8 +235,8 @@ def scrape(institution_name):
                                 overview_dictionary[overview_field] += innerHTML
                         results[year][overview_dictionary['module_id']] = overview_dictionary
                     except Exception as e:
-                        print ("Could not find link " + moduleLink)
-                        print (yearIndex)
+                        print ("Could not find link " + module_link)
+                        print (year_index)
                         print (e)
 
 
