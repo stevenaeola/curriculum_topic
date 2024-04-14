@@ -136,6 +136,8 @@ def scrape(institution_name):
 
         for year in index:
             results[year] = {}
+
+            index_results[year] = {}
 # the same module may appear in different programmes, so merge them into a set
 
             #Create a folder for module webpages of a given year. Check if folder exists already otherwise you'll get a FileExistsError
@@ -210,6 +212,15 @@ def scrape(institution_name):
                         year_module_links.add(module_link)
                         all_module_links.add(module_link)
 
+                        index_results[year][module_link] = {}
+# look for module details in the index page
+                        if 'moduleLink' in mmc.keys():
+                            for overview_field in overview_fields:
+                                if overview_field in mmc.keys():
+                                    overview_field_path = mmc[overview_field]['XPath']
+                                    overview_field_elt = module_container.find_element(By.XPATH, overview_field_path)
+                                    index_results[year][module_link][overview_field] = overview_field_elt.get_attribute('innerHTML').strip()
+
                 # print ("yearModuleLinks[ ", list(yearModuleLinks)[0:200])
 
                 for module_link in year_module_links:
@@ -218,10 +229,11 @@ def scrape(institution_name):
                         print ("looking for link " + module_link)
                         click_element(driver1, (By.PARTIAL_LINK_TEXT,  module_link))
 
-                        overview_dictionary = {}
+                        overview_dictionary = index_results[year][module_link]
 
                         for overview_field in overview_fields:
-                            overview_dictionary[overview_field] = ""
+                            if not (overview_field in overview_dictionary.keys()):
+                                overview_dictionary[overview_field] = ""
                             try:
                                 overview_elts = driver1.find_elements(By.XPATH, module[overview_field]['XPath'])
                             except Exception:

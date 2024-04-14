@@ -9,7 +9,8 @@ This is a quick README for the data required in the institution.json file for a 
                         IF MODULE CODES EXIST IN MULTIPLE TABLES, E.G. EDINBURGH, THEN COMPARE TWO XPATHS FROM DIFFERENT TABLES TO WORK OUT WHICH TABLE ELEMENT TO REPLACE WITH TABLE[*]",
                             "exclude": ["regexp on module link to exclude"],
                             "include": ["regexp on module link to include"],
-                             "moduleLink": {"XPath": "XPATH to module link within the container, relative to container. If not specified then then moduleContainers.XPath is used by itself. Useful for when there is a table including module links and other information we need e.g. number of credits"}
+                            "moduleLink": {"XPath": "XPATH to module link within the container, relative to container. If not specified then then moduleContainers.XPath is used by itself. Useful for when there is a table including module links and other information we need e.g. number of credits"},
+                            "credits": {"XPath": "XPATH to credits within the index container, relative to container. Use only if not defined in the module page. Same for all fields e.g. level"}
                 },
         "module_id": {"XPath": "XPATH TO THE MODULE CODE ON A GIVEN MODULE PAGE"},
         "title": {"XPath": "XPATH TO THE MODULE TITLE. THIS MAY END UP THE SAME AS module_id IN MANY CASES AND WE WILL SORT THIS WITH REGEX AFTERWARDS"},
