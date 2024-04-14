@@ -1,0 +1,14 @@
+{
+    "institution": "London_Met",
+    "index": {"2023": [{"url": "https://intranet.londonmet.ac.uk/course-catalogue/course-specifications/2023-24/UDCMPSCI/BSc-Computer-Science/"}]},
+    "module": {
+        "moduleContainers": {"XPath": "//*/tbody/tr[*]/td[2]/a"},
+        "module_id": {"XPath": "//*[@id='content']/h2[1]"},
+        "title": {"XPath": "//*[@id='content']/h2[1]"},
+        "summary": {"XPath": "//*[@id='mdesc']"},
+        "content": {"XPath": "//*[@id='msyllabus']"},
+        "ilo": {"XPath": "//*[@id='mlearnout']"},
+        "level": {"XPath": "//*[@id='content']/table/tbody/tr[3]/td[2]"},
+        "credits": {"XPath": "//*[@id='content']/table/tbody/tr[4]/td[2]"}
+    }
+}
