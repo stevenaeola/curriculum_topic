@@ -1,0 +1,540 @@
+<html><head>
+  <title>Programme Specification</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+<link rel="Shortcut Icon" type="image/ico" href="https://programmes.chester.ac.uk/favicon.ico">
+<link rel="icon" type="image/gif" href="https://programmes.chester.ac.uk/favicon.gif">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!-- link calendar resources -->
+	<link rel="stylesheet" type="text/css" href="tcal/tcal.css">
+	<script type="text/javascript" src="tcal/tcal.js"></script>
+
+<style>
+
+
+.border {
+
+	border-style:solid; 
+	border-color:#6a8cd4; /* change using php on the fly*/ 
+	border-width: 3px; 
+	padding: 10px; 
+	text-align:left; 
+	border-bottom-width:0px;
+	border-right-width:0px;
+}
+
+.colour_block{
+	border-style:solid; 
+	background-color: #6a8cd4; /* change using php on the fly*/
+	border-width: 3px; 
+	border-color:#6a8cd4; /* change using php on the fly*/ 
+}
+
+.view_items_border{
+	border-style:solid; 
+	border-width: 1px; 
+	border-color: #cccccc;
+	padding: 5px;
+}
+
+.border_colour_block{
+
+	border-style:solid; 
+	border-color:#6a8cd4; /* change using php on the fly*/ 
+	border-width: 3px; 
+	padding: 10px; 
+	text-align:left; 
+	border-bottom-width:0px;
+	border-right-width:0px;
+	background-color: #6a8cd4; /* change using php on the fly*/
+}
+
+.border_colour_end_block{
+	border-style:solid; 
+	border-color:#6a8cd4; /* change using php on the fly*/ 
+	border-width: 3px; 
+	padding: 10px; 
+	text-align:left; 
+	border-bottom-width:0px;
+	background-color: #6a8cd4; /* change using php on the fly*/ 
+}
+
+.border_right_block{
+	border-style:solid; 
+	border-color:#6a8cd4; /* change using php on the fly*/ 
+	border-width: 3px; 
+	padding: 10px; 
+	text-align:left; 
+	border-bottom-width:0px;
+	border-left-width:0px;
+}
+
+.border_end_block{
+	border-style:solid; 
+	border-color:#6a8cd4; /* change using php on the fly*/ 
+	border-width: 3px; 
+	padding: 10px; 
+	text-align:left; 
+	border-bottom-width:0px;
+}
+
+.border_left_panel_block{
+	border-style:solid;
+	border-color:#6a8cd4; /* change using php on the fly*/
+	border-width: 3px;
+	padding: 10px; text-align:left;
+}	
+
+#box1 {
+	background: #e5b8b7;
+}
+
+#box2 {
+	background: #e5cfec;
+}
+
+#box3 {
+	background: #fde9d9;
+}
+
+a.mya {
+       display: block;
+       background: url(images/search.png) no-repeat;
+       height: 25px;
+       width: 25px;
+	   text-indent: -9999px;
+}
+
+a.mya:hover {
+       background-position: 0 -25px;
+}
+
+a.createNewMD {
+       display: block;
+       background: url(images/create_new_MD.png) no-repeat;
+       height: 25px;
+       width: 85px;
+	   text-indent: -9999px;
+}
+
+a.createNewMD:hover {
+       background-position: 0 -25px;
+}
+
+
+a.deleteRow {
+       display: block;
+       background: url(images/delete.png) no-repeat;
+       height: 23px;
+       width: 22px;
+	   text-indent: -9999px;
+}
+
+a.deleteRow:hover {
+       background-position: 0 -23px;
+}
+
+</style>
+
+<script>
+	
+	
+		
+	
+	
+	
+		
+	
+	function cancels(theFaculty, theSearch, pse_ps_id, group_id) {
+		window.open('PS_main_process_page.php?pse_ps_id=' + pse_ps_id + '&group_id=' + group_id + '&search_faculty=' + theFaculty + '&frm_search=' + theSearch, '_self');
+	}
+	
+	function returnToSearch(theFaculty, theSearch){
+		var url = 'PS_main_menu_search_results.php?search_faculty=' + theFaculty + '&frm_search=' + theSearch;
+		window.open(url, '_self');
+	}
+	
+	function loadTable(){
+		//alert (ar.length);
+
+		var tableTop = '<table width="728" border="0" cellspacing="0" cellpadding="2" id="tb">';
+		tableTop += '	<tbody id="tb4">';
+		tableTop += '			<tr>';
+		tableTop += '				<td width="364" style="vertical-align:text-bottom;" class="moddesc_guidance"><p>4a. Award</label></p></td>';	
+		tableTop += '				<td width="364" style="vertical-align:text-bottom;" class="moddesc_guidance"><p>4b. Title </label></p></td>';		
+		tableTop += '			</tr>';
+
+		var helloWorld = tableTop; 
+		
+		// draw rows.
+		var uu= "";
+		for (i=0; i < ar.length; i++ )	{			
+			for (j = 0; j < selectAwards.length; j++ )	{	
+				if (selectAwards[j][0] == ar[i][1]){
+					//alert(selectAwards[j][0] + "-" + ar[i][1]);
+					helloWorld += '<tr>';			
+					helloWorld += '<td width="364">' + selectAwards[j][1] + '</td>';	
+					helloWorld += '<td width="364">' + selectAwards[j][3] + '</td>';			
+					helloWorld += '</tr>';
+				}				
+			}			
+		}
+				
+		// finish table
+		helloWorld += '<tbody></table>';
+		//alert ('helloWorld');
+		
+		assessment.innerHTML = helloWorld;	
+		
+	}
+	
+</script>
+
+
+ </head>
+ 
+  
+<body>
+<center>
+
+							<table width="736" border="0" cellspacing="0" cellpadding="0">
+												
+							<!-- hide when in edit mode-->
+								<tbody><tr>
+									
+									<td width="728">
+										<table border="0" cellspacing="0" cellpadding="0">
+											<tbody><tr>
+												<td style="vertical-align:text-middle; height: 32px;  text-align:left;">
+													<h2>&nbsp;CO5608 - Conducting Cyber Crime Investigations</h2>
+												</td>
+											</tr>
+											<tr>
+												<td width="719">
+													<table style="border-width: 0; width:728px;" cellspacing="0" cellpadding="0">
+														<tbody><tr>
+															<td style="height: 22px; vertical-align:text-middle;  width: 161px; text-align:left;" class="moddesc_guidance">
+																<h3>
+																	<label for="mod_code">1. Module Code</label>
+																</h3>
+															</td>
+															<td class="view_items_border" style=" height: 22px; vertical-align:text-middle;  width: 52px;  text-align:left;">
+																 
+																	CO5608																 
+															</td>
+															<!--td style="vertical-align:text-middle; width: 5px; text-align:left;" width="5"></td-->
+															<td style="vertical-align:text-middle;  width: 161px;  text-align:left;" class="moddesc_guidance">
+																<h3>
+																	<label for="mod_title">2. Module Title</label>
+																</h3>
+															</td>
+															<td class="view_items_border" style="vertical-align:text-middle;  width: 475px;  text-align:left;">
+																Conducting Cyber Crime Investigations															</td>
+														</tr>												
+														<tr>
+															<td style="vertical-align:text-middle; width: 131px; text-align:left; height: 22px;" class="moddesc_guidance">
+																<h3>
+																  <label for="frm_modlevel">3. Module Level</label>
+																</h3>
+															</td>
+															<td class="view_items_border" style="vertical-align:text-middle; text-align:left; height: 22px;">
+																5																					
+															</td>																					
+															<td style="vertical-align:text-middle; width:161px; text-align:left; height: 22px;" class="moddesc_guidance">
+																<h3>
+																	<label for="modcredit">4. Module Credit</label>
+																</h3>
+															</td>
+															<td class="view_items_border" style="vertical-align:text-middle; text-align:left; height: 22px;">
+																										
+																	20&nbsp;CC&nbsp;&nbsp;&nbsp;10&nbsp;ECTS
+																 
+															</td>
+														</tr>
+														<tr>																	
+															<td colspan="2" style="vertical-align:text-middle; height: 22px; text-align:left;" class="moddesc_guidance">					
+																<h3>
+																  <label for="mod_deliverysites">5. Delivery Site(s)</label>
+																</h3>
+															</td>																					
+															<td colspan="2" class="view_items_border" style="vertical-align:text-middle; height: 22px;  text-align:left;">
+																Exton Park (Chester)															</td>
+														</tr>
+														<tr>																	
+															<td colspan="2" style="vertical-align:text-middle; height: 22px; text-align:left;" class="moddesc_guidance">					
+																<h3>
+																  <label for="mod_deliverysites">6. Available to / Restrictions</label>
+																</h3>
+															</td>																					
+															<td colspan="2" class="view_items_border" style="vertical-align:text-middle; height: 22px;  text-align:left;">
+																Pre-requisite: CO4608 or equivalent															</td>
+														</tr>
+														
+														<tr>																					
+															<td class="moddesc_guidance" colspan="4" style="vertical-align:text-middle;  text-align:left;">				
+																<h3>
+																  <label for="mod_study_text">7. Expected Student Learning Activity</label>
+																</h3>
+															</td>
+														</tr>
+														<tr>																					
+															<td class="view_items_border" colspan="4" style="vertical-align:text-middle;  text-align:left;">				
+																<br>															</td>
+														</tr>																						
+														<tr>
+														
+															<td class="view_items_border" colspan="4" style="vertical-align:text-top; width: 728px; text-align:center;">
+																
+																<table width="726" border="0" cellpadding="0" cellspacing="0">
+																	<tbody><tr>
+																		<td class="moddesc_guidance">Scheduled hours 
+																		</td>
+																		<td class="moddesc_guidance">Placement Hours 
+																		</td>
+																		<td class="moddesc_guidance">Independent Guided study 
+																		</td>
+																	</tr>
+																	<tr>
+																		<td style="width:242px" class="view_items_border">48 
+																		</td>
+																		<td style="width:242px" class="view_items_border">0																		</td>
+																		<td style="width:242px" class="view_items_border">152 
+																		</td>
+																	</tr>
+																 
+																</tbody></table>
+															</td>
+														</tr>																			
+														<tr>																	
+															<td colspan="4" style="vertical-align:text-middle; height: 22px; text-align:left;" class="moddesc_guidance">					
+																<h3>
+																  <label for="mod_deliverysites">8. Attendance Guidance</label>
+																</h3>
+															</td>	
+														</tr>
+														<tr>
+															<td colspan="4" class="view_items_border" style="vertical-align:text-middle; height: 22px;  text-align:left;">
+																<ul>
+<li>Students are expected to attend all lectures, tutorials and workshops.</li>
+<li>Students are expected to provide evidence of engagement with online materials by using the Module Discussion Board for regular reflection on learning.</li>
+<li>Students are expected to arrange meetings with team colleagues as required by group-work activities.</li>
+</ul>															</td>
+														</tr>
+														<tr>																	
+															<td colspan="4" style="vertical-align:text-middle; height: 22px; text-align:left;" class="moddesc_guidance">					
+																<h3>
+																  <label for="mod_deliverysites">9. Module Content</label>
+																</h3>
+															</td>	
+														</tr>
+														<tr>
+															<td colspan="4" class="view_items_border" style="vertical-align:text-middle; height: 22px;  text-align:left;">
+																This module will have an underlying theme on investigative interviewing with both victims and witnesses as part of a serious and complex cybercrime investigation.&nbsp; It&nbsp;involves;<p></p>
+<ul>
+<li>The Investigatory Mind-set and recording rational.</li>
+<li>Core Investigative Doctrine.</li>
+<li>Decision Making (National Decision Making Model) in the criminal investigation.</li>
+<li>Investigating the Internet and the use of open source research.</li>
+<li>Introduction of role &amp; impact of Artificial Intelligence in Policing</li>
+<li>Understanding and investigating the dark web.</li>
+<li>Intelligence and the National Intelligence Model.</li>
+<li>The Regulation of Investigatory Powers Act 2000 (RIPA).</li>
+<li>The role of communications data within the cyber investigation.</li>
+<li>Enhanced and practical application of ACPO Good Practice and Principles for Digital Evidence.</li>
+<li>Enhanced and practical application of methodology and good practice relating to Cyber Crime Scene Investigation.</li>
+<li>The PEACE Interview Framework. Planning and preparation for interviews with victims of Cyber Crime, identifying the requirements of relevant others including prosecutors and the court.</li>
+<li>Understanding the purpose of the Achieving Best Evidence Guidance.</li>
+<li>Presenting evidence in criminal proceedings and the role of the expert witness and defence.</li>
+<li>Students will be introduced to the latest developments and implications of Artificial Intelligence for Law Enforcement.</li>
+</ul>															</td>
+														</tr>
+														<tr>																				</tr><tr>																	
+															<td colspan="4" style="vertical-align:text-middle; height: 22px; text-align:left;" class="moddesc_guidance">					
+																<h3>
+																  <label for="mod_deliverysites">10. Aims</label>
+																</h3>
+															</td>	
+														</tr>
+														<tr>
+															<td colspan="4" class="view_items_border" style="vertical-align:text-middle; height: 22px;  text-align:left;">
+																<ul>
+<li>To provide students with the knowledge, understanding and practical skills to plan, prepare and conduct interviews with witnesses to Cyber Crime and to achieve best evidence in Cyber Crime investigations.</li>
+<li>To give students opportunities to use and develop their skills, to exercise appropriate judgment in making professional decisions underpinned with academic theory and to record and present rationale and evidence that would withstand scrutiny in the criminal justice system.</li>
+<li>To broaden the student’s skills to effectively investigate the Internet and to understand how intelligence can be acquired, submitted and used in cyber investigations.</li>
+<li>To introduce the development of Artificial Intelligence and its application by Law Enforcement and Criminal Justice Agencies.</li>
+</ul>															</td>
+														</tr>
+														<tr>																				</tr><tr>																	
+															<td colspan="4" style="vertical-align:text-middle; height: 22px; text-align:left;" class="moddesc_guidance">					
+																<h3>
+																  <label for="mod_deliverysites">11. Methods of Learning and Teaching and Formative Assessment</label>
+																</h3>
+															</td>	
+														</tr>
+														<tr>
+															<td colspan="4" class="view_items_border" style="vertical-align:text-middle; height: 22px;  text-align:left;">
+																<ul>
+<li>Tutorials.</li>
+<li>Additional material will be available to students in the form of podcasts.</li>
+<li>Practical task oriented group work.</li>
+<li>Peer reviews.</li>
+<li>Tutor directed and self-directed study.</li>
+<li>Online learning as directed.</li>
+<li>Demonstrations and practical exercises.</li>
+<li>Formative feedback will be given during contact time, by email and via discussion boards where appropriate.</li>
+</ul>															</td>
+														</tr>
+														<tr>																				</tr><tr>																	
+															<td colspan="4" style="vertical-align:text-middle; height: 22px; text-align:left;" class="moddesc_guidance">					
+																<h3>
+																  <label for="mod_deliverysites">12. Learning Outcomes</label>
+																</h3>
+															</td>	
+														</tr>
+														<tr>
+															<td colspan="4" class="view_items_border" style="vertical-align:text-middle; height: 22px;  text-align:left;">
+																On completion students should be able to;<p></p>
+<ol>
+<li>Make sound decisions and record rationale underpinned with academic theory in relation to Cyber Crime investigations.</li>
+<li>Demonstrate an understanding of interview techniques used to gather information and evidence from victims and witnesses.</li>
+<li>Demonstrate application of good practice and legislative requirements in relation to the seizure of and presentation of digital evidence.</li>
+<li>To demonstrate an understanding of how social media and other open source information can be used in a cybercrime investigation. &nbsp; &nbsp; &nbsp;</li>
+<li>Produce investigative and forensic strategy, policy and rationale.</li>
+<li>Demonstrate an understanding of how RIPA impacts upon the cybercrime investigation.</li>
+<li>Demonstrate an understanding of the implications to Law Enforcement and the criminal justice system with the development of Artificial Intelligence.</li>
+</ol>															</td>
+														</tr>
+														<tr>																				</tr><tr>																	
+															<td colspan="4" style="vertical-align:text-middle; height: 22px; text-align:left;" class="moddesc_guidance">					
+																<h3>
+																  <label for="mod_deliverysites">13. Assessment and Reassessment Components and Weighting</label>
+																</h3>
+															</td>	
+														</tr>
+														<tr>																	
+															<td colspan="4" style="vertical-align:text-middle; height: 18px; text-align:left;" class="moddesc_guidance">					
+																
+																  <label for="mod_deliverysites">&nbsp;13a. Assessment</label>
+																
+															</td>	
+														</tr>
+														<tr>
+															<td colspan="4" class="view_items_border" style="vertical-align:text-middle; height: 22px;  text-align:left;">
+																<table width="728" border="0" cellspacing="0" cellpadding="2" id="tb">	<tbody id="tb13a">			<tr>				<td style="width:10px; text-align:right;"></td>				<td style="vertical-align:text-top; width: 271px; text-align:center;" class="moddesc_guidance"><b><font size="-1" face="Helvetica, Geneva, Arial, SunSans-Regular, sans-serif">Component</font></b></td>				<td style="vertical-align:text-top; width: 83px; text-align:center;" class="moddesc_guidance"><b><font size="-1" face="Helvetica, Geneva, Arial, SunSans-Regular, sans-serif">Weighting %</font></b></td>				<td style="vertical-align:text-top; width: 159px; text-align:center;" class="moddesc_guidance"><b><font size="-1" face="Helvetica, Geneva, Arial, SunSans-Regular, sans-serif">Learning outcome(s) assessed</font></b></td>				<td style="vertical-align:text-top; width: 149px; text-align:center;" class="moddesc_guidance" width="153"><b><font size="-1" face="Helvetica, Geneva, Arial, SunSans-Regular, sans-serif">Assessment category</font></b></td>			</tr><tr><td style="width:10px; text-align:right;">1</td><td class="view_items_border" width="271">Professional Report (2500 words equivalent)</td><td class="view_items_border" align="center" width="83">63%</td><td class="view_items_border" width="159">1, 2, 4, 5, and 6</td><td class="view_items_border" width="149">Coursework</td></tr><tr><td style="width:10px; text-align:right;">2</td><td class="view_items_border" width="271">Presentation (Podcast Report) (1500 words equivalent)</td><td class="view_items_border" align="center" width="83">37%</td><td class="view_items_border" width="159">3, 5, and 7</td><td class="view_items_border" width="149">Coursework</td></tr></tbody><tbody></tbody></table><br><br><strong>Component 1</strong>: The Professional Report will be based upon a Case Study where students will be provided information which will be delivered in one/two scheduled sessions. The outcome is the production of an individual report to illustrate the student's understanding of the Learning Outcomes 1, 2, 4, 5, &amp; 6. While participation in the scheduled sessions will be encouraged it will not form part of the assessment.<p></p>
+<p><strong>Component 2</strong>: The presentation will take the form of a 'Podcast' that will be prepared by the student to illustrate their understanding of Learning Outcomes 3,5, &amp; 7.															</p></td>
+														</tr>
+														<tr>																				</tr><tr>																	
+															<td colspan="4" style="vertical-align:text-middle; height: 18px; text-align:left;" class="moddesc_guidance">					
+																
+																  <label for="mod_deliverysites">&nbsp;13b. Reassessment</label>
+																
+															</td>	
+														</tr>
+														<tr>
+															<td colspan="4" class="view_items_border" style="vertical-align:text-middle; height: 22px;  text-align:left;">
+																Reassessment of any component will take the same form as the original assessment.															</td>
+														</tr>
+														<tr>																																					
+															<td colspan="4" style="vertical-align:text-middle; height: 22px; text-align:left;" class="moddesc_guidance">					
+																<h3>
+																  <label for="mod_deliverysites">14. Key References</label>
+																</h3>
+															</td>	
+														</tr>
+														<tr>
+															<td colspan="4" class="view_items_border" style="vertical-align:text-middle; height: 22px;  text-align:left;">
+																<ul>
+<li>ACPO (2012) Core Investigative Doctrine.</li>
+<li>ACPO (2012) Good Practice Guide for Digital Evidence.</li>
+<li>Allen, C. (2008). <em>Practical guide to evidence.</em> London: Routledge.</li>
+<li>Boden, M.A. (2016). 'Its nature and future AI'.Oxford: Oxford University Press.</li>
+<li>Boden, M.A. (2005). 'The Philosophy of AI'.Oxford: Oxford University Press.</li>
+<li>Bloomfield, B.P. (2018). 'The Question of AI. Philosophical and Sociological Perspectives.". Oxon. Routledge.</li>
+<li>Choo, A. (2009). Evidence. Oxford: Oxford University Press.&nbsp;</li>
+<li>Connor. P, Hutton. G, Johnston. D, McKinnon. G. (2011). <em>Blackstone's Police Investigators' Manual 2014.</em>Oxford: Oxford University Press.</li>
+<li>Cook, T., Hibbitt, S. &amp; Hill, M. (2014). <em>Blackstone's Crime Investigators' Handbook.</em> Oxford: Oxford University Press.</li>
+<li>Human Lives- A Handbook for Public Authorities.</li>
+<li>Ministry of Justice (2011). Achieving Best Evidence in Criminal Proceedings.</li>
+<li>Ozin, P., Norton. H, and Spivey. P. (2010) (2nd ed). PACE: A Practical Guide to the Police and Criminal Evidence Act 1984. OUP. Oxford.</li>
+<li>Shepherd, E. (2007). Investigative interviewing. Oxford: Oxford University Press.</li>
+<li>Tegmark. M. (2017). 'Life 3.0 Being human in the age of AI.' St Ives. Penguin.</li>
+<li>The Criminal Justice System. Codes of Practice for Victims of Crime</li>
+<li>The Department for Constitutional Affairs. Human Rights.</li>
+<li>Williams, V. (2006). <em>Surveillance and intelligence law handbook.</em> Oxford: Oxford University Press.</li>
+</ul>															</td>
+														</tr>
+														<tr>																				</tr><tr>																	
+															<td colspan="4" style="vertical-align:text-middle; height: 22px; text-align:left;" class="moddesc_guidance">					
+																<h3>
+																  <label for="mod_deliverysites">15. Module Leader</label>
+																</h3>
+															</td>	
+														</tr>
+														<tr>
+															<td colspan="4" class="view_items_border" style="vertical-align:text-middle; height: 22px;  text-align:left;">
+																David Browne															</td>
+														</tr>
+														<tr>																				</tr><tr>																	
+															<td colspan="4" style="vertical-align:text-middle; height: 22px; text-align:left;" class="moddesc_guidance">					
+																<h3>
+																  <label for="mod_deliverysites">16. Module Assessment Board</label>
+																</h3>
+															</td>	
+														</tr>
+														<tr>
+															<td colspan="4" class="view_items_border" style="vertical-align:text-middle; height: 22px;  text-align:left;">
+																Computer Science Undergraduate Module Assessment Board															</td>
+														</tr>
+														<tr>																				</tr><tr>																	
+															<td colspan="4" style="vertical-align:text-middle; height: 22px; text-align:left;" class="moddesc_guidance">					
+																<h3>
+																  <label for="mod_deliverysites">17. Approved by</label>
+																</h3>
+															</td>	
+														</tr>
+														<tr>
+															<td colspan="4" class="view_items_border" style="vertical-align:text-middle; height: 22px;  text-align:left;">
+																Faculty of Science and Engineering Board of Studies															</td>
+														</tr>
+														<tr>																				</tr><tr>																	
+															<td colspan="4" style="vertical-align:text-middle; height: 22px; text-align:left;" class="moddesc_guidance">					
+																<h3>
+																  <label for="mod_deliverysites">18. Date of Approval</label>
+																</h3>
+															</td>	
+														</tr>
+														<tr>
+															<td colspan="4" class="view_items_border" style="vertical-align:text-middle; height: 22px;  text-align:left;">
+																Wed, 04 Jul 2018															</td>
+														</tr>
+												   </tbody></table>
+												</td>																
+											</tr>
+											
+										</tbody></table>
+									</td>
+								</tr>
+								<tr>
+									
+									<td style="vertical-align:text-top; width: 728px; text-align:left;">
+										
+										<p>											 
+										  <input name="mod_code" type="hidden" id="mod_code" value="CO5608">																  						  
+										</p>
+											
+										<p><a href="javascript:window.history.go(-1)">Close</a> - return to programme display page&nbsp;&nbsp;<a href="JavaScript:window.print()">Print</a> - launches the print options panel<br><br>
+										</p>
+									</td>
+								</tr>
+							</tbody></table>
+								
+						</center>
+	<br>
+<!-----------------start footer---------------->
+		
+
+	
+				
+
+
+</body></html>

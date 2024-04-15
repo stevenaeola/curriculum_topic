@@ -1,0 +1,514 @@
+<html><head>
+  <title>Programme Specification</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+<link rel="Shortcut Icon" type="image/ico" href="https://programmes.chester.ac.uk/favicon.ico">
+<link rel="icon" type="image/gif" href="https://programmes.chester.ac.uk/favicon.gif">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!-- link calendar resources -->
+	<link rel="stylesheet" type="text/css" href="tcal/tcal.css">
+	<script type="text/javascript" src="tcal/tcal.js"></script>
+
+<style>
+
+
+.border {
+
+	border-style:solid; 
+	border-color:#6a8cd4; /* change using php on the fly*/ 
+	border-width: 3px; 
+	padding: 10px; 
+	text-align:left; 
+	border-bottom-width:0px;
+	border-right-width:0px;
+}
+
+.colour_block{
+	border-style:solid; 
+	background-color: #6a8cd4; /* change using php on the fly*/
+	border-width: 3px; 
+	border-color:#6a8cd4; /* change using php on the fly*/ 
+}
+
+.view_items_border{
+	border-style:solid; 
+	border-width: 1px; 
+	border-color: #cccccc;
+	padding: 5px;
+}
+
+.border_colour_block{
+
+	border-style:solid; 
+	border-color:#6a8cd4; /* change using php on the fly*/ 
+	border-width: 3px; 
+	padding: 10px; 
+	text-align:left; 
+	border-bottom-width:0px;
+	border-right-width:0px;
+	background-color: #6a8cd4; /* change using php on the fly*/
+}
+
+.border_colour_end_block{
+	border-style:solid; 
+	border-color:#6a8cd4; /* change using php on the fly*/ 
+	border-width: 3px; 
+	padding: 10px; 
+	text-align:left; 
+	border-bottom-width:0px;
+	background-color: #6a8cd4; /* change using php on the fly*/ 
+}
+
+.border_right_block{
+	border-style:solid; 
+	border-color:#6a8cd4; /* change using php on the fly*/ 
+	border-width: 3px; 
+	padding: 10px; 
+	text-align:left; 
+	border-bottom-width:0px;
+	border-left-width:0px;
+}
+
+.border_end_block{
+	border-style:solid; 
+	border-color:#6a8cd4; /* change using php on the fly*/ 
+	border-width: 3px; 
+	padding: 10px; 
+	text-align:left; 
+	border-bottom-width:0px;
+}
+
+.border_left_panel_block{
+	border-style:solid;
+	border-color:#6a8cd4; /* change using php on the fly*/
+	border-width: 3px;
+	padding: 10px; text-align:left;
+}	
+
+#box1 {
+	background: #e5b8b7;
+}
+
+#box2 {
+	background: #e5cfec;
+}
+
+#box3 {
+	background: #fde9d9;
+}
+
+a.mya {
+       display: block;
+       background: url(images/search.png) no-repeat;
+       height: 25px;
+       width: 25px;
+	   text-indent: -9999px;
+}
+
+a.mya:hover {
+       background-position: 0 -25px;
+}
+
+a.createNewMD {
+       display: block;
+       background: url(images/create_new_MD.png) no-repeat;
+       height: 25px;
+       width: 85px;
+	   text-indent: -9999px;
+}
+
+a.createNewMD:hover {
+       background-position: 0 -25px;
+}
+
+
+a.deleteRow {
+       display: block;
+       background: url(images/delete.png) no-repeat;
+       height: 23px;
+       width: 22px;
+	   text-indent: -9999px;
+}
+
+a.deleteRow:hover {
+       background-position: 0 -23px;
+}
+
+</style>
+
+<script>
+	
+	
+		
+	
+	
+	
+		
+	
+	function cancels(theFaculty, theSearch, pse_ps_id, group_id) {
+		window.open('PS_main_process_page.php?pse_ps_id=' + pse_ps_id + '&group_id=' + group_id + '&search_faculty=' + theFaculty + '&frm_search=' + theSearch, '_self');
+	}
+	
+	function returnToSearch(theFaculty, theSearch){
+		var url = 'PS_main_menu_search_results.php?search_faculty=' + theFaculty + '&frm_search=' + theSearch;
+		window.open(url, '_self');
+	}
+	
+	function loadTable(){
+		//alert (ar.length);
+
+		var tableTop = '<table width="728" border="0" cellspacing="0" cellpadding="2" id="tb">';
+		tableTop += '	<tbody id="tb4">';
+		tableTop += '			<tr>';
+		tableTop += '				<td width="364" style="vertical-align:text-bottom;" class="moddesc_guidance"><p>4a. Award</label></p></td>';	
+		tableTop += '				<td width="364" style="vertical-align:text-bottom;" class="moddesc_guidance"><p>4b. Title </label></p></td>';		
+		tableTop += '			</tr>';
+
+		var helloWorld = tableTop; 
+		
+		// draw rows.
+		var uu= "";
+		for (i=0; i < ar.length; i++ )	{			
+			for (j = 0; j < selectAwards.length; j++ )	{	
+				if (selectAwards[j][0] == ar[i][1]){
+					//alert(selectAwards[j][0] + "-" + ar[i][1]);
+					helloWorld += '<tr>';			
+					helloWorld += '<td width="364">' + selectAwards[j][1] + '</td>';	
+					helloWorld += '<td width="364">' + selectAwards[j][3] + '</td>';			
+					helloWorld += '</tr>';
+				}				
+			}			
+		}
+				
+		// finish table
+		helloWorld += '<tbody></table>';
+		//alert ('helloWorld');
+		
+		assessment.innerHTML = helloWorld;	
+		
+	}
+	
+</script>
+
+
+ </head>
+ 
+  
+<body>
+<center>
+
+							<table width="736" border="0" cellspacing="0" cellpadding="0">
+												
+							<!-- hide when in edit mode-->
+								<tbody><tr>
+									
+									<td width="728">
+										<table border="0" cellspacing="0" cellpadding="0">
+											<tbody><tr>
+												<td style="vertical-align:text-middle; height: 32px;  text-align:left;">
+													<h2>&nbsp;CO4201 - Professional Skills for Computing</h2>
+												</td>
+											</tr>
+											<tr>
+												<td width="719">
+													<table style="border-width: 0; width:728px;" cellspacing="0" cellpadding="0">
+														<tbody><tr>
+															<td style="height: 22px; vertical-align:text-middle;  width: 161px; text-align:left;" class="moddesc_guidance">
+																<h3>
+																	<label for="mod_code">1. Module Code</label>
+																</h3>
+															</td>
+															<td class="view_items_border" style=" height: 22px; vertical-align:text-middle;  width: 52px;  text-align:left;">
+																 
+																	CO4201																 
+															</td>
+															<!--td style="vertical-align:text-middle; width: 5px; text-align:left;" width="5"></td-->
+															<td style="vertical-align:text-middle;  width: 161px;  text-align:left;" class="moddesc_guidance">
+																<h3>
+																	<label for="mod_title">2. Module Title</label>
+																</h3>
+															</td>
+															<td class="view_items_border" style="vertical-align:text-middle;  width: 475px;  text-align:left;">
+																Professional Skills for Computing															</td>
+														</tr>												
+														<tr>
+															<td style="vertical-align:text-middle; width: 131px; text-align:left; height: 22px;" class="moddesc_guidance">
+																<h3>
+																  <label for="frm_modlevel">3. Module Level</label>
+																</h3>
+															</td>
+															<td class="view_items_border" style="vertical-align:text-middle; text-align:left; height: 22px;">
+																4																					
+															</td>																					
+															<td style="vertical-align:text-middle; width:161px; text-align:left; height: 22px;" class="moddesc_guidance">
+																<h3>
+																	<label for="modcredit">4. Module Credit</label>
+																</h3>
+															</td>
+															<td class="view_items_border" style="vertical-align:text-middle; text-align:left; height: 22px;">
+																										
+																	10&nbsp;CC&nbsp;&nbsp;&nbsp;5&nbsp;ECTS
+																 
+															</td>
+														</tr>
+														<tr>																	
+															<td colspan="2" style="vertical-align:text-middle; height: 22px; text-align:left;" class="moddesc_guidance">					
+																<h3>
+																  <label for="mod_deliverysites">5. Delivery Site(s)</label>
+																</h3>
+															</td>																					
+															<td colspan="2" class="view_items_border" style="vertical-align:text-middle; height: 22px;  text-align:left;">
+																Exton Park (Chester), University College Isle of Man, Laksamana College of Business															</td>
+														</tr>
+														<tr>																	
+															<td colspan="2" style="vertical-align:text-middle; height: 22px; text-align:left;" class="moddesc_guidance">					
+																<h3>
+																  <label for="mod_deliverysites">6. Available to / Restrictions</label>
+																</h3>
+															</td>																					
+															<td colspan="2" class="view_items_border" style="vertical-align:text-middle; height: 22px;  text-align:left;">
+																None															</td>
+														</tr>
+														
+														<tr>																					
+															<td class="moddesc_guidance" colspan="4" style="vertical-align:text-middle;  text-align:left;">				
+																<h3>
+																  <label for="mod_study_text">7. Expected Student Learning Activity</label>
+																</h3>
+															</td>
+														</tr>
+														<tr>																					
+															<td class="view_items_border" colspan="4" style="vertical-align:text-middle;  text-align:left;">				
+																<br>															</td>
+														</tr>																						
+														<tr>
+														
+															<td class="view_items_border" colspan="4" style="vertical-align:text-top; width: 728px; text-align:center;">
+																
+																<table width="726" border="0" cellpadding="0" cellspacing="0">
+																	<tbody><tr>
+																		<td class="moddesc_guidance">Scheduled hours 
+																		</td>
+																		<td class="moddesc_guidance">Placement Hours 
+																		</td>
+																		<td class="moddesc_guidance">Independent Guided study 
+																		</td>
+																	</tr>
+																	<tr>
+																		<td style="width:242px" class="view_items_border">24 
+																		</td>
+																		<td style="width:242px" class="view_items_border">0																		</td>
+																		<td style="width:242px" class="view_items_border">76 
+																		</td>
+																	</tr>
+																 
+																</tbody></table>
+															</td>
+														</tr>																			
+														<tr>																	
+															<td colspan="4" style="vertical-align:text-middle; height: 22px; text-align:left;" class="moddesc_guidance">					
+																<h3>
+																  <label for="mod_deliverysites">8. Attendance Guidance</label>
+																</h3>
+															</td>	
+														</tr>
+														<tr>
+															<td colspan="4" class="view_items_border" style="vertical-align:text-middle; height: 22px;  text-align:left;">
+																Students are expected to attend all timetable teaching and learning activities.															</td>
+														</tr>
+														<tr>																	
+															<td colspan="4" style="vertical-align:text-middle; height: 22px; text-align:left;" class="moddesc_guidance">					
+																<h3>
+																  <label for="mod_deliverysites">9. Module Content</label>
+																</h3>
+															</td>	
+														</tr>
+														<tr>
+															<td colspan="4" class="view_items_border" style="vertical-align:text-middle; height: 22px;  text-align:left;">
+																<ul>
+<li>Referencing</li>
+<li>Plagiarism</li>
+<li>Literature searching</li>
+<li>Professional Bodies</li>
+<li>Employability</li>
+<li>Ethics</li>
+<li>Law (data protection, computer misuse act)</li>
+<li>Copyright and intellectual property</li>
+<li>Personal reflection</li>
+<li>CPD</li>
+<li>Feedback</li>
+<li>Questionnaire design: Likert scale, numerical data, coding,</li>
+<li>Correlation</li>
+<li>Parametric and non-parametric tests</li>
+</ul>															</td>
+														</tr>
+														<tr>																				</tr><tr>																	
+															<td colspan="4" style="vertical-align:text-middle; height: 22px; text-align:left;" class="moddesc_guidance">					
+																<h3>
+																  <label for="mod_deliverysites">10. Aims</label>
+																</h3>
+															</td>	
+														</tr>
+														<tr>
+															<td colspan="4" class="view_items_border" style="vertical-align:text-middle; height: 22px;  text-align:left;">
+																To introduce the key skills required of the computing professional, comprising oral and written communication, along with an awareness of professional aspects of computing practice.<p></p>
+<p>The two components of the module address respectively:</p>
+<ul>
+<li>Introducing students to the concept of professional ethics and behaviour, the place of computers in society and the legal aspects of computing;</li>
+<li>Developing skills in summarising, quoting, paraphrasing, critical analysis, grammar, referencing, poster construction and oral presentation, and teaching writing as a process approach to composing academic papers.</li>
+</ul>															</td>
+														</tr>
+														<tr>																				</tr><tr>																	
+															<td colspan="4" style="vertical-align:text-middle; height: 22px; text-align:left;" class="moddesc_guidance">					
+																<h3>
+																  <label for="mod_deliverysites">11. Methods of Learning and Teaching and Formative Assessment</label>
+																</h3>
+															</td>	
+														</tr>
+														<tr>
+															<td colspan="4" class="view_items_border" style="vertical-align:text-middle; height: 22px;  text-align:left;">
+																<ul>
+<li>Tutor-directed and self-directed study;</li>
+<li>Lectures, workshops and on-line learning;</li>
+<li>Formative feedback will be on-line, verbal or via the discussion board.</li>
+</ul>															</td>
+														</tr>
+														<tr>																				</tr><tr>																	
+															<td colspan="4" style="vertical-align:text-middle; height: 22px; text-align:left;" class="moddesc_guidance">					
+																<h3>
+																  <label for="mod_deliverysites">12. Learning Outcomes</label>
+																</h3>
+															</td>	
+														</tr>
+														<tr>
+															<td colspan="4" class="view_items_border" style="vertical-align:text-middle; height: 22px;  text-align:left;">
+																<ol>
+<li>Understand the relevance for professional computing along with the practice of basic computer law, professional bodies, and the social impact of computer technology.</li>
+<li>Judge and improve their own writing with increased confidence, utilise appropriate methods for referencing and citing sources, and be familiar with the idea of writing as a process.</li>
+</ol>															</td>
+														</tr>
+														<tr>																				</tr><tr>																	
+															<td colspan="4" style="vertical-align:text-middle; height: 22px; text-align:left;" class="moddesc_guidance">					
+																<h3>
+																  <label for="mod_deliverysites">13. Assessment and Reassessment Components and Weighting</label>
+																</h3>
+															</td>	
+														</tr>
+														<tr>																	
+															<td colspan="4" style="vertical-align:text-middle; height: 18px; text-align:left;" class="moddesc_guidance">					
+																
+																  <label for="mod_deliverysites">&nbsp;13a. Assessment</label>
+																
+															</td>	
+														</tr>
+														<tr>
+															<td colspan="4" class="view_items_border" style="vertical-align:text-middle; height: 22px;  text-align:left;">
+																<table width="728" border="0" cellspacing="0" cellpadding="2" id="tb">	<tbody id="tb13a">			<tr>				<td style="width:10px; text-align:right;"></td>				<td style="vertical-align:text-top; width: 271px; text-align:center;" class="moddesc_guidance"><b><font size="-1" face="Helvetica, Geneva, Arial, SunSans-Regular, sans-serif">Component</font></b></td>				<td style="vertical-align:text-top; width: 83px; text-align:center;" class="moddesc_guidance"><b><font size="-1" face="Helvetica, Geneva, Arial, SunSans-Regular, sans-serif">Weighting %</font></b></td>				<td style="vertical-align:text-top; width: 159px; text-align:center;" class="moddesc_guidance"><b><font size="-1" face="Helvetica, Geneva, Arial, SunSans-Regular, sans-serif">Learning outcome(s) assessed</font></b></td>				<td style="vertical-align:text-top; width: 149px; text-align:center;" class="moddesc_guidance" width="153"><b><font size="-1" face="Helvetica, Geneva, Arial, SunSans-Regular, sans-serif">Assessment category</font></b></td>			</tr><tr><td style="width:10px; text-align:right;">1</td><td class="view_items_border" width="271">Assignment (1500 words)</td><td class="view_items_border" align="center" width="83">100%</td><td class="view_items_border" width="159">1 and 2</td><td class="view_items_border" width="149">Coursework</td></tr></tbody><tbody></tbody></table><br><br>															</td>
+														</tr>
+														<tr>																				</tr><tr>																	
+															<td colspan="4" style="vertical-align:text-middle; height: 18px; text-align:left;" class="moddesc_guidance">					
+																
+																  <label for="mod_deliverysites">&nbsp;13b. Reassessment</label>
+																
+															</td>	
+														</tr>
+														<tr>
+															<td colspan="4" class="view_items_border" style="vertical-align:text-middle; height: 22px;  text-align:left;">
+																Reassessment will take the same format as the original work.															</td>
+														</tr>
+														<tr>																																					
+															<td colspan="4" style="vertical-align:text-middle; height: 22px; text-align:left;" class="moddesc_guidance">					
+																<h3>
+																  <label for="mod_deliverysites">14. Key References</label>
+																</h3>
+															</td>	
+														</tr>
+														<tr>
+															<td colspan="4" class="view_items_border" style="vertical-align:text-middle; height: 22px;  text-align:left;">
+																<ul>
+<li>
+<h2 class="a-size-medium a-color-null s-inline  s-access-title  a-text-normal" style="margin: 0px; padding: 0px; text-transform: none !important; line-height: 1.255 !important; font-family: Arial, sans-serif; font-size: 17px !important; font-style: normal !important; font-weight: 400 !important; text-decoration: none !important; display: inline; box-sizing: border-box; text-rendering: optimizeLegibility;" data-attribute="Essence of Professional Issues in Computing (Essence of Computing)" data-max-rows="0" data-truncate-by-character="false"><span style="font-family: verdana,geneva;"><span style="font-size: 10pt;">Ayres, R. (1998). <em>Essence of professional issues in computing (Essence of computing). </em>London, United Kingdom: </span><span style="font-size: 10pt;">Prentice Hall.</span></span></h2>
+</li>
+<li><span style="font-size: 10pt;">Bott, F.&nbsp;(2014). </span><span style="font-size: 10pt;"><em>Professional issues in information technology</em> (2nd ed.). London, United Kingdom:</span> <span style="text-align: left; color: #333333; text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: verdana, arial, helvetica, sans-serif; font-size: 13px; font-style: normal; font-weight: normal; word-spacing: 0px; float: none; display: inline !important; white-space: normal; orphans: 2; widows: 2; background-color: #ffffff; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px;">BCS</span><em><span style="text-align: left; color: #333333; text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: verdana, arial, helvetica, sans-serif; font-size: 13px; font-style: normal; font-weight: normal; word-spacing: 0px; float: none; display: inline !important; white-space: normal; orphans: 2; widows: 2; background-color: #ffffff; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px;">, The Chartered Institute for IT.</span></em></li>
+<li><em><span style="text-align: left; color: #333333; text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: verdana, arial, helvetica, sans-serif; font-size: 13px; font-style: normal; font-weight: normal; word-spacing: 0px; float: none; display: inline !important; white-space: normal; orphans: 2; widows: 2; background-color: #ffffff; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px;"> De Voss, D., Eidman-Aadahl, E., &amp; Hicks, T. (2010). </span></em><span style="font-family: verdana,geneva; font-size: 10pt;"><span id="productTitle" class="a-size-large" style="line-height: 1.3 !important; box-sizing: border-box; text-rendering: optimizeLegibility;"><em>Because digital writing matters: Improving student writing in online and multimedia environments (National writing project). </em>San Francisco, CA: Jossey Bass.</span></span></li>
+<li><em><em><span style="text-align: left; color: #333333; text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: verdana, arial, helvetica, sans-serif; font-size: 13px; font-style: normal; font-weight: normal; word-spacing: 0px; float: none; display: inline !important; white-space: normal; orphans: 2; widows: 2; background-color: #ffffff; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px;">Holt, J., Newton, J. (2011). </span></em></em><span style="text-align: left; color: #333333; text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: verdana, arial, helvetica, sans-serif; font-size: 13px; font-style: normal; font-weight: normal; word-spacing: 0px; float: none; display: inline !important; white-space: normal; orphans: 2; widows: 2; background-color: #ffffff; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px;"><em>A manager's guide to IT law. </em>London, United Kingdom: BCS. </span></li>
+<li><span style="text-align: left; color: #333333; text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: verdana, arial, helvetica, sans-serif; font-size: 13px; font-style: normal; font-weight: normal; word-spacing: 0px; float: none; display: inline !important; white-space: normal; orphans: 2; widows: 2; background-color: #ffffff; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px;">Kizza, J. M. (2016).</span><span style="text-align: left; color: #333333; text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: verdana, arial, helvetica, sans-serif; font-size: 13px; font-style: normal; font-weight: normal; word-spacing: 0px; float: none; display: inline !important; white-space: normal; orphans: 2; widows: 2; background-color: #ffffff; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px;"> <em>Ethics in computing:&nbsp;A concise module (Undergraduate topics in computer science). </em>Springer.</span></li>
+<li><span style="text-align: left; color: #333333; text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: verdana, arial, helvetica, sans-serif; font-size: 13px; font-style: normal; font-weight: normal; word-spacing: 0px; float: none; display: inline !important; white-space: normal; orphans: 2; widows: 2; background-color: #ffffff; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px;">Tavani, H.T. (2016). <em>Ethics and technology: Controversies, questions, and strategies for ethical computing. </em>London, United Kingdom: Wiley.</span></li>
+</ul>
+<p>&nbsp;<span style="text-align: left; color: #333333; text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: verdana, arial, helvetica, sans-serif; font-size: 13px; font-style: normal; font-weight: normal; word-spacing: 0px; float: none; display: inline !important; white-space: normal; orphans: 2; widows: 2; background-color: #ffffff; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px;">A range of supporting articles can be sourced via online library resources. In particular, IEEE/IET Electronic Library and ACM Digital Library. </span>															</p></td>
+														</tr>
+														<tr>																				</tr><tr>																	
+															<td colspan="4" style="vertical-align:text-middle; height: 22px; text-align:left;" class="moddesc_guidance">					
+																<h3>
+																  <label for="mod_deliverysites">15. Module Leader</label>
+																</h3>
+															</td>	
+														</tr>
+														<tr>
+															<td colspan="4" class="view_items_border" style="vertical-align:text-middle; height: 22px;  text-align:left;">
+																Graham Logan															</td>
+														</tr>
+														<tr>																				</tr><tr>																	
+															<td colspan="4" style="vertical-align:text-middle; height: 22px; text-align:left;" class="moddesc_guidance">					
+																<h3>
+																  <label for="mod_deliverysites">16. Module Assessment Board</label>
+																</h3>
+															</td>	
+														</tr>
+														<tr>
+															<td colspan="4" class="view_items_border" style="vertical-align:text-middle; height: 22px;  text-align:left;">
+																Computer Science Undergraduate Module Assessment Board															</td>
+														</tr>
+														<tr>																				</tr><tr>																	
+															<td colspan="4" style="vertical-align:text-middle; height: 22px; text-align:left;" class="moddesc_guidance">					
+																<h3>
+																  <label for="mod_deliverysites">17. Approved by</label>
+																</h3>
+															</td>	
+														</tr>
+														<tr>
+															<td colspan="4" class="view_items_border" style="vertical-align:text-middle; height: 22px;  text-align:left;">
+																Faculty of Science and Engineering Board of Studies															</td>
+														</tr>
+														<tr>																				</tr><tr>																	
+															<td colspan="4" style="vertical-align:text-middle; height: 22px; text-align:left;" class="moddesc_guidance">					
+																<h3>
+																  <label for="mod_deliverysites">18. Date of Approval</label>
+																</h3>
+															</td>	
+														</tr>
+														<tr>
+															<td colspan="4" class="view_items_border" style="vertical-align:text-middle; height: 22px;  text-align:left;">
+																Wed, 07 Jul 2021															</td>
+														</tr>
+												   </tbody></table>
+												</td>																
+											</tr>
+											
+										</tbody></table>
+									</td>
+								</tr>
+								<tr>
+									
+									<td style="vertical-align:text-top; width: 728px; text-align:left;">
+										
+										<p>											 
+										  <input name="mod_code" type="hidden" id="mod_code" value="CO4201">																  						  
+										</p>
+											
+										<p><a href="javascript:window.history.go(-1)">Close</a> - return to programme display page&nbsp;&nbsp;<a href="JavaScript:window.print()">Print</a> - launches the print options panel<br><br>
+										</p>
+									</td>
+								</tr>
+							</tbody></table>
+								
+						</center>
+	<br>
+<!-----------------start footer---------------->
+		
+
+	
+				
+
+
+</body></html>

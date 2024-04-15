@@ -1,0 +1,542 @@
+<html><head>
+  <title>Programme Specification</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+<link rel="Shortcut Icon" type="image/ico" href="https://programmes.chester.ac.uk/favicon.ico">
+<link rel="icon" type="image/gif" href="https://programmes.chester.ac.uk/favicon.gif">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!-- link calendar resources -->
+	<link rel="stylesheet" type="text/css" href="tcal/tcal.css">
+	<script type="text/javascript" src="tcal/tcal.js"></script>
+
+<style>
+
+
+.border {
+
+	border-style:solid; 
+	border-color:#6a8cd4; /* change using php on the fly*/ 
+	border-width: 3px; 
+	padding: 10px; 
+	text-align:left; 
+	border-bottom-width:0px;
+	border-right-width:0px;
+}
+
+.colour_block{
+	border-style:solid; 
+	background-color: #6a8cd4; /* change using php on the fly*/
+	border-width: 3px; 
+	border-color:#6a8cd4; /* change using php on the fly*/ 
+}
+
+.view_items_border{
+	border-style:solid; 
+	border-width: 1px; 
+	border-color: #cccccc;
+	padding: 5px;
+}
+
+.border_colour_block{
+
+	border-style:solid; 
+	border-color:#6a8cd4; /* change using php on the fly*/ 
+	border-width: 3px; 
+	padding: 10px; 
+	text-align:left; 
+	border-bottom-width:0px;
+	border-right-width:0px;
+	background-color: #6a8cd4; /* change using php on the fly*/
+}
+
+.border_colour_end_block{
+	border-style:solid; 
+	border-color:#6a8cd4; /* change using php on the fly*/ 
+	border-width: 3px; 
+	padding: 10px; 
+	text-align:left; 
+	border-bottom-width:0px;
+	background-color: #6a8cd4; /* change using php on the fly*/ 
+}
+
+.border_right_block{
+	border-style:solid; 
+	border-color:#6a8cd4; /* change using php on the fly*/ 
+	border-width: 3px; 
+	padding: 10px; 
+	text-align:left; 
+	border-bottom-width:0px;
+	border-left-width:0px;
+}
+
+.border_end_block{
+	border-style:solid; 
+	border-color:#6a8cd4; /* change using php on the fly*/ 
+	border-width: 3px; 
+	padding: 10px; 
+	text-align:left; 
+	border-bottom-width:0px;
+}
+
+.border_left_panel_block{
+	border-style:solid;
+	border-color:#6a8cd4; /* change using php on the fly*/
+	border-width: 3px;
+	padding: 10px; text-align:left;
+}	
+
+#box1 {
+	background: #e5b8b7;
+}
+
+#box2 {
+	background: #e5cfec;
+}
+
+#box3 {
+	background: #fde9d9;
+}
+
+a.mya {
+       display: block;
+       background: url(images/search.png) no-repeat;
+       height: 25px;
+       width: 25px;
+	   text-indent: -9999px;
+}
+
+a.mya:hover {
+       background-position: 0 -25px;
+}
+
+a.createNewMD {
+       display: block;
+       background: url(images/create_new_MD.png) no-repeat;
+       height: 25px;
+       width: 85px;
+	   text-indent: -9999px;
+}
+
+a.createNewMD:hover {
+       background-position: 0 -25px;
+}
+
+
+a.deleteRow {
+       display: block;
+       background: url(images/delete.png) no-repeat;
+       height: 23px;
+       width: 22px;
+	   text-indent: -9999px;
+}
+
+a.deleteRow:hover {
+       background-position: 0 -23px;
+}
+
+</style>
+
+<script>
+	
+	
+		
+	
+	
+	
+		
+	
+	function cancels(theFaculty, theSearch, pse_ps_id, group_id) {
+		window.open('PS_main_process_page.php?pse_ps_id=' + pse_ps_id + '&group_id=' + group_id + '&search_faculty=' + theFaculty + '&frm_search=' + theSearch, '_self');
+	}
+	
+	function returnToSearch(theFaculty, theSearch){
+		var url = 'PS_main_menu_search_results.php?search_faculty=' + theFaculty + '&frm_search=' + theSearch;
+		window.open(url, '_self');
+	}
+	
+	function loadTable(){
+		//alert (ar.length);
+
+		var tableTop = '<table width="728" border="0" cellspacing="0" cellpadding="2" id="tb">';
+		tableTop += '	<tbody id="tb4">';
+		tableTop += '			<tr>';
+		tableTop += '				<td width="364" style="vertical-align:text-bottom;" class="moddesc_guidance"><p>4a. Award</label></p></td>';	
+		tableTop += '				<td width="364" style="vertical-align:text-bottom;" class="moddesc_guidance"><p>4b. Title </label></p></td>';		
+		tableTop += '			</tr>';
+
+		var helloWorld = tableTop; 
+		
+		// draw rows.
+		var uu= "";
+		for (i=0; i < ar.length; i++ )	{			
+			for (j = 0; j < selectAwards.length; j++ )	{	
+				if (selectAwards[j][0] == ar[i][1]){
+					//alert(selectAwards[j][0] + "-" + ar[i][1]);
+					helloWorld += '<tr>';			
+					helloWorld += '<td width="364">' + selectAwards[j][1] + '</td>';	
+					helloWorld += '<td width="364">' + selectAwards[j][3] + '</td>';			
+					helloWorld += '</tr>';
+				}				
+			}			
+		}
+				
+		// finish table
+		helloWorld += '<tbody></table>';
+		//alert ('helloWorld');
+		
+		assessment.innerHTML = helloWorld;	
+		
+	}
+	
+</script>
+
+
+ </head>
+ 
+  
+<body>
+<center>
+
+							<table width="736" border="0" cellspacing="0" cellpadding="0">
+												
+							<!-- hide when in edit mode-->
+								<tbody><tr>
+									
+									<td width="728">
+										<table border="0" cellspacing="0" cellpadding="0">
+											<tbody><tr>
+												<td style="vertical-align:text-middle; height: 32px;  text-align:left;">
+													<h2>&nbsp;CO5136 - Collaborative Games Production II</h2>
+												</td>
+											</tr>
+											<tr>
+												<td width="719">
+													<table style="border-width: 0; width:728px;" cellspacing="0" cellpadding="0">
+														<tbody><tr>
+															<td style="height: 22px; vertical-align:text-middle;  width: 161px; text-align:left;" class="moddesc_guidance">
+																<h3>
+																	<label for="mod_code">1. Module Code</label>
+																</h3>
+															</td>
+															<td class="view_items_border" style=" height: 22px; vertical-align:text-middle;  width: 52px;  text-align:left;">
+																 
+																	CO5136																 
+															</td>
+															<!--td style="vertical-align:text-middle; width: 5px; text-align:left;" width="5"></td-->
+															<td style="vertical-align:text-middle;  width: 161px;  text-align:left;" class="moddesc_guidance">
+																<h3>
+																	<label for="mod_title">2. Module Title</label>
+																</h3>
+															</td>
+															<td class="view_items_border" style="vertical-align:text-middle;  width: 475px;  text-align:left;">
+																Collaborative Games Production II															</td>
+														</tr>												
+														<tr>
+															<td style="vertical-align:text-middle; width: 131px; text-align:left; height: 22px;" class="moddesc_guidance">
+																<h3>
+																  <label for="frm_modlevel">3. Module Level</label>
+																</h3>
+															</td>
+															<td class="view_items_border" style="vertical-align:text-middle; text-align:left; height: 22px;">
+																5																					
+															</td>																					
+															<td style="vertical-align:text-middle; width:161px; text-align:left; height: 22px;" class="moddesc_guidance">
+																<h3>
+																	<label for="modcredit">4. Module Credit</label>
+																</h3>
+															</td>
+															<td class="view_items_border" style="vertical-align:text-middle; text-align:left; height: 22px;">
+																										
+																	20&nbsp;CC&nbsp;&nbsp;&nbsp;10&nbsp;ECTS
+																 
+															</td>
+														</tr>
+														<tr>																	
+															<td colspan="2" style="vertical-align:text-middle; height: 22px; text-align:left;" class="moddesc_guidance">					
+																<h3>
+																  <label for="mod_deliverysites">5. Delivery Site(s)</label>
+																</h3>
+															</td>																					
+															<td colspan="2" class="view_items_border" style="vertical-align:text-middle; height: 22px;  text-align:left;">
+																Exton Park (Chester)															</td>
+														</tr>
+														<tr>																	
+															<td colspan="2" style="vertical-align:text-middle; height: 22px; text-align:left;" class="moddesc_guidance">					
+																<h3>
+																  <label for="mod_deliverysites">6. Available to / Restrictions</label>
+																</h3>
+															</td>																					
+															<td colspan="2" class="view_items_border" style="vertical-align:text-middle; height: 22px;  text-align:left;">
+																Pre-requisite:<p></p>
+<ul>
+<li>CO4136 Collaborative Games Production I, or equivalent</li>
+</ul>
+<p>Co-requisite:</p>
+<ul>
+<li>CO5035 Further Games Theory and Implementation</li>
+</ul>															</td>
+														</tr>
+														
+														<tr>																					
+															<td class="moddesc_guidance" colspan="4" style="vertical-align:text-middle;  text-align:left;">				
+																<h3>
+																  <label for="mod_study_text">7. Expected Student Learning Activity</label>
+																</h3>
+															</td>
+														</tr>
+														<tr>																					
+															<td class="view_items_border" colspan="4" style="vertical-align:text-middle;  text-align:left;">				
+																Tutor led workshop sessions. Total 40 hours<br>20 hours of formative work and reading. 20 hours assessed individual work. 120 hours assessed team work. Total 160 hours<br><br>During the module, students will be "employed" in a team and be expected to complete 120 self- and team- guided hours working on their respective projects outside of the timetabled sessions. Of these 120 hours, a minimum of 50% (60 hours) should be completed while working collaboratively.<p></p>
+<p>Students will also be expected to complete 20 hours of formative work and reading, and 20 hours of preparation and work on an assessed individual report.															</p></td>
+														</tr>																						
+														<tr>
+														
+															<td class="view_items_border" colspan="4" style="vertical-align:text-top; width: 728px; text-align:center;">
+																
+																<table width="726" border="0" cellpadding="0" cellspacing="0">
+																	<tbody><tr>
+																		<td class="moddesc_guidance">Scheduled hours 
+																		</td>
+																		<td class="moddesc_guidance">Placement Hours 
+																		</td>
+																		<td class="moddesc_guidance">Independent Guided study 
+																		</td>
+																	</tr>
+																	<tr>
+																		<td style="width:242px" class="view_items_border">40 
+																		</td>
+																		<td style="width:242px" class="view_items_border">0																		</td>
+																		<td style="width:242px" class="view_items_border">160 
+																		</td>
+																	</tr>
+																 
+																</tbody></table>
+															</td>
+														</tr>																			
+														<tr>																	
+															<td colspan="4" style="vertical-align:text-middle; height: 22px; text-align:left;" class="moddesc_guidance">					
+																<h3>
+																  <label for="mod_deliverysites">8. Attendance Guidance</label>
+																</h3>
+															</td>	
+														</tr>
+														<tr>
+															<td colspan="4" class="view_items_border" style="vertical-align:text-middle; height: 22px;  text-align:left;">
+																As this module incorporates assessed group work, a minimum of 75% attendance is required across all timetabled activities. If the attendance requirement is not met, the mark for every assessment with a component of group work will be capped at 40%. It is the responsibility of individual students to make sure their attendance is recorded on the attendance monitoring system during each timetabled activity.<p></p>
+<p>Students are also expected to provide evidence of a minimum of 120 self- and team- guided working hours during the module on the assessed team project.															</p></td>
+														</tr>
+														<tr>																	
+															<td colspan="4" style="vertical-align:text-middle; height: 22px; text-align:left;" class="moddesc_guidance">					
+																<h3>
+																  <label for="mod_deliverysites">9. Module Content</label>
+																</h3>
+															</td>	
+														</tr>
+														<tr>
+															<td colspan="4" class="view_items_border" style="vertical-align:text-middle; height: 22px;  text-align:left;">
+																1. Further practical experience in team work<p></p>
+<ul>
+<li>Long-term project (full module length) to a specified brief</li>
+<li>Strict client requirements to meet</li>
+<li>Strict (assessed) deadlines to achieve through the project</li>
+<li>Formal presentation of the final product</li>
+</ul>
+<p>2. Theory of team and project work</p>
+<ul>
+<li>The software development lifecycle</li>
+<li>Project methodologies</li>
+<li>Team structures and how they relate to individual personality</li>
+</ul>
+<p>3. Technical tools for team work</p>
+<ul>
+<li>Source control</li>
+<li>Quality assurance</li>
+<li>Task planning and tracking</li>
+<li>Bug tracking</li>
+<li>Asset management</li>
+<li>Communication tools</li>
+</ul>
+<p>4. Dealing with clients</p>
+<ul>
+<li>Meetings and etiquette</li>
+<li>Briefs and information recording</li>
+<li>Marketing</li>
+<li>Promotional work</li>
+</ul>															</td>
+														</tr>
+														<tr>																				</tr><tr>																	
+															<td colspan="4" style="vertical-align:text-middle; height: 22px; text-align:left;" class="moddesc_guidance">					
+																<h3>
+																  <label for="mod_deliverysites">10. Aims</label>
+																</h3>
+															</td>	
+														</tr>
+														<tr>
+															<td colspan="4" class="view_items_border" style="vertical-align:text-middle; height: 22px;  text-align:left;">
+																<ol>
+<li>To allow students to build on the skills learnt at Level&nbsp;4 to produce a more advanced games project to a supplied brief, and to integrate the new skills being learnt at Level 5 in other modules to achieve that aim.</li>
+<li>Develop on the team work experience at Level 4 so that a more effective and efficient team work process can be followed.</li>
+<li>To introduce students to the software engineering lifecyle and explore the different types of project methodologies that could be employed during team projects.</li>
+<li>To explore the technical tools and solutions which can be applied to make team work easier and more productive.</li>
+<li>Ensure all students understand the theory of team work and related practices and how their own experiences relate to that theory.</li>
+</ol>															</td>
+														</tr>
+														<tr>																				</tr><tr>																	
+															<td colspan="4" style="vertical-align:text-middle; height: 22px; text-align:left;" class="moddesc_guidance">					
+																<h3>
+																  <label for="mod_deliverysites">11. Methods of Learning and Teaching and Formative Assessment</label>
+																</h3>
+															</td>	
+														</tr>
+														<tr>
+															<td colspan="4" class="view_items_border" style="vertical-align:text-middle; height: 22px;  text-align:left;">
+																A student team or teams (dependent on cohort size)&nbsp;will be formed and "employed" to work on a specified game project for the whole module. During that time, regular tutor directed sessions will be used to monitor progress and provide feedback. Communication and teamwork are essential aspects of the module and students will be expected to work effectively with the individuals in their team.<p></p>
+<p>Tutor directed&nbsp;workshops will also include lecture material to cover the course material and related theory at appropriate points.															</p></td>
+														</tr>
+														<tr>																				</tr><tr>																	
+															<td colspan="4" style="vertical-align:text-middle; height: 22px; text-align:left;" class="moddesc_guidance">					
+																<h3>
+																  <label for="mod_deliverysites">12. Learning Outcomes</label>
+																</h3>
+															</td>	
+														</tr>
+														<tr>
+															<td colspan="4" class="view_items_border" style="vertical-align:text-middle; height: 22px;  text-align:left;">
+																<ol>
+<li>Apply existing and developing skills to designing and building elements of a computer game.</li>
+<li>Examine the concept of the&nbsp;software development lifecycle and distinguish which of the available software methodologies can be used to organise games projects in teams.</li>
+<li>Employ skills and experience with technical tools to support team work, including task planning/tracking software, source control, QA tools, backups and communication tools.</li>
+<li>Work effectively within a team, collaborate as a reliable contributor to the team effort and adapt to the strengths and weaknesses within that team.</li>
+<li>Prioritise&nbsp;deadlines, employ time management, and manage production to ensure such pressures are met.</li>
+<li>Evaluate and assess&nbsp;the principles of developing commercial games&nbsp;products in teams and be able to appraise these with respect to available literature and theory, as well as their own experiences.</li>
+</ol>															</td>
+														</tr>
+														<tr>																				</tr><tr>																	
+															<td colspan="4" style="vertical-align:text-middle; height: 22px; text-align:left;" class="moddesc_guidance">					
+																<h3>
+																  <label for="mod_deliverysites">13. Assessment and Reassessment Components and Weighting</label>
+																</h3>
+															</td>	
+														</tr>
+														<tr>																	
+															<td colspan="4" style="vertical-align:text-middle; height: 18px; text-align:left;" class="moddesc_guidance">					
+																
+																  <label for="mod_deliverysites">&nbsp;13a. Assessment</label>
+																
+															</td>	
+														</tr>
+														<tr>
+															<td colspan="4" class="view_items_border" style="vertical-align:text-middle; height: 22px;  text-align:left;">
+																<table width="728" border="0" cellspacing="0" cellpadding="2" id="tb">	<tbody id="tb13a">			<tr>				<td style="width:10px; text-align:right;"></td>				<td style="vertical-align:text-top; width: 271px; text-align:center;" class="moddesc_guidance"><b><font size="-1" face="Helvetica, Geneva, Arial, SunSans-Regular, sans-serif">Component</font></b></td>				<td style="vertical-align:text-top; width: 83px; text-align:center;" class="moddesc_guidance"><b><font size="-1" face="Helvetica, Geneva, Arial, SunSans-Regular, sans-serif">Weighting %</font></b></td>				<td style="vertical-align:text-top; width: 159px; text-align:center;" class="moddesc_guidance"><b><font size="-1" face="Helvetica, Geneva, Arial, SunSans-Regular, sans-serif">Learning outcome(s) assessed</font></b></td>				<td style="vertical-align:text-top; width: 149px; text-align:center;" class="moddesc_guidance" width="153"><b><font size="-1" face="Helvetica, Geneva, Arial, SunSans-Regular, sans-serif">Assessment category</font></b></td>			</tr><tr><td style="width:10px; text-align:right;">1</td><td class="view_items_border" width="271">Team Portfolio of Work and Individual Support Documentation (3000 word equivalent)</td><td class="view_items_border" align="center" width="83">75%</td><td class="view_items_border" width="159">1,2,3,4,5</td><td class="view_items_border" width="149">Coursework</td></tr><tr><td style="width:10px; text-align:right;">2</td><td class="view_items_border" width="271">Individual Written Report (1000 words)</td><td class="view_items_border" align="center" width="83">25%</td><td class="view_items_border" width="159">6</td><td class="view_items_border" width="149">Coursework</td></tr></tbody><tbody></tbody></table><br><br>Assignment 1: A team portfolio of work, comprising of a computer game prototype developed by that team, supporting documentation and a final group presentation. This will be supported by an individual submission, comprising a completed time-sheet and peer review document.<p></p>
+<p>Assignment 2: An individual written report demonstrating the student's understanding of team work, including production methodologies; the importance of documentation and communication; and the technical issues and solutions applied during teamwork. This report will require reference to the student's experiences during their team work on this module, and any previous experiences, such as&nbsp;collaborative work during level 4.															</p></td>
+														</tr>
+														<tr>																				</tr><tr>																	
+															<td colspan="4" style="vertical-align:text-middle; height: 18px; text-align:left;" class="moddesc_guidance">					
+																
+																  <label for="mod_deliverysites">&nbsp;13b. Reassessment</label>
+																
+															</td>	
+														</tr>
+														<tr>
+															<td colspan="4" class="view_items_border" style="vertical-align:text-middle; height: 22px;  text-align:left;">
+																Reassessment for Assignment 1 will depend on the availability of a suitable number of candidates to form a team, and the hours already completed during the original module delivery.<p></p>
+<p>If a team is available, Assignment 1 will take the same form as the original component, with an adjustment made to the brief to ensure a different project is completed, and the hours requirements are suitable for the re-assessment period available.</p>
+<p>If no team is available, Assignment 1 will take the same form as part of the original component - the student will be required to complete work equivalent to that of one team member in a period of time appropriate to the re-assessment period. For example, they may be required to complete the design of a game suitable for a small team to complete, but not actually work on the development of that game. In these cases, the student will be required to demonstrate understanding of how their working practices would be influenced by the presence of a team.</p>
+<p>Reassessment of Assignment 2 will take the same format as the original assessment, but the student must evaluate the experiences of a case study from within the games industry and relate those to the theory of team work instead of to their own experiences. A suitable case study will be suggested by the tutor.</p>
+<p>Due to the limited time available during reassessment periods, if a student is unable to meet the minimum required total of hours (when combined with any already completed during the original delivery), then they will be required to resit during the next full delivery.															</p></td>
+														</tr>
+														<tr>																																					
+															<td colspan="4" style="vertical-align:text-middle; height: 22px; text-align:left;" class="moddesc_guidance">					
+																<h3>
+																  <label for="mod_deliverysites">14. Key References</label>
+																</h3>
+															</td>	
+														</tr>
+														<tr>
+															<td colspan="4" class="view_items_border" style="vertical-align:text-middle; height: 22px;  text-align:left;">
+																<ul>
+<li>Fitzpatrick, B.W. &amp; Collin-Sussman, B. (2012).&nbsp;<em>Team Geek: A Software Developer's Guide to Working Well with Others</em><em>.&nbsp;</em>Farnham, England: O'Reilly</li>
+<li>Fullerton, T. (2014).&nbsp;<em>Game Design Workshop: A Playcentric Approach to Creating Innovative Games</em>(3rd ed.). Boca Raton, FL: CRC Press</li>
+<li>Geig, M. (2013)&nbsp;<em>Sams Teach Yourself Unity Game Development in 24 Hours</em>. Indianapolis, IN: SAMS</li>
+<li>Keith, Clinton. (2010).&nbsp;<em>Agile Game Development with SCRUM</em>. Boston, MA: Addison-Wesley</li>
+<li>Klimczak, Erik. (2013).&nbsp;<em>Design for Software: A Playbook for Developers</em>. New York, NY: John Wiley &amp; Sons</li>
+<li>Madhav, S. (2014).&nbsp;<em>Game Programming Algorithms and Techniques: A Platform-Agnostic Approach.&nbsp;</em>Crawfordsville, IN: Pearson Education</li>
+<li>Norton, T. (2013)&nbsp;<em>Learning C# by Developing Games with Unity 3D Beginner's Guide</em>. Birmingham, United Kingdom: PacktPub</li>
+<li>Sommerville, I. (2010)&nbsp;<em>Software Engineering</em>. (9th ed.) London, England: Pearson</li>
+</ul>															</td>
+														</tr>
+														<tr>																				</tr><tr>																	
+															<td colspan="4" style="vertical-align:text-middle; height: 22px; text-align:left;" class="moddesc_guidance">					
+																<h3>
+																  <label for="mod_deliverysites">15. Module Leader</label>
+																</h3>
+															</td>	
+														</tr>
+														<tr>
+															<td colspan="4" class="view_items_border" style="vertical-align:text-middle; height: 22px;  text-align:left;">
+																Ralph Ferneyhough															</td>
+														</tr>
+														<tr>																				</tr><tr>																	
+															<td colspan="4" style="vertical-align:text-middle; height: 22px; text-align:left;" class="moddesc_guidance">					
+																<h3>
+																  <label for="mod_deliverysites">16. Module Assessment Board</label>
+																</h3>
+															</td>	
+														</tr>
+														<tr>
+															<td colspan="4" class="view_items_border" style="vertical-align:text-middle; height: 22px;  text-align:left;">
+																Computer Science Undergraduate Board															</td>
+														</tr>
+														<tr>																				</tr><tr>																	
+															<td colspan="4" style="vertical-align:text-middle; height: 22px; text-align:left;" class="moddesc_guidance">					
+																<h3>
+																  <label for="mod_deliverysites">17. Approved by</label>
+																</h3>
+															</td>	
+														</tr>
+														<tr>
+															<td colspan="4" class="view_items_border" style="vertical-align:text-middle; height: 22px;  text-align:left;">
+																Faculty of Science and Engineering Board of Studies - sub-Committee															</td>
+														</tr>
+														<tr>																				</tr><tr>																	
+															<td colspan="4" style="vertical-align:text-middle; height: 22px; text-align:left;" class="moddesc_guidance">					
+																<h3>
+																  <label for="mod_deliverysites">18. Date of Approval</label>
+																</h3>
+															</td>	
+														</tr>
+														<tr>
+															<td colspan="4" class="view_items_border" style="vertical-align:text-middle; height: 22px;  text-align:left;">
+																Tue, 21 Jul 2020															</td>
+														</tr>
+												   </tbody></table>
+												</td>																
+											</tr>
+											
+										</tbody></table>
+									</td>
+								</tr>
+								<tr>
+									
+									<td style="vertical-align:text-top; width: 728px; text-align:left;">
+										
+										<p>											 
+										  <input name="mod_code" type="hidden" id="mod_code" value="CO5136">																  						  
+										</p>
+											
+										<p><a href="javascript:window.history.go(-1)">Close</a> - return to programme display page&nbsp;&nbsp;<a href="JavaScript:window.print()">Print</a> - launches the print options panel<br><br>
+										</p>
+									</td>
+								</tr>
+							</tbody></table>
+								
+						</center>
+	<br>
+<!-----------------start footer---------------->
+		
+
+	
+				
+
+
+</body></html>

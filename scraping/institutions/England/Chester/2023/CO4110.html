@@ -1,0 +1,512 @@
+<html><head>
+  <title>Programme Specification</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+<link rel="Shortcut Icon" type="image/ico" href="https://programmes.chester.ac.uk/favicon.ico">
+<link rel="icon" type="image/gif" href="https://programmes.chester.ac.uk/favicon.gif">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!-- link calendar resources -->
+	<link rel="stylesheet" type="text/css" href="tcal/tcal.css">
+	<script type="text/javascript" src="tcal/tcal.js"></script>
+
+<style>
+
+
+.border {
+
+	border-style:solid; 
+	border-color:#6a8cd4; /* change using php on the fly*/ 
+	border-width: 3px; 
+	padding: 10px; 
+	text-align:left; 
+	border-bottom-width:0px;
+	border-right-width:0px;
+}
+
+.colour_block{
+	border-style:solid; 
+	background-color: #6a8cd4; /* change using php on the fly*/
+	border-width: 3px; 
+	border-color:#6a8cd4; /* change using php on the fly*/ 
+}
+
+.view_items_border{
+	border-style:solid; 
+	border-width: 1px; 
+	border-color: #cccccc;
+	padding: 5px;
+}
+
+.border_colour_block{
+
+	border-style:solid; 
+	border-color:#6a8cd4; /* change using php on the fly*/ 
+	border-width: 3px; 
+	padding: 10px; 
+	text-align:left; 
+	border-bottom-width:0px;
+	border-right-width:0px;
+	background-color: #6a8cd4; /* change using php on the fly*/
+}
+
+.border_colour_end_block{
+	border-style:solid; 
+	border-color:#6a8cd4; /* change using php on the fly*/ 
+	border-width: 3px; 
+	padding: 10px; 
+	text-align:left; 
+	border-bottom-width:0px;
+	background-color: #6a8cd4; /* change using php on the fly*/ 
+}
+
+.border_right_block{
+	border-style:solid; 
+	border-color:#6a8cd4; /* change using php on the fly*/ 
+	border-width: 3px; 
+	padding: 10px; 
+	text-align:left; 
+	border-bottom-width:0px;
+	border-left-width:0px;
+}
+
+.border_end_block{
+	border-style:solid; 
+	border-color:#6a8cd4; /* change using php on the fly*/ 
+	border-width: 3px; 
+	padding: 10px; 
+	text-align:left; 
+	border-bottom-width:0px;
+}
+
+.border_left_panel_block{
+	border-style:solid;
+	border-color:#6a8cd4; /* change using php on the fly*/
+	border-width: 3px;
+	padding: 10px; text-align:left;
+}	
+
+#box1 {
+	background: #e5b8b7;
+}
+
+#box2 {
+	background: #e5cfec;
+}
+
+#box3 {
+	background: #fde9d9;
+}
+
+a.mya {
+       display: block;
+       background: url(images/search.png) no-repeat;
+       height: 25px;
+       width: 25px;
+	   text-indent: -9999px;
+}
+
+a.mya:hover {
+       background-position: 0 -25px;
+}
+
+a.createNewMD {
+       display: block;
+       background: url(images/create_new_MD.png) no-repeat;
+       height: 25px;
+       width: 85px;
+	   text-indent: -9999px;
+}
+
+a.createNewMD:hover {
+       background-position: 0 -25px;
+}
+
+
+a.deleteRow {
+       display: block;
+       background: url(images/delete.png) no-repeat;
+       height: 23px;
+       width: 22px;
+	   text-indent: -9999px;
+}
+
+a.deleteRow:hover {
+       background-position: 0 -23px;
+}
+
+</style>
+
+<script>
+	
+	
+		
+	
+	
+	
+		
+	
+	function cancels(theFaculty, theSearch, pse_ps_id, group_id) {
+		window.open('PS_main_process_page.php?pse_ps_id=' + pse_ps_id + '&group_id=' + group_id + '&search_faculty=' + theFaculty + '&frm_search=' + theSearch, '_self');
+	}
+	
+	function returnToSearch(theFaculty, theSearch){
+		var url = 'PS_main_menu_search_results.php?search_faculty=' + theFaculty + '&frm_search=' + theSearch;
+		window.open(url, '_self');
+	}
+	
+	function loadTable(){
+		//alert (ar.length);
+
+		var tableTop = '<table width="728" border="0" cellspacing="0" cellpadding="2" id="tb">';
+		tableTop += '	<tbody id="tb4">';
+		tableTop += '			<tr>';
+		tableTop += '				<td width="364" style="vertical-align:text-bottom;" class="moddesc_guidance"><p>4a. Award</label></p></td>';	
+		tableTop += '				<td width="364" style="vertical-align:text-bottom;" class="moddesc_guidance"><p>4b. Title </label></p></td>';		
+		tableTop += '			</tr>';
+
+		var helloWorld = tableTop; 
+		
+		// draw rows.
+		var uu= "";
+		for (i=0; i < ar.length; i++ )	{			
+			for (j = 0; j < selectAwards.length; j++ )	{	
+				if (selectAwards[j][0] == ar[i][1]){
+					//alert(selectAwards[j][0] + "-" + ar[i][1]);
+					helloWorld += '<tr>';			
+					helloWorld += '<td width="364">' + selectAwards[j][1] + '</td>';	
+					helloWorld += '<td width="364">' + selectAwards[j][3] + '</td>';			
+					helloWorld += '</tr>';
+				}				
+			}			
+		}
+				
+		// finish table
+		helloWorld += '<tbody></table>';
+		//alert ('helloWorld');
+		
+		assessment.innerHTML = helloWorld;	
+		
+	}
+	
+</script>
+
+
+ </head>
+ 
+  
+<body>
+<center>
+
+							<table width="736" border="0" cellspacing="0" cellpadding="0">
+												
+							<!-- hide when in edit mode-->
+								<tbody><tr>
+									
+									<td width="728">
+										<table border="0" cellspacing="0" cellpadding="0">
+											<tbody><tr>
+												<td style="vertical-align:text-middle; height: 32px;  text-align:left;">
+													<h2>&nbsp;CO4110 - User Experience and Collaborative Development</h2>
+												</td>
+											</tr>
+											<tr>
+												<td width="719">
+													<table style="border-width: 0; width:728px;" cellspacing="0" cellpadding="0">
+														<tbody><tr>
+															<td style="height: 22px; vertical-align:text-middle;  width: 161px; text-align:left;" class="moddesc_guidance">
+																<h3>
+																	<label for="mod_code">1. Module Code</label>
+																</h3>
+															</td>
+															<td class="view_items_border" style=" height: 22px; vertical-align:text-middle;  width: 52px;  text-align:left;">
+																 
+																	CO4110																 
+															</td>
+															<!--td style="vertical-align:text-middle; width: 5px; text-align:left;" width="5"></td-->
+															<td style="vertical-align:text-middle;  width: 161px;  text-align:left;" class="moddesc_guidance">
+																<h3>
+																	<label for="mod_title">2. Module Title</label>
+																</h3>
+															</td>
+															<td class="view_items_border" style="vertical-align:text-middle;  width: 475px;  text-align:left;">
+																User Experience and Collaborative Development															</td>
+														</tr>												
+														<tr>
+															<td style="vertical-align:text-middle; width: 131px; text-align:left; height: 22px;" class="moddesc_guidance">
+																<h3>
+																  <label for="frm_modlevel">3. Module Level</label>
+																</h3>
+															</td>
+															<td class="view_items_border" style="vertical-align:text-middle; text-align:left; height: 22px;">
+																4																					
+															</td>																					
+															<td style="vertical-align:text-middle; width:161px; text-align:left; height: 22px;" class="moddesc_guidance">
+																<h3>
+																	<label for="modcredit">4. Module Credit</label>
+																</h3>
+															</td>
+															<td class="view_items_border" style="vertical-align:text-middle; text-align:left; height: 22px;">
+																										
+																	20&nbsp;CC&nbsp;&nbsp;&nbsp;10&nbsp;ECTS
+																 
+															</td>
+														</tr>
+														<tr>																	
+															<td colspan="2" style="vertical-align:text-middle; height: 22px; text-align:left;" class="moddesc_guidance">					
+																<h3>
+																  <label for="mod_deliverysites">5. Delivery Site(s)</label>
+																</h3>
+															</td>																					
+															<td colspan="2" class="view_items_border" style="vertical-align:text-middle; height: 22px;  text-align:left;">
+																Exton Park (Chester), University College Isle of Man, Laksamana College of Business															</td>
+														</tr>
+														<tr>																	
+															<td colspan="2" style="vertical-align:text-middle; height: 22px; text-align:left;" class="moddesc_guidance">					
+																<h3>
+																  <label for="mod_deliverysites">6. Available to / Restrictions</label>
+																</h3>
+															</td>																					
+															<td colspan="2" class="view_items_border" style="vertical-align:text-middle; height: 22px;  text-align:left;">
+																N/A															</td>
+														</tr>
+														
+														<tr>																					
+															<td class="moddesc_guidance" colspan="4" style="vertical-align:text-middle;  text-align:left;">				
+																<h3>
+																  <label for="mod_study_text">7. Expected Student Learning Activity</label>
+																</h3>
+															</td>
+														</tr>
+														<tr>																					
+															<td class="view_items_border" colspan="4" style="vertical-align:text-middle;  text-align:left;">				
+																<br>															</td>
+														</tr>																						
+														<tr>
+														
+															<td class="view_items_border" colspan="4" style="vertical-align:text-top; width: 728px; text-align:center;">
+																
+																<table width="726" border="0" cellpadding="0" cellspacing="0">
+																	<tbody><tr>
+																		<td class="moddesc_guidance">Scheduled hours 
+																		</td>
+																		<td class="moddesc_guidance">Placement Hours 
+																		</td>
+																		<td class="moddesc_guidance">Independent Guided study 
+																		</td>
+																	</tr>
+																	<tr>
+																		<td style="width:242px" class="view_items_border">48 
+																		</td>
+																		<td style="width:242px" class="view_items_border">0																		</td>
+																		<td style="width:242px" class="view_items_border">152 
+																		</td>
+																	</tr>
+																 
+																</tbody></table>
+															</td>
+														</tr>																			
+														<tr>																	
+															<td colspan="4" style="vertical-align:text-middle; height: 22px; text-align:left;" class="moddesc_guidance">					
+																<h3>
+																  <label for="mod_deliverysites">8. Attendance Guidance</label>
+																</h3>
+															</td>	
+														</tr>
+														<tr>
+															<td colspan="4" class="view_items_border" style="vertical-align:text-middle; height: 22px;  text-align:left;">
+																<strong>Ongoing engagement with the module</strong><p></p>
+<p>Students are expected to provide evidence of engagement with online materials by using the&nbsp;module&nbsp;discussion board and workshops opportunities, for regular reflection on learning.															</p></td>
+														</tr>
+														<tr>																	
+															<td colspan="4" style="vertical-align:text-middle; height: 22px; text-align:left;" class="moddesc_guidance">					
+																<h3>
+																  <label for="mod_deliverysites">9. Module Content</label>
+																</h3>
+															</td>	
+														</tr>
+														<tr>
+															<td colspan="4" class="view_items_border" style="vertical-align:text-middle; height: 22px;  text-align:left;">
+																<ul>
+<li>Defining user experience design and&nbsp;the various subsets; including usability.</li>
+<li>An introduction to human factors and human-centred design standards.</li>
+<li>History of HCI and issues surrounding technology and innovation.</li>
+<li>Practical design and prototyping of user interface solutions to solve 'real world' problems.</li>
+<li>Experimenting with iterative team-based design and development exercises covering&nbsp;insights gathering, design processes, industry-approved frameworks, and user testing and evaluation.</li>
+<li>Introduction to careers in UX.</li>
+</ul>															</td>
+														</tr>
+														<tr>																				</tr><tr>																	
+															<td colspan="4" style="vertical-align:text-middle; height: 22px; text-align:left;" class="moddesc_guidance">					
+																<h3>
+																  <label for="mod_deliverysites">10. Aims</label>
+																</h3>
+															</td>	
+														</tr>
+														<tr>
+															<td colspan="4" class="view_items_border" style="vertical-align:text-middle; height: 22px;  text-align:left;">
+																<ul>
+<li>To encourage critical reflection on the needs of humans as users/consumers, and the demands and relevant constraints imposed.</li>
+<li>To ensure awareness of the rate of technological change, the effects on users/consumers, and the issues relevant to user experience designers.</li>
+<li>To promote inquiry into current leading digital technologies and possible future developments in ubiquitous computing.</li>
+<li>To give practice in the design and prototyping of user experiences and user interfaces, especially for web-based, console, desktop systems, and mobile devices.</li>
+<li>Gain "real-world" experience of taking part as a team member in a software development project.</li>
+</ul>															</td>
+														</tr>
+														<tr>																				</tr><tr>																	
+															<td colspan="4" style="vertical-align:text-middle; height: 22px; text-align:left;" class="moddesc_guidance">					
+																<h3>
+																  <label for="mod_deliverysites">11. Methods of Learning and Teaching and Formative Assessment</label>
+																</h3>
+															</td>	
+														</tr>
+														<tr>
+															<td colspan="4" class="view_items_border" style="vertical-align:text-middle; height: 22px;  text-align:left;">
+																<ul>
+<li>Tutor directed and self directed study. Lectures, workshops/tutorials and seminars.</li>
+<li>Online learning as directed, plus demonstrations &amp; practical exercises.</li>
+<li>Formative feedback will be given during contact time, by email and via virtual learning environments where appropriate.</li>
+</ul>															</td>
+														</tr>
+														<tr>																				</tr><tr>																	
+															<td colspan="4" style="vertical-align:text-middle; height: 22px; text-align:left;" class="moddesc_guidance">					
+																<h3>
+																  <label for="mod_deliverysites">12. Learning Outcomes</label>
+																</h3>
+															</td>	
+														</tr>
+														<tr>
+															<td colspan="4" class="view_items_border" style="vertical-align:text-middle; height: 22px;  text-align:left;">
+																<ol>
+<li>Demonstrate knowledge and understanding of key principles in the development of human-centered systems.&nbsp;</li>
+<li>Demonstrate knowledge and understanding of techniques associated with the thoughtful design of user interfaces.</li>
+<li>Select ‘fit for purpose’ methods and techniques for capturing, transferring and presenting data.</li>
+<li>Produce team-based, design-focused and human-centred solutions towards the creation of an interactive system&nbsp;prototype.</li>
+<li>Understand and reflect upon&nbsp;the multidisciplinary nature and significance of roles within a software development team.</li>
+<li>Evaluate&nbsp;a prototype&nbsp;system using the appropriate tools and methodology.</li>
+</ol>															</td>
+														</tr>
+														<tr>																				</tr><tr>																	
+															<td colspan="4" style="vertical-align:text-middle; height: 22px; text-align:left;" class="moddesc_guidance">					
+																<h3>
+																  <label for="mod_deliverysites">13. Assessment and Reassessment Components and Weighting</label>
+																</h3>
+															</td>	
+														</tr>
+														<tr>																	
+															<td colspan="4" style="vertical-align:text-middle; height: 18px; text-align:left;" class="moddesc_guidance">					
+																
+																  <label for="mod_deliverysites">&nbsp;13a. Assessment</label>
+																
+															</td>	
+														</tr>
+														<tr>
+															<td colspan="4" class="view_items_border" style="vertical-align:text-middle; height: 22px;  text-align:left;">
+																<table width="728" border="0" cellspacing="0" cellpadding="2" id="tb">	<tbody id="tb13a">			<tr>				<td style="width:10px; text-align:right;"></td>				<td style="vertical-align:text-top; width: 271px; text-align:center;" class="moddesc_guidance"><b><font size="-1" face="Helvetica, Geneva, Arial, SunSans-Regular, sans-serif">Component</font></b></td>				<td style="vertical-align:text-top; width: 83px; text-align:center;" class="moddesc_guidance"><b><font size="-1" face="Helvetica, Geneva, Arial, SunSans-Regular, sans-serif">Weighting %</font></b></td>				<td style="vertical-align:text-top; width: 159px; text-align:center;" class="moddesc_guidance"><b><font size="-1" face="Helvetica, Geneva, Arial, SunSans-Regular, sans-serif">Learning outcome(s) assessed</font></b></td>				<td style="vertical-align:text-top; width: 149px; text-align:center;" class="moddesc_guidance" width="153"><b><font size="-1" face="Helvetica, Geneva, Arial, SunSans-Regular, sans-serif">Assessment category</font></b></td>			</tr><tr><td style="width:10px; text-align:right;">1</td><td class="view_items_border" width="271">Practical - Team Project with Evaluation (4000 word equivalent)</td><td class="view_items_border" align="center" width="83">100%%</td><td class="view_items_border" width="159">1, 2, 3, 4, 5, 6</td><td class="view_items_border" width="149">Coursework</td></tr></tbody><tbody></tbody></table><br><br><strong>Assessment</strong>&nbsp;(team-based coursework) assesses the student on the meaningful practical application of the&nbsp;module theory (LOs 1-3),&nbsp;towards an interactive software prototype with evaluation (LOs 4-6). Evaluation involves&nbsp;a team-based oral&nbsp;presentation covering a detailed rationale of the theory and design-development process.															</td>
+														</tr>
+														<tr>																				</tr><tr>																	
+															<td colspan="4" style="vertical-align:text-middle; height: 18px; text-align:left;" class="moddesc_guidance">					
+																
+																  <label for="mod_deliverysites">&nbsp;13b. Reassessment</label>
+																
+															</td>	
+														</tr>
+														<tr>
+															<td colspan="4" class="view_items_border" style="vertical-align:text-middle; height: 22px;  text-align:left;">
+																Reassessment will be in the same format as the original assessment, with a&nbsp;narrated&nbsp;presentation&nbsp;<strong>replacing</strong>&nbsp;any oral face-to-face presentation.															</td>
+														</tr>
+														<tr>																																					
+															<td colspan="4" style="vertical-align:text-middle; height: 22px; text-align:left;" class="moddesc_guidance">					
+																<h3>
+																  <label for="mod_deliverysites">14. Key References</label>
+																</h3>
+															</td>	
+														</tr>
+														<tr>
+															<td colspan="4" class="view_items_border" style="vertical-align:text-middle; height: 22px;  text-align:left;">
+																<ul>
+<li>Cooper, A. et al. (2014).&nbsp;<em>About face 3: The essentials of interactive design</em>. Indianapolis, IN: Wiley.</li>
+<li>Garrett, J. J.&nbsp;(2011).&nbsp;<em>The elements of user experience: User-centered design for the web and beyond</em>. (2nd ed.). Berkeley, CA: New Riders.</li>
+<li><strong>Knapp, J., &amp; Zeratsky, J (2016).&nbsp;<em>Sprint.&nbsp;How to Solve Big Problems and Test New Ideas in Just Five Days.</em>&nbsp;Simon Schuster.</strong></li>
+<li>Krug, S. (2014).&nbsp;<em>Don't make me think!: A common sense approach to web usability.</em>&nbsp;Berkeley, CA: New Riders.</li>
+<li>Moggridge, B. (2010).&nbsp;<em>Designing interactions</em>. Cambridge, MA: Massachusetts Institute of Technology.</li>
+<li>Norman, D. A. (2013).&nbsp;<em>The design of everyday things.&nbsp;</em>(Rev. ed.).<em>&nbsp;Cambridge</em>, MA: Massachusetts Institute of Technology.</li>
+<li><strong>Saffer, D.&nbsp;(2010).&nbsp;<em>Designing for interaction: Creating innovative applications and devices</em>. (2nd ed.). Berkeley, CA: New Riders.</strong></li>
+<li>Smith, K. (2014).&nbsp;<em>Teamwork and project management</em>. New York: McGraw-Hill Higher Education.</li>
+</ul>
+<p>Key texts have been highlighted. A range of supporting articles can be sourced via online library resources. In particular, IEEE/IET Electronic Library and ACM Digital Library.															</p></td>
+														</tr>
+														<tr>																				</tr><tr>																	
+															<td colspan="4" style="vertical-align:text-middle; height: 22px; text-align:left;" class="moddesc_guidance">					
+																<h3>
+																  <label for="mod_deliverysites">15. Module Leader</label>
+																</h3>
+															</td>	
+														</tr>
+														<tr>
+															<td colspan="4" class="view_items_border" style="vertical-align:text-middle; height: 22px;  text-align:left;">
+																Andy Davies															</td>
+														</tr>
+														<tr>																				</tr><tr>																	
+															<td colspan="4" style="vertical-align:text-middle; height: 22px; text-align:left;" class="moddesc_guidance">					
+																<h3>
+																  <label for="mod_deliverysites">16. Module Assessment Board</label>
+																</h3>
+															</td>	
+														</tr>
+														<tr>
+															<td colspan="4" class="view_items_border" style="vertical-align:text-middle; height: 22px;  text-align:left;">
+																Computer Science Module Assessment Board															</td>
+														</tr>
+														<tr>																				</tr><tr>																	
+															<td colspan="4" style="vertical-align:text-middle; height: 22px; text-align:left;" class="moddesc_guidance">					
+																<h3>
+																  <label for="mod_deliverysites">17. Approved by</label>
+																</h3>
+															</td>	
+														</tr>
+														<tr>
+															<td colspan="4" class="view_items_border" style="vertical-align:text-middle; height: 22px;  text-align:left;">
+																Faculty of Science and Engineering Board of Studies															</td>
+														</tr>
+														<tr>																				</tr><tr>																	
+															<td colspan="4" style="vertical-align:text-middle; height: 22px; text-align:left;" class="moddesc_guidance">					
+																<h3>
+																  <label for="mod_deliverysites">18. Date of Approval</label>
+																</h3>
+															</td>	
+														</tr>
+														<tr>
+															<td colspan="4" class="view_items_border" style="vertical-align:text-middle; height: 22px;  text-align:left;">
+																Wed, 17 Mar 2021															</td>
+														</tr>
+												   </tbody></table>
+												</td>																
+											</tr>
+											
+										</tbody></table>
+									</td>
+								</tr>
+								<tr>
+									
+									<td style="vertical-align:text-top; width: 728px; text-align:left;">
+										
+										<p>											 
+										  <input name="mod_code" type="hidden" id="mod_code" value="CO4110">																  						  
+										</p>
+											
+										<p><a href="javascript:window.history.go(-1)">Close</a> - return to programme display page&nbsp;&nbsp;<a href="JavaScript:window.print()">Print</a> - launches the print options panel<br><br>
+										</p>
+									</td>
+								</tr>
+							</tbody></table>
+								
+						</center>
+	<br>
+<!-----------------start footer---------------->
+		
+
+	
+				
+
+
+</body></html>

@@ -1,0 +1,23 @@
+{
+    "institution": "Chester",
+    "index": {"2023": [
+        {
+            "url": "https://programmes.chester.ac.uk/ies/",
+            "actions": [{"XPath": "/html/body/div[4]/table[6]/tbody/tr/td[2]/p/a[2]",
+                        "action": "click"}]
+        }]},
+    "module": {
+        "moduleContainers": {
+            "XPath": "//*[@id='div6']//tr[position()>1]",
+            "moduleLink": {"XPath": "td[2]"},
+            "module_id": {"XPath": "td[1]"},
+            "title": {"XPath": "td[2]"},
+            "level": {"XPath": "td[4]"},
+            "credits": {"XPath": "td[6]"},
+            "link_to_click": {"XPath": "//td[contains(text(),'%LINK%')]/parent::tr/td[3]/a"}
+        },
+        "summary": {"XPath": "/html/body/center/table/tbody/tr[1]/td/table/tbody/tr[2]/td/table/tbody/tr[14]/td"},
+        "content": {"XPath": "/html/body/center/table/tbody/tr[1]/td/table/tbody/tr[2]/td/table/tbody/tr[11]/td"},
+        "ilo": {"XPath": "/html/body/center/table/tbody/tr[1]/td/table/tbody/tr[2]/td/table/tbody/tr[20]/td"}
+    }
+}
