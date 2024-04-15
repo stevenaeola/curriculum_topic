@@ -1,0 +1,31 @@
+{
+    "institution": "YSJ",
+    "index": {"2023": [
+        {"url": "https://www.yorksj.ac.uk/module-documents/",
+        "actions": [
+            {"ID": "onetrust-accept-btn-handler",
+            "action": "click",
+            "when": "first"},
+            {"action": "scroll"},
+            {"Link": "Computer Sciences",
+            "action": "click"},
+            {"ID": "mlmain_ddlYear",
+            "action": "select",
+            "data": "2023/4"},
+            {"ID": "mlmain_btnSubmit",
+            "action": "click"}
+        ]
+        }]},
+    "module": {
+        "moduleContainers": {
+            "XPath": "//tr[position() >1]",
+            "title": {"XPath": "td[3]"},
+            "module_id": {"XPath": "td[2]"},
+            "level": {"XPath": "td[5]"},
+            "credits": {"XPath": "td[6]"},
+            "module_link": {"XPath": "td[3]"},
+            "link_to_click": {"XPath": "//td[contains(text(),'%LINK%')]/parent::tr//a"}
+        },
+        "summary": {"XPath": "//*[@id='mlmain_lblModDesc']"}
+    }
+}
