@@ -45,7 +45,7 @@ def heading(field):
 # and https://www.lambdatest.com/blog/element-is-not-clickable-at-point-exception/
 # and https://www.scrapingbee.com/webscraping-questions/selenium/how-to-scroll-to-element-selenium/
 def click_element(driver, element_by):
-    wait = WebDriverWait(driver, 1)
+    wait = WebDriverWait(driver, 5)
     elt = wait.until(EC.element_to_be_clickable(element_by))
     driver.execute_script("arguments[0].scrollIntoView();", elt)
     try:
@@ -68,7 +68,7 @@ def load_content(driver, url_spec):
     if ('actions' in url_spec.keys()) and (type(actions := url_spec['actions']) is list):
         for action_spec in actions:
             select_by = None
-            # print ("About to do action", json.dumps(actionSpec))
+            # print ("About to do action", json.dumps(action_spec))
             # input("Hit enter")
             if 'when' in action_spec.keys():
                 if action_spec['when'] == "first":
@@ -84,18 +84,32 @@ def load_content(driver, url_spec):
 
             if 'Link' in action_spec.keys():
                 select_by = (By.PARTIAL_LINK_TEXT, action_spec['Link'])
-            
-            if not select_by:
+
+            if 'ID' in action_spec.keys():
+                select_by = (By.ID, action_spec['ID'])
+
+            action = action_spec['action']
+
+            if (not select_by) and (action != 'scroll'):
                 raise ValueError("No select_by for " + json.dumps(action_spec))
             
-            action = action_spec['action']
 
             if action == "click":
                 click_element(driver, select_by)
+            elif action == "scroll":
+                # adapted from https://scrapfly.io/blog/how-to-scroll-to-the-bottom-with-selenium/
+                if "data" in action_spec.keys():
+                    num_scrolls = int(action_spec['data'])
+                else:
+                    num_scrolls = 1
+                for times in range(num_scrolls):
+                    driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
             elif action == "select":
                 option = action_spec['data']
+                wait = WebDriverWait(driver, 5)
+                select_elt = wait.until(EC.presence_of_element_located(select_by))
                 # print ("selecting element " + option)
-                select = Select(driver.find_element(element_by))
+                select = Select(select_elt)
                 select.select_by_visible_text(option)
             
 
@@ -107,6 +121,10 @@ def scrape(institution_name):
     pp = pprint.PrettyPrinter(indent=4)
 
     driver1 = webdriver.Chrome()
+
+    # from https://stackoverflow.com/questions/28110008/python-selenium-wait-until-element-is-clickable-not-working
+    driver1.execute_script('document.getElementsByTagName("html")[0].style.scrollBehavior = "auto"')
+
     # driver1.implicitly_wait(2)
     # driver2 = webdriver.Chrome()
     key_fields = ['institution', 'year']
@@ -123,6 +141,8 @@ def scrape(institution_name):
 
         index = institution_config['index']     
         module = institution_config['module']
+        mmc = module['moduleContainers']
+
 
 
 # dictionary structure: year > module code > feature
@@ -177,7 +197,6 @@ def scrape(institution_name):
                         driver1.close()
                     driver1.switch_to.window(driver1.window_handles[0])
 
-                    mmc = module['moduleContainers']
 
                     # print ("moduleContainer", moduleContainer)
                     if 'moduleLink' in mmc.keys():
@@ -227,7 +246,13 @@ def scrape(institution_name):
                     load_content(driver1, year_index)
                     try:
                         print ("looking for link " + module_link)
-                        click_element(driver1, (By.PARTIAL_LINK_TEXT,  module_link))
+
+                        if "link_to_click" in mmc.keys():
+                            link_to_click_xpath = mmc['link_to_click']['XPath'].replace("%LINK%", module_link)
+                            print ("searching for" , link_to_click_xpath)
+                            click_element(driver1, (By.XPATH, link_to_click_xpath))
+                        else:
+                            click_element(driver1, (By.PARTIAL_LINK_TEXT,  module_link))
 
                         overview_dictionary = index_results[year][module_link]
 
