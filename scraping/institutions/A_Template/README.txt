@@ -24,6 +24,8 @@ This is a quick README for the data required in the institution.json file for a 
 
 If all of the data is held inside the index page then include '"no_clicking_required": true' in the spec (see Northampton)
 
+If the clickable items to select a module all have the same link title, then in the moduleContainers specify the "link_to_click" as an absolute XPath, with the link name replacing "%LINK%". See Chester as an example
+
 Actions to navigate from the index page to the list of modules can be specified in the "index" items e.g.
 
 "index": {"2023": {"url": "URL of starting point":
