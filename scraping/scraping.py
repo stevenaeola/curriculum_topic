@@ -256,20 +256,23 @@ def scrape(institution_name):
 
                         if "link_to_click" in mmc.keys():
                             link_to_click_xpath = mmc['link_to_click']['XPath'].replace("%LINK%", module_link)
-                            print ("searching for" , link_to_click_xpath)
                             click_element(driver1, (By.XPATH, link_to_click_xpath))
                         else:
                             click_element(driver1, (By.PARTIAL_LINK_TEXT,  module_link))
-
 
                         for overview_field in overview_fields:
                             if not (overview_field in overview_dictionary.keys()):
                                 overview_dictionary[overview_field] = ""
                             try:
+                                # print ("Looking for field at ",  module[overview_field]['XPath'])
+                                # input("Hit enter")
+                                wait = WebDriverWait(driver1, 5)
+                                wait.until(EC.presence_of_element_located((By.XPATH, module[overview_field]['XPath'])))
                                 overview_elts = driver1.find_elements(By.XPATH, module[overview_field]['XPath'])
                             except Exception:
                                 # print("Could not find field " + overview_field)
                                 continue
+
                             for elt in overview_elts:
                                 # print ("found elt for " + overview_field)
                                 innerHTML = elt.get_attribute('innerHTML').strip()
