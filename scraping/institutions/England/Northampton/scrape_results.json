@@ -1,0 +1,697 @@
+{
+  "2023": {
+    "CSY1900 \u2013 Studying the Games Industry": {
+      "module_id": "CSY1900 \u2013 Studying the Games Industry",
+      "title": "CSY1900 \u2013 Studying the Games Industry",
+      "summary": "<strong>Description:</strong> This module provides an insight into the creative industries and the way they function. Through this, students will gain knowledge and understanding of the ways in which content originates, is constructed and is categorised using key theoretical frameworks. Embedded throughout this module, are a range of academic study skills.",
+      "level": "<strong>Level:</strong> 4",
+      "credits": "<strong>Credit Value:</strong> 30"
+    },
+    "CSY1095 \u2013 3D Modelling for Gameplay Prototypes": {
+      "module_id": "CSY1095 \u2013 3D Modelling for Gameplay Prototypes",
+      "title": "CSY1095 \u2013 3D Modelling for Gameplay Prototypes",
+      "summary": "<strong>Description:</strong> This module introduces students to the technical 3D modelling skills and creative processes required to produce 3D models for game prototypes. Students develop their visual research and texturing skill set to produce bespoke assets which respond to market trends and audience requirements.",
+      "level": "<strong>Level:</strong> 4",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY1062 \u2013 Computer Communications": {
+      "module_id": "CSY1062 \u2013 Computer Communications",
+      "title": "CSY1062 \u2013 Computer Communications",
+      "summary": "<strong>Description:</strong> This module develops student?s understanding of the principles of communication networks and how to classify the various network devices in the appropriate layer of the protocol stack. Students will learn how to manage IP addresses in a small network and will develop confidence in using network simulation software.",
+      "level": "<strong>Level:</strong> 4",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY1080 \u2013 Fundamentals of Programming": {
+      "module_id": "CSY1080 \u2013 Fundamentals of Programming",
+      "title": "CSY1080 \u2013 Fundamentals of Programming",
+      "summary": "<strong>Description:</strong> This module introduces students to computer programming, and the concepts necessary to write a successful piece of code in a High-Level Programming Language (HLPL). Students develop essential skills to solve simple programming problems and are introduced to the principles underlying the design of High-Level Programming Languages.",
+      "level": "<strong>Level:</strong> 4",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY1082 \u2013 Database Design for Computer Games": {
+      "module_id": "CSY1082 \u2013 Database Design for Computer Games",
+      "title": "CSY1082 \u2013 Database Design for Computer Games",
+      "summary": "<strong>Description:</strong> In this module students apply the principles of database integrity to the design and development of database structures for computer games. Students apply data modelling techniques to establish, modify and maintain database integrity and data structures, using industry software and languages such as MySQL and Structured Query Language (SQL) PHP.",
+      "level": "<strong>Level:</strong> 4",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY1093 \u2013 Material Development for Games": {
+      "module_id": "CSY1093 \u2013 Material Development for Games",
+      "title": "CSY1093 \u2013 Material Development for Games",
+      "summary": "<strong>Description:</strong> The purpose of this module is to introduce students to the principles and technical skills used to create materials and textures for use in video games and other creative industries. Students explore the creative processes required to produce their own digital materials to industry standards.",
+      "level": "<strong>Level:</strong> 4",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY1077 \u2013 Group Game Project: Fundamentals": {
+      "module_id": "CSY1077 \u2013 Group Game Project: Fundamentals",
+      "title": "CSY1077 \u2013 Group Game Project: Fundamentals",
+      "summary": "<strong>Description:</strong> This module introduces students to group working practices within the context of a computer game development project. The module encourages the development of key interpersonal skills needed for collaborative work, such as communication, problem solving, respect and consideration of others, and identifying roles and responsibilities within a multidisciplinary group project.",
+      "level": "<strong>Level:</strong> 4",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY1073 \u2013 2D Animation": {
+      "module_id": "CSY1073 \u2013 2D Animation",
+      "title": "CSY1073 \u2013 2D Animation",
+      "summary": "<strong>Description:</strong> This module equips students to understand and implement the use of 2D animation in a digital format. Industry relevant 2D software, processes and terminology will be taught through practical tutorials and workshops. Students will also learn the fundamentals of sequence drawing for animation.",
+      "level": "<strong>Level:</strong> 4",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY1060 \u2013 Mathematics for Computer Science": {
+      "module_id": "CSY1060 \u2013 Mathematics for Computer Science",
+      "title": "CSY1060 \u2013 Mathematics for Computer Science",
+      "summary": "<strong>Description:</strong> This module introduces a set of mathematical topics, which include binary number system, logic circuits, linear systems, graph theory, probability and statistics, that are widely studied by those learning computing sciences. The module equips students with fundamental mathematical skills which underpin a range of computing disciplines.",
+      "level": "<strong>Level:</strong> 4",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY1063 \u2013 Web Development": {
+      "module_id": "CSY1063 \u2013 Web Development",
+      "title": "CSY1063 \u2013 Web Development",
+      "summary": "<strong>Description:</strong> This purpose of this  module is to give students an understanding of client side web technologies. This module provides students with: the essential knowledge and practical skills to design, develop and implement a Web site to contemmporary web standard",
+      "level": "<strong>Level:</strong> 4",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY1079 \u2013 Programming 2D Computer Games": {
+      "module_id": "CSY1079 \u2013 Programming 2D Computer Games",
+      "title": "CSY1079 \u2013 Programming 2D Computer Games",
+      "summary": "<strong>Description:</strong> This module introduces students to the skills, principles and concepts necessary to develop 2D computer games. Students apply aspects of High-Level Programming Language (HLPL) and development platforms to develop 2D computer games.",
+      "level": "<strong>Level:</strong> 4",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY1097 \u2013 Computer Games Architecture and Optimisation": {
+      "module_id": "CSY1097 \u2013 Computer Games Architecture and Optimisation",
+      "title": "CSY1097 \u2013 Computer Games Architecture and Optimisation",
+      "summary": "<strong>Description:</strong> This module introduces the main principles of computer games architecture, enabling students to gain practical experience of software engineering. Students explore computer game design, architecture and management, and gain an overview of game development process.",
+      "level": "<strong>Level:</strong> 4",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY1030 \u2013 Digital Footprints": {
+      "module_id": "CSY1030 \u2013 Digital Footprints",
+      "title": "CSY1030 \u2013 Digital Footprints",
+      "summary": "<strong>Description:</strong> The purpose of this module is ?to understand and apply and the principles of data integrity and protection to take responsibility for managing and capitalising on your online presence. Digital footprint is a self-managed, online module that considers the data trail and shadow left by interactions in digital environments.  The module develops a broad understanding of the impact of individual and organisational online presence in the context of digital marketing, data protection, ethical issues and good practice to optimise employability and prospects.",
+      "level": "<strong>Level:</strong> 4",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY1078 \u2013 Scripting for Games": {
+      "module_id": "CSY1078 \u2013 Scripting for Games",
+      "title": "CSY1078 \u2013 Scripting for Games",
+      "summary": "<strong>Description:</strong> This module introduces students to the key programming principles necessary to develop computer games through scripting. Students will apply these within the context of a game engine, exploring the development and application of algorithms, real-time assets, data management and interactivity within computer games.",
+      "level": "<strong>Level:</strong> 4",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY1092 \u2013 3D Character Art": {
+      "module_id": "CSY1092 \u2013 3D Character Art",
+      "title": "CSY1092 \u2013 3D Character Art",
+      "summary": "<strong>Description:</strong> This module develops the student?s knowledge and practical expertise in 3D modelling, with a specific focus on the technical skills required to produce 3D character models for use in computer games. Students will develop experience with character construction, topological deformation and rigging for animation.",
+      "level": "<strong>Level:</strong> 4",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY1061 \u2013 Computer Systems": {
+      "module_id": "CSY1061 \u2013 Computer Systems",
+      "title": "CSY1061 \u2013 Computer Systems",
+      "summary": "<strong>Description:</strong> This module provides knowledge of the hardware and software components that make up a computer system and overview the important concepts in preparation for future study of computer science.",
+      "level": "<strong>Level:</strong> 4",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY1085 \u2013 2D Visualisation": {
+      "module_id": "CSY1085 \u2013 2D Visualisation",
+      "title": "CSY1085 \u2013 2D Visualisation",
+      "summary": "<strong>Description:</strong> This module equips students to understand and implement the use of 2D graphics in a digital format. 2D software, figure drawing and perspective drawing will be taught through practical tutorials and workshops. Students will also learn the fundamentals of solid drawing through character design.",
+      "level": "<strong>Level:</strong> 4",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY1090 \u2013 2D Game Asset Production": {
+      "module_id": "CSY1090 \u2013 2D Game Asset Production",
+      "title": "CSY1090 \u2013 2D Game Asset Production",
+      "summary": "<strong>Description:</strong> The purpose of this module is to introduce students to the principles and technical skills used to create 2D digital graphics for video games and other creative industries, and to explore the creative processes required to produce their own digital assets to professional standards.",
+      "level": "<strong>Level:</strong> 4",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY1072 \u2013 3D Animation": {
+      "module_id": "CSY1072 \u2013 3D Animation",
+      "title": "CSY1072 \u2013 3D Animation",
+      "summary": "<strong>Description:</strong> This module introduces the fundamentals of 3D Animation, utilising industry standard software. Students will develop technical skills and learn how to produce key framed animations and looping sequences. The outcome of this module will be learner proficiency using professional software tools and 3D Animation techniques.",
+      "level": "<strong>Level:</strong> 4",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY1064 \u2013 Software Engineering Fundamentals": {
+      "module_id": "CSY1064 \u2013 Software Engineering Fundamentals",
+      "title": "CSY1064 \u2013 Software Engineering Fundamentals",
+      "summary": "<strong>Description:</strong> The purpose of this module is to develop student's experience with the multiple stages of software engineering life-cycles from initial need and requirements identification through to the design and implementation of code in order to develop confidence in the use of terminology and techniques for each of the stages.",
+      "level": "<strong>Level:</strong> 4",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY1086 \u2013 3D Modelling for Animation": {
+      "module_id": "CSY1086 \u2013 3D Modelling for Animation",
+      "title": "CSY1086 \u2013 3D Modelling for Animation",
+      "summary": "<strong>Description:</strong> This module introduces the fundamentals of 3D modelling, utilising industry standard software. Students will develop technical skills and learn how to produce low polygon models and correctly topologized 3D models. The outcome of this module will be learner proficiency understanding 3D basics and essentials.",
+      "level": "<strong>Level:</strong> 4",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY1903 \u2013 Games Art Production": {
+      "module_id": "CSY1903 \u2013 Games Art Production",
+      "title": "CSY1903 \u2013 Games Art Production",
+      "summary": "<strong>Description:</strong> The purpose of this module is to consider, understand and develop skills to design and produce game characters, game environments and game assets. This will be informed by a sound appreciation of key elements including style, form, scale, structure, perspective, colour, texture and their interrelationship.",
+      "level": "<strong>Level:</strong> 4",
+      "credits": "<strong>Credit Value:</strong> 40"
+    },
+    "CSY1081 \u2013 Programming for Game Engines": {
+      "module_id": "CSY1081 \u2013 Programming for Game Engines",
+      "title": "CSY1081 \u2013 Programming for Game Engines",
+      "summary": "<strong>Description:</strong> The purpose of this module is for students to explore 2D game engine functionality and develop skills to manage and work with 2D objects, worlds and spaces. Students will engage with the important technical skills required for programming 2D computer games within a game engine.",
+      "level": "<strong>Level:</strong> 4",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY1070 \u2013 Fundamentals of Animation": {
+      "module_id": "CSY1070 \u2013 Fundamentals of Animation",
+      "title": "CSY1070 \u2013 Fundamentals of Animation",
+      "summary": "<strong>Description:</strong> This module equips students with the core practical, theoretical and critical skills needed to start animation development. Students will develop core knowledge to support Animation for 2D, 3D, Visual Effects and Games. They will explore different animation methods using traditional techniques.",
+      "level": "<strong>Level:</strong> 4",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY1043 \u2013 Fundamentals of Computing Systems": {
+      "module_id": "CSY1043 \u2013 Fundamentals of Computing Systems",
+      "title": "CSY1043 \u2013 Fundamentals of Computing Systems",
+      "summary": "<strong>Description:</strong> The purpose of this module is to: introduce basic computing systems concepts by introducing computer architecture, compilers, operating systems, and algorithms; the interdependency of hardware and software design techniques and balance trade-offs between competing design constraints as well as classification of software (systems and application software).",
+      "level": "<strong>Level:</strong> 4",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY1020 \u2013 Problem Solving and Programming": {
+      "module_id": "CSY1020 \u2013 Problem Solving and Programming",
+      "title": "CSY1020 \u2013 Problem Solving and Programming",
+      "summary": "<strong>Description:</strong> This purpose of this module is to: introduce students to the skills, principles and concepts necessary to solve problems in computing; to develop essential skills to enable the solution of these problems with the construction of appropriate algorithms and a computer program; introduce principles underlying the design of a high level programming language (HLPL); gain experience and confidence in the use of a HLPL to implement algorithms; implement HLPL programs using an appropriate programming language  e.g. Java; introduce an object-oriented language initially as a non-object language.",
+      "level": "<strong>Level:</strong> 4",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY1902 \u2013 Traditional Art Skills": {
+      "module_id": "CSY1902 \u2013 Traditional Art Skills",
+      "title": "CSY1902 \u2013 Traditional Art Skills",
+      "summary": "<strong>Description:</strong> This module is to develop and enhance students? knowledge and understanding of the history, context and development of traditional art practices and skills. Through a range of practical workshops, students will be introduced to a range of techniques and approaches that can be applied to their art practice.",
+      "level": "<strong>Level:</strong> 4",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY1071 \u2013 Narrative Development": {
+      "module_id": "CSY1071 \u2013 Narrative Development",
+      "title": "CSY1071 \u2013 Narrative Development",
+      "summary": "<strong>Description:</strong> This module explores the fundamentals of storytelling within animated sequences. Students demonstrate their ability to intepret specified requirements, express their ideas for and produce thematical interpretations. Collaborative production techniques will be utilised to generate uniquely emotive products for a specified target audience.",
+      "level": "<strong>Level:</strong> 4",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY1094 \u2013 Level Design Principles": {
+      "module_id": "CSY1094 \u2013 Level Design Principles",
+      "title": "CSY1094 \u2013 Level Design Principles",
+      "summary": "<strong>Description:</strong> In this module students use level design principles within game engines to produce interactive game prototypes. Students learn the technical skills required to create effective `white box? designs for game levels, appreciating the importance of level design in the production pipeline.",
+      "level": "<strong>Level:</strong> 4",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY1023 \u2013 ICT Applications": {
+      "module_id": "CSY1023 \u2013 ICT Applications",
+      "title": "CSY1023 \u2013 ICT Applications",
+      "summary": "<strong>Description:</strong> This module aims to provide the ICT skills which will be directly relevant to an engineering role in the workplace and which will help to obtain maximum benefit from the programme. It covers a range of key ICT fundamentals and will allow students to explore the applications of ICT.",
+      "level": "<strong>Level:</strong> 4",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY1096 \u2013 User Interface Design for Games": {
+      "module_id": "CSY1096 \u2013 User Interface Design for Games",
+      "title": "CSY1096 \u2013 User Interface Design for Games",
+      "summary": "<strong>Description:</strong> This module introduces students to the principles and technical skills required to create interactive and intuitive user-interfaces (UI) for computer games. Students will use industry-standard 2D software to produce UI graphics. This will involve using shape language, colour theory and composition in the context of visual design for screen-based formats.",
+      "level": "<strong>Level:</strong> 4",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY1065 \u2013 Databases Design and Development": {
+      "module_id": "CSY1065 \u2013 Databases Design and Development",
+      "title": "CSY1065 \u2013 Databases Design and Development",
+      "summary": "<strong>Description:</strong> The purpose of this module is to apply the principles of database integrity in the design and development of database structures. This is a practical module that applies data modelling techniques to establish, modify and maintain database integrity, structures and associated components such as entities, relationships and attribute definitions.",
+      "level": "<strong>Level:</strong> 4",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY1076 \u2013 Drawing Fundamentals": {
+      "module_id": "CSY1076 \u2013 Drawing Fundamentals",
+      "title": "CSY1076 \u2013 Drawing Fundamentals",
+      "summary": "<strong>Description:</strong> This module introduces students to 2D and 3D visual communication, stimulating visual perception and idea generation.  Students will be encouraged to be experimental in their approach to applying suitable media and techniques to communicate technical and aesthetic subjects.",
+      "level": "<strong>Level:</strong> 4",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY1901 \u2013 Digital Art Practice": {
+      "module_id": "CSY1901 \u2013 Digital Art Practice",
+      "title": "CSY1901 \u2013 Digital Art Practice",
+      "summary": "<strong>Description:</strong> The purpose of this module is to enable students to develop an essential set of creative and technical skills and techniques in order to initiate, originate, develop and communicate creative ideas and concepts within a digital art context.",
+      "level": "<strong>Level:</strong> 4",
+      "credits": "<strong>Credit Value:</strong> 30"
+    },
+    "CSY1091 \u2013 3D Game Asset Production": {
+      "module_id": "CSY1091 \u2013 3D Game Asset Production",
+      "title": "CSY1091 \u2013 3D Game Asset Production",
+      "summary": "<strong>Description:</strong> This module introduces students to the technical 3D modelling skills and creative processes required to produce 3D digital assets within creative industry projects. The module will also introduce students to the study of professional developers and their product standards, to contextualise and understand current market trends and platform limitations.",
+      "level": "<strong>Level:</strong> 4",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY2088 \u2013 Group Project": {
+      "module_id": "CSY2088 \u2013 Group Project",
+      "title": "CSY2088 \u2013 Group Project",
+      "summary": "<strong>Description:</strong> The module is designed to develop higher-order intellectual skills (problem-solving) and appropriate personal qualities including team working. Each group will develop and document effective, robust and high-quality computing systems to a professional standard in response to a supplied specification of requirements.",
+      "level": "<strong>Level:</strong> 5",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY2080 \u2013 Relational Databases": {
+      "module_id": "CSY2080 \u2013 Relational Databases",
+      "title": "CSY2080 \u2013 Relational Databases",
+      "summary": "<strong>Description:</strong> The purpose of this module is to understand and apply the principles of database integrity to implement and utilise efficient databases.    RD is a practical module that employs data modelling and SQL techniques to design, define and manipulate data.",
+      "level": "<strong>Level:</strong> 5",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY2127 \u2013 Group Game Project: Advanced": {
+      "module_id": "CSY2127 \u2013 Group Game Project: Advanced",
+      "title": "CSY2127 \u2013 Group Game Project: Advanced",
+      "summary": "<strong>Description:</strong> This module develops students? professional collaborative skills and experience of the game development process when working in multi-disciplinary groups to develop a 3D digital game to a deadline. Students use effective communication methods, empathy and compromise, problem solving and organisation skills within the context of a computer game project.",
+      "level": "<strong>Level:</strong> 5",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY2061 \u2013 Mobile Application Development 1": {
+      "module_id": "CSY2061 \u2013 Mobile Application Development 1",
+      "title": "CSY2061 \u2013 Mobile Application Development 1",
+      "summary": "<strong>Description:</strong> This module is designed to give an understanding of the technologies (hardware/software) and how these are utilised in a modern networks. This understanding is then use to develop the necessary skills to design and implement (programming) software to be deployed within modern networks.",
+      "level": "<strong>Level:</strong> 5",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY2043 \u2013 Website Design": {
+      "module_id": "CSY2043 \u2013 Website Design",
+      "title": "CSY2043 \u2013 Website Design",
+      "summary": "<strong>Description:</strong> The purpose of this module is to focus on website interface design and develop principles, practices and concepts of web development to the next level. Building functional and professionally consistent websites involves an understanding of not only the interface, but how users experience design (UXD), interact with design (XD), and work with clients. The development of current coding and scripting skills are developed to support aesthetic considerations.",
+      "level": "<strong>Level:</strong> 5",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY2128 \u2013 Concept Art Techniques": {
+      "module_id": "CSY2128 \u2013 Concept Art Techniques",
+      "title": "CSY2128 \u2013 Concept Art Techniques",
+      "summary": "<strong>Description:</strong> This module provides students with the opportunity to expand their digital and traditional drawing skills into contemporary concept art techniques for creative industries such as computer game development. They will develop their individual design philosophy and workflow through study of current industry trends and practical application to computer game projects.",
+      "level": "<strong>Level:</strong> 5",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY2132 \u2013 Human Computer Interaction for Games": {
+      "module_id": "CSY2132 \u2013 Human Computer Interaction for Games",
+      "title": "CSY2132 \u2013 Human Computer Interaction for Games",
+      "summary": "<strong>Description:</strong> This module introduces students to the underlying reasoning behind Human Computer Interaction with relation to game design and accessibility; Why games are built the way they are. In digital games, this might relate to the requirements of a game engine or target platform and most importantly, the end user",
+      "level": "<strong>Level:</strong> 5",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY2086 \u2013 Computer Networks": {
+      "module_id": "CSY2086 \u2013 Computer Networks",
+      "title": "CSY2086 \u2013 Computer Networks",
+      "summary": "<strong>Description:</strong> The purpose of this module is to provide students a thorough understanding of the basic principles of communication networks, architectural design and the fundamental  communication protocols and the day-by-day network management. The module employs modern teaching simulation tool and hands on a fully equipped network lab.",
+      "level": "<strong>Level:</strong> 5",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY2100 \u2013 Advanced 3D Animation": {
+      "module_id": "CSY2100 \u2013 Advanced 3D Animation",
+      "title": "CSY2100 \u2013 Advanced 3D Animation",
+      "summary": "<strong>Description:</strong> This module develops the skills and technical knowledge required to produce complex 3D animated sequences. Students create and utilise a variety of assets, creation tools and engines. Open discussions and experimentation with post-production techniques ensure that opportunities to enhance the final quality of a product are explored.",
+      "level": "<strong>Level:</strong> 5",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY2041 \u2013 Quality and User-Centred Systems": {
+      "module_id": "CSY2041 \u2013 Quality and User-Centred Systems",
+      "title": "CSY2041 \u2013 Quality and User-Centred Systems",
+      "summary": "<strong>Description:</strong> Creating high quality information systems involves many different factors and all stages of the lifecycle. It relies on the establishment of standards, guidelines and techniques at each stage, and on a quality culture which embeds quality by design. Through this module you will build up a thorough understanding of the complexity of the user-technology relationship and how to ensure that the developed system fits the user needs and expectations.",
+      "level": "<strong>Level:</strong> 5",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY2119 \u2013 VFX Essentials": {
+      "module_id": "CSY2119 \u2013 VFX Essentials",
+      "title": "CSY2119 \u2013 VFX Essentials",
+      "summary": "<strong>Description:</strong> The purpose of this module is to research and learn the core skills and technical knowledge required to produce visual effects (VFX) for a variety of media. The primary aim is to develop theoretical knowledge and encourage experimentation with simulation processes.",
+      "level": "<strong>Level:</strong> 5",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY2093 \u2013 Object-Relational Databases": {
+      "module_id": "CSY2093 \u2013 Object-Relational Databases",
+      "title": "CSY2093 \u2013 Object-Relational Databases",
+      "summary": "<strong>Description:</strong> The purpose of this module is to develop the fundamental concepts and skills of Entity Relational Models (ERMs) and Structured Query Language (SQL).  It introduces extended-relational databases; user-defined types, their practical creation, application along with valuable data extraction methods to provide intelligence and database programming (PL/SQL).",
+      "level": "<strong>Level:</strong> 5",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY2125 \u2013 3D Environment Modelling": {
+      "module_id": "CSY2125 \u2013 3D Environment Modelling",
+      "title": "CSY2125 \u2013 3D Environment Modelling",
+      "summary": "<strong>Description:</strong> This module further develops learners? technical 3D modelling skills in application to computer game environment production. Learners are encouraged to produce optimised and efficient digital assets for game environments following industry development standards.",
+      "level": "<strong>Level:</strong> 5",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY2036 \u2013 Learning Through Work (WBL)": {
+      "module_id": "CSY2036 \u2013 Learning Through Work (WBL)",
+      "title": "CSY2036 \u2013 Learning Through Work (WBL)",
+      "summary": "<strong>Description:</strong> This module gives students the opportunity to apply and develop theoretical knowledge in the execution of an individual project and report.  By completing the module students will gain experience of researching the necessary technical information, of solving cross-disciplinary technical problems, of sourcing and obtaining parts and components and of working to a deadline with others in a team. This module has a strong industrial focus and includes various methods of engagement.",
+      "level": "<strong>Level:</strong> 5",
+      "credits": "<strong>Credit Value:</strong> 40"
+    },
+    "CSY2042 \u2013 Website Management": {
+      "module_id": "CSY2042 \u2013 Website Management",
+      "title": "CSY2042 \u2013 Website Management",
+      "summary": "<strong>Description:</strong> The purpose of this module is ? Developing a new website is one small part of the overall lifecycle. Managing and maintaining a site calls on a wide variety of skills, from content management to understanding the legal context of ownership, from people skills to implementing added functionality. This module introduces you to the varied talents required of a successful WebMaster.",
+      "level": "<strong>Level:</strong> 5",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY2089 \u2013 Web Programming": {
+      "module_id": "CSY2089 \u2013 Web Programming",
+      "title": "CSY2089 \u2013 Web Programming",
+      "summary": "<strong>Description:</strong> This purpose of this module is to give students an understanding of the conceps and technologies of web based server side technologies; teach students to use up-to-date programming techniques to design and develop coherent server side software for websites with a focus on security, functionality and usability.",
+      "level": "<strong>Level:</strong> 5",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY2083 \u2013 Digital Communications": {
+      "module_id": "CSY2083 \u2013 Digital Communications",
+      "title": "CSY2083 \u2013 Digital Communications",
+      "summary": "<strong>Description:</strong> This module examines the principles of fixed, wired and wireless digital communication systems.  At the end of this module, the learners will know the physical representation and features of the analogue and digital signal. They will also be able to apply the concepts in MATLAB or Python for simulation purposes.",
+      "level": "<strong>Level:</strong> 5",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY2084 \u2013 Ethical Hacking and Penetration Testing": {
+      "module_id": "CSY2084 \u2013 Ethical Hacking and Penetration Testing",
+      "title": "CSY2084 \u2013 Ethical Hacking and Penetration Testing",
+      "summary": "<strong>Description:</strong> This module equips students with theoretical awareness and practical skills to promote the protection and privacy of user?s data within an online environment.Students examine and use Industry standard tools, techniques, and documentation within the Ethical and legal framework for maintaining an effective Cybersecurity environment",
+      "level": "<strong>Level:</strong> 5",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY2130 \u2013 Digital Sculpting for Character Art": {
+      "module_id": "CSY2130 \u2013 Digital Sculpting for Character Art",
+      "title": "CSY2130 \u2013 Digital Sculpting for Character Art",
+      "summary": "<strong>Description:</strong> The purpose of this module is to develop students? skills in 3D digital character sculpting. Students will design and build 3D character models through the study of organic forms such as anatomy, skin, hair and clothing with consideration of polygonal topology and rigging for animation",
+      "level": "<strong>Level:</strong> 5",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY2131 \u2013 Design and Development for Games": {
+      "module_id": "CSY2131 \u2013 Design and Development for Games",
+      "title": "CSY2131 \u2013 Design and Development for Games",
+      "summary": "<strong>Description:</strong> This module guides students towards producing working prototypes of digital games using approaches relevant in modern industry and understanding how to make a playable and entertaining game. Students will engage with design principles, iteration cycles, and practical software skills necessary to deliver an impactful game demo.",
+      "level": "<strong>Level:</strong> 5",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY2129 \u2013 3D Art for Game Engines": {
+      "module_id": "CSY2129 \u2013 3D Art for Game Engines",
+      "title": "CSY2129 \u2013 3D Art for Game Engines",
+      "summary": "<strong>Description:</strong> This module develops the technical skills required to integrate 3D game art assets into a real-time game engine. Learners develop game engine specific techniques such as basic scripting, shader and geometry management, lighting and post processing.",
+      "level": "<strong>Level:</strong> 5",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY2087 \u2013 Data Structures and Algorithms": {
+      "module_id": "CSY2087 \u2013 Data Structures and Algorithms",
+      "title": "CSY2087 \u2013 Data Structures and Algorithms",
+      "summary": "<strong>Description:</strong> This module provides  students with a conceptual understanding of common data structures and algorithms used in Computer Science and Software Engineering. It enables students to implement and evaluate a selection of algorithms and abstract data types, including linked lists, stacks, queues, graphs and binary trees using an object-oriented language.",
+      "level": "<strong>Level:</strong> 5",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY2038 \u2013 Databases 2": {
+      "module_id": "CSY2038 \u2013 Databases 2",
+      "title": "CSY2038 \u2013 Databases 2",
+      "summary": "<strong>Description:</strong> The purpose of this module is ?To develop the fundamental concepts and skills of Entity Relational Models (ERMs) and Structured Query Language (SQL).  It focuses on the key areas of extended-relational databases; user-defined types, their practical creation, application along with valuable data extraction methods to provide intelligence.  Database programming (PL/SQL) is introduced.  The module employs industry standard software to achieve the maximum economic saleability.",
+      "level": "<strong>Level:</strong> 5",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY2081 \u2013 Cloud Computing and Big Data": {
+      "module_id": "CSY2081 \u2013 Cloud Computing and Big Data",
+      "title": "CSY2081 \u2013 Cloud Computing and Big Data",
+      "summary": "<strong>Description:</strong> The purpose of this module is to provide a fundamental understanding of the concepts of big data, virtualisation, and cloud computing. Students explore, select and justify appropriate frameworks/technologies for big data processing, virtualisation, and cloud computing solutions for a given scenario.",
+      "level": "<strong>Level:</strong> 5",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY2090 \u2013 Microprocessors and Internet of Things (IoT)": {
+      "module_id": "CSY2090 \u2013 Microprocessors and Internet of Things (IoT)",
+      "title": "CSY2090 \u2013 Microprocessors and Internet of Things (IoT)",
+      "summary": "<strong>Description:</strong> This purpose of this module is for students to explore a range of applications and design principles of various microprocessor based systems that can support the development and analyse of emerging Internet of Things technologies.",
+      "level": "<strong>Level:</strong> 5",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY2056 \u2013 Narrative for Games": {
+      "module_id": "CSY2056 \u2013 Narrative for Games",
+      "title": "CSY2056 \u2013 Narrative for Games",
+      "summary": "<strong>Description:</strong> Through session based activities, learners will be guided towards developing an insightful knowledge into narrative design. Understanding how to use narrative engagingly within a designed medium. Within digital industry, this will involve learning narrative history, media theory, act structure, psychological principles and digital implementation skills that are necessary to create an engaging digital product.",
+      "level": "<strong>Level:</strong> 5",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY2091 \u2013 Mobile Application Development": {
+      "module_id": "CSY2091 \u2013 Mobile Application Development",
+      "title": "CSY2091 \u2013 Mobile Application Development",
+      "summary": "<strong>Description:</strong> This module is designed to give an understanding of the technologies (hardware/software) and how these are utilised in a modern networks. This understanding is then use to develop the necessary skills to design and implement (programming) software to be deployed within modern networks.",
+      "level": "<strong>Level:</strong> 5",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY2126 \u2013 Digital Sculpting Fundamentals": {
+      "module_id": "CSY2126 \u2013 Digital Sculpting Fundamentals",
+      "title": "CSY2126 \u2013 Digital Sculpting Fundamentals",
+      "summary": "<strong>Description:</strong> The purpose of this module is to develop fundamental skills in 3D digital sculpting. Students use relevant digital sculpting software and non-linear creative processes to produce efficiently retopologised 3D models for use within computer game projects.",
+      "level": "<strong>Level:</strong> 5",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY2133 \u2013 Games Production": {
+      "module_id": "CSY2133 \u2013 Games Production",
+      "title": "CSY2133 \u2013 Games Production",
+      "summary": "<strong>Description:</strong> This module guides students towards producing working finalised levels of digital games using approaches relevant in modern industry and understanding how to make an immersive and fully interactable game. Students will engage with user testing, build cycles, and refined software skills necessary to deliver an effective product.",
+      "level": "<strong>Level:</strong> 5",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY2094 \u2013 Systems Design and Development": {
+      "module_id": "CSY2094 \u2013 Systems Design and Development",
+      "title": "CSY2094 \u2013 Systems Design and Development",
+      "summary": "<strong>Description:</strong> This purpose of this module is to extend and apply system design and development to large scale systems; explore building GUIs  so that the idea of specifying general software components and implementing re-usable classes will become familiar; provide tools and skills which the student will require when encountering design projects.",
+      "level": "<strong>Level:</strong> 5",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY2135 \u2013 Mathematics For Computer Games": {
+      "module_id": "CSY2135 \u2013 Mathematics For Computer Games",
+      "title": "CSY2135 \u2013 Mathematics For Computer Games",
+      "summary": "<strong>Description:</strong> In this module students acquire the essential mathematic skills which underpin computer games programming. Students will develop skills in Algebra, Geometry and Calculus in the context of computer games programming.",
+      "level": "<strong>Level:</strong> 5",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY2134 \u2013 Interaction Design for Games": {
+      "module_id": "CSY2134 \u2013 Interaction Design for Games",
+      "title": "CSY2134 \u2013 Interaction Design for Games",
+      "summary": "<strong>Description:</strong> This module develops learner?s knowledge of designing to enhance the overall player experience. Learners will implement essential user experience principles to enable the design of rewarding prototype gameplay mechanics. This will produce interactive experiences that meet the requirements of varying target platforms and most importantly, the player.",
+      "level": "<strong>Level:</strong> 5",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY2136 \u2013 2D Graphics Programming for Computer Games": {
+      "module_id": "CSY2136 \u2013 2D Graphics Programming for Computer Games",
+      "title": "CSY2136 \u2013 2D Graphics Programming for Computer Games",
+      "summary": "<strong>Description:</strong> This module explores the use of 2D graphics for computer games, and primarily focuses on fundamental mathematical techniques that underpin the manipulation and display of 2D images and objects. The module addresses key aspects of the human visual system and how it governs our interaction with the digital domain.",
+      "level": "<strong>Level:</strong> 5",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY2082 \u2013 Introduction to Artificial Intelligence": {
+      "module_id": "CSY2082 \u2013 Introduction to Artificial Intelligence",
+      "title": "CSY2082 \u2013 Introduction to Artificial Intelligence",
+      "summary": "<strong>Description:</strong> The module introduces fundamentals of data science and machine learning. Students will gain understanding of ethical and legal considerations when analysing data and acquire skills to address bias. Students will practice using data processing, modelling and visualisation tools for problem solving of practical challenges and the development of AI-driven applications",
+      "level": "<strong>Level:</strong> 5",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY2058 \u2013 Indie Games Development": {
+      "module_id": "CSY2058 \u2013 Indie Games Development",
+      "title": "CSY2058 \u2013 Indie Games Development",
+      "summary": "<strong>Description:</strong> The purpose of this module is to: introduce the concepts and the fundamentals of Indie Games design, programming and development; to gain in-depth understanding of real-time animations for computer games applications; to further understand the process of computer games programming and development using game engines; to gain the technical skills by developing a 3D application project.",
+      "level": "<strong>Level:</strong> 5",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY2092 \u2013 Operating Systems": {
+      "module_id": "CSY2092 \u2013 Operating Systems",
+      "title": "CSY2092 \u2013 Operating Systems",
+      "summary": "<strong>Description:</strong> The purpose of this module is designed to give an understanding of the theory, application, structure and design principles of operating systems. This module requires a significant practical element delivered as formal laboratory sessions.",
+      "level": "<strong>Level:</strong> 5",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY2137 \u2013 Programming 3D Computer Games": {
+      "module_id": "CSY2137 \u2013 Programming 3D Computer Games",
+      "title": "CSY2137 \u2013 Programming 3D Computer Games",
+      "summary": "<strong>Description:</strong> The purpose of this module is to introduce the skills, principles and concepts necessary to develop high-performance 3D computer games. Students will construct appropriate algorithms to develop interactive gaming applications using contemporary game engines such as Unreal or Unity.",
+      "level": "<strong>Level:</strong> 5",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY2085 \u2013 Server Administration and Security": {
+      "module_id": "CSY2085 \u2013 Server Administration and Security",
+      "title": "CSY2085 \u2013 Server Administration and Security",
+      "summary": "<strong>Description:</strong> This module equips students with the skills to create a secure hosting environment and knowledge on how to deploy a website live on the web using modern concepts such as containerisation and a focus on security.",
+      "level": "<strong>Level:</strong> 5",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY3034 \u2013 Business Intelligence": {
+      "module_id": "CSY3034 \u2013 Business Intelligence",
+      "title": "CSY3034 \u2013 Business Intelligence",
+      "summary": "<strong>Description:</strong> The purpose of this module is the link between business and IT, allowing student to use and evaluate technologies and infrastructures needed to synthesize valuable information providing businesses with a competitive edge. Data analysis, reporting, and query tools are used to develop insights for business decisions. Business Intelligence (BI) represents a category of applications and technologies for gathering, storing, visualising, analysing, and providing access to data to make informed business decisions.",
+      "level": "<strong>Level:</strong> 6",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY3046 \u2013 Mobile Application Development 2": {
+      "module_id": "CSY3046 \u2013 Mobile Application Development 2",
+      "title": "CSY3046 \u2013 Mobile Application Development 2",
+      "summary": "<strong>Description:</strong> The purpose of this module is to understand modern mobile computing in terms of its hardware and software and the networks that support mobile devices as well as to implement software to run in a mobile computing context.",
+      "level": "<strong>Level:</strong> 6",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY3065 \u2013 Contemporary Approaches to Software Development": {
+      "module_id": "CSY3065 \u2013 Contemporary Approaches to Software Development",
+      "title": "CSY3065 \u2013 Contemporary Approaches to Software Development",
+      "summary": "<strong>Description:</strong> This module will explore many of the most widely used software development methodologies and skill - sets currently being used in the software industry by high-quality software engineers and facilitate students to effective select, deploy and manage a suitable methodology for a given industry scenario",
+      "level": "<strong>Level:</strong> 6",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY3032 \u2013 Systems Development Approaches": {
+      "module_id": "CSY3032 \u2013 Systems Development Approaches",
+      "title": "CSY3032 \u2013 Systems Development Approaches",
+      "summary": "<strong>Description:</strong> This purpose of this module is to: develop further the concepts learned in the prerequisites level 5 module by placing analysis and design techniques and approaches into context; explore alternative approaches to requirements capture and specification, and to development models; give guidance on how to map these development models onto organisational situations; develop an understanding of the importance of 'softer' skills in systems development, and experience in applying them; develop the ability to select, apply and justify appropriate methods and tools that will make an effective contribution to information systems development.",
+      "level": "<strong>Level:</strong> 6",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY3064 \u2013 Embedded Real Time Systems": {
+      "module_id": "CSY3064 \u2013 Embedded Real Time Systems",
+      "title": "CSY3064 \u2013 Embedded Real Time Systems",
+      "summary": "<strong>Description:</strong> This module is designed to give an indepth appreciation of the design, implementation and testing principles of embedded and real-time systems. Students will explore the complexities andissues involved in the use of  embedded systems and interfacing with computer devices.",
+      "level": "<strong>Level:</strong> 6",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY3062 \u2013 Cybersecurity and Applied Cryptography": {
+      "module_id": "CSY3062 \u2013 Cybersecurity and Applied Cryptography",
+      "title": "CSY3062 \u2013 Cybersecurity and Applied Cryptography",
+      "summary": "<strong>Description:</strong> This module provides students with the necessary practical skills and theoretical understanding of the technologies used to secure communications and protect the privacy of users within an online environment. Concepts introduced, and skills learnt, provide the necessary technical underpinning to enable the student to address the issues of effective Security.",
+      "level": "<strong>Level:</strong> 6",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY4018 \u2013 Games Dissertation": {
+      "module_id": "CSY4018 \u2013 Games Dissertation",
+      "title": "CSY4018 \u2013 Games Dissertation",
+      "summary": "<strong>Description:</strong> The purpose of this module is to provide the opportunity for the student to undertake the research and self-management of a Computer Games related problem that permits the integration of the main areas of study in the student?s study programme. The module also permits the development of higher order intellectual skills.",
+      "level": "<strong>Level:</strong> 6",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY3028 \u2013 Graphics 2": {
+      "module_id": "CSY3028 \u2013 Graphics 2",
+      "title": "CSY3028 \u2013 Graphics 2",
+      "summary": "<strong>Description:</strong> This purpose of this (Level 5) module is to understand and implement graphic applications. The module consists of three-dimensional graphics and animation. Such graphics have many uses from medical simulation to computer games. Advances in computer graphics hardware and in computer graphics libraries has now made it possible for the production and display of high quality computer graphics on stock hardware.",
+      "level": "<strong>Level:</strong> 6",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY3061 \u2013 Cloud and Advanced Network Technologies": {
+      "module_id": "CSY3061 \u2013 Cloud and Advanced Network Technologies",
+      "title": "CSY3061 \u2013 Cloud and Advanced Network Technologies",
+      "summary": "<strong>Description:</strong> At the end of this module, the students will be able to apply advanced networking routing and security protocols on a medium/large enterprise network. Furthermore, they will know how enterprise networks access the Internet and Cloud services. Students will also learn Cloud networking principles with applications to modern telecommunications.",
+      "level": "<strong>Level:</strong> 6",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY3045 \u2013 Simulation and Dynamics": {
+      "module_id": "CSY3045 \u2013 Simulation and Dynamics",
+      "title": "CSY3045 \u2013 Simulation and Dynamics",
+      "summary": "<strong>Description:</strong> The purpose of this module is to introduce the basic concepts of computation through modelling and simulation that are increasingly being used by computer games developers/programmers to shorten design/implementation cycles and simulate the impacts of alternative approaches; to introduce students to scientific programming through exploring a range of programming and modelling concepts using the appropriate mathematical software.",
+      "level": "<strong>Level:</strong> 6",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY3044 \u2013 Design Innovation": {
+      "module_id": "CSY3044 \u2013 Design Innovation",
+      "title": "CSY3044 \u2013 Design Innovation",
+      "summary": "<strong>Description:</strong>  The objective of the module is to encourage students to explore the potential of innovative or unconventional technology to construct genuinely new, interactive experiences.",
+      "level": "<strong>Level:</strong> 6",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY3055 \u2013 Natural Language Processing": {
+      "module_id": "CSY3055 \u2013 Natural Language Processing",
+      "title": "CSY3055 \u2013 Natural Language Processing",
+      "summary": "<strong>Description:</strong> This module introduces the most recent theories, methods, and tools in Natural Language Processing (NLP) to develop high-performance NLP-driven applications. Students apply traditional and advanced NLP methods to common use-cases, with a focus on establishing successful Machine Learning-based NLP solutions using cutting-edge Deep Learning algorithms and Transfer Learning methods.",
+      "level": "<strong>Level:</strong> 6",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY3058 \u2013 Media Technology": {
+      "module_id": "CSY3058 \u2013 Media Technology",
+      "title": "CSY3058 \u2013 Media Technology",
+      "summary": "<strong>Description:</strong> Media Technology is an important aspect to Computer Science. This module will introduce a range of technologies relevant to modern multimedia systems. This includes computer graphics, digital image processing, online video streaming, immersive media, and other advanced applications. Student will develop audio-visual systems in a third generation computer language.",
+      "level": "<strong>Level:</strong> 6",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY3050 \u2013 Visual Studies for Games 3": {
+      "module_id": "CSY3050 \u2013 Visual Studies for Games 3",
+      "title": "CSY3050 \u2013 Visual Studies for Games 3",
+      "summary": "<strong>Description:</strong> This module builds on the level five visual studies module with the aim of providing learners with the opportunity to expand on skills and understanding, learnt in the first two years, through the vehicle of an associated creative project. Learners will be encouraged to further develop individual design philosophies and styles within the learning constraints of a creative brief. The module provides the opportunity for learners to research, integrate and apply established working practices, concepts and principles within a commercial setting and to deadlines.The two items of assessed work associated with Visual Studies 3 are intended to support:1.\tThe ?Art Director Portfolio, Final Major Project? level six module2.\tTo further enhance individual learner portfolios to meet requirements for interviews (ongoing practice)",
+      "level": "<strong>Level:</strong> 6",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY3022 \u2013 Digital Signal Processing": {
+      "module_id": "CSY3022 \u2013 Digital Signal Processing",
+      "title": "CSY3022 \u2013 Digital Signal Processing",
+      "summary": "<strong>Description:</strong> The purpose of this module is to give an understanding of the theory, design and structure of both the hardware and software used in digital signal processor systems and their application in real world situations. This module requires a significant practical element delivered as formal laboratory sessions.",
+      "level": "<strong>Level:</strong> 6",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY3031 \u2013 Group Project 3 (Games)": {
+      "module_id": "CSY3031 \u2013 Group Project 3 (Games)",
+      "title": "CSY3031 \u2013 Group Project 3 (Games)",
+      "summary": "<strong>Description:</strong> The purpose of this module is: to emphasie independent learning, development and responsibility, through the creation of a social game following industry practices; implement production process and design of the groups games, through self-directed and supported support from a module supervisor in conjunction with some, tutor lead lectures; implement a game to demonstrate the understanding of the complete development life cycle; publication of the game in the public domain.",
+      "level": "<strong>Level:</strong> 6",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY3051 \u2013 Professional Practice in Games": {
+      "module_id": "CSY3051 \u2013 Professional Practice in Games",
+      "title": "CSY3051 \u2013 Professional Practice in Games",
+      "summary": "<strong>Description:</strong> The main aim of the module is to ensure students are fully aware of the needs and expectations of the contemporary digital industry through an understanding of its social, economic and cultural climate. The module aims to enable students to pitch projects in terms of concept and business models; establishing and maintaining a personal website; identifying trends and market possibilities; encouraging participation in competitions; developing presentation and self-promotional skills; making job applications and preparing for interview.",
+      "level": "<strong>Level:</strong> 6",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY3057 \u2013 Cyber Security Management": {
+      "module_id": "CSY3057 \u2013 Cyber Security Management",
+      "title": "CSY3057 \u2013 Cyber Security Management",
+      "summary": "<strong>Description:</strong> This module examines the concepts and practices underlying effective cyber security management. Students learn strategic components of managing for successful cyber security, with emphasis on information protection, compliance, standards and ethics. Students are equipped to design an effective cyber intelligence framework and draft appropriate security policies aligned with business requirements.",
+      "level": "<strong>Level:</strong> 6",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY3030 \u2013 Game Techniques 3": {
+      "module_id": "CSY3030 \u2013 Game Techniques 3",
+      "title": "CSY3030 \u2013 Game Techniques 3",
+      "summary": "<strong>Description:</strong> The purpose of this module is to: develop a critical appreciation of the social game development lifecycle; apply complex problem-solving skills to social develop games programs; introduce students to the skills, principles and concepts necessary to develop social computer games; implemente social games programs using an appropriate programming language and development platform.",
+      "level": "<strong>Level:</strong> 6",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY3056 \u2013 Development Operations and Software Testing": {
+      "module_id": "CSY3056 \u2013 Development Operations and Software Testing",
+      "title": "CSY3056 \u2013 Development Operations and Software Testing",
+      "summary": "<strong>Description:</strong> This module equips students with the skills to work in environments using modern development techniques and knowledge of the development operations role in software development.",
+      "level": "<strong>Level:</strong> 6",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY4022 \u2013 Computing Project Dissertation": {
+      "module_id": "CSY4022 \u2013 Computing Project Dissertation",
+      "title": "CSY4022 \u2013 Computing Project Dissertation",
+      "summary": "<strong>Description:</strong> This project module provides the opportunity for the student to undertake independent research, development, and self-management of a Computing related project leading to completing a dissertation. An essential outcome for this module is that the student?s project deliverable includes the design and development of a system, or a software application, or a novel functional approach that relates to the main areas of student study, and that can be used, applied or demonstrated in some way. Students on the BSc Business Computing may engage on a research centered project resulting in a report of analysis of an appropriate topic.",
+      "level": "<strong>Level:</strong> 6",
+      "credits": "<strong>Credit Value:</strong> 40"
+    },
+    "CSY3060 \u2013 Advanced AI and Applications": {
+      "module_id": "CSY3060 \u2013 Advanced AI and Applications",
+      "title": "CSY3060 \u2013 Advanced AI and Applications",
+      "summary": "<strong>Description:</strong> The purpose of this module is to: teach students the fundamental theories and practical applications of advanced artificial intelligence techniques including artificial neural networks, image classification and object detection.  The underpinning concepts will be introduced, followed by examples of how responsible and ethical artificial intelligence applications are developed and tested.",
+      "level": "<strong>Level:</strong> 6",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY4021 \u2013 Art Director Portfolio, Final Major Project": {
+      "module_id": "CSY4021 \u2013 Art Director Portfolio, Final Major Project",
+      "title": "CSY4021 \u2013 Art Director Portfolio, Final Major Project",
+      "summary": "<strong>Description:</strong> The module integrates and draws together the various aspects of the programme gained during study at levels 4, 5 and 6.The main aim of the module is to ensure students are prepared for their first steps towards the industry, by allowing them opportunity to develop a body of highly polished work demonstrated and refined via regular critiques of work in progress.This module gives them opportunity to specialize on developing content for their portfolio. The work developed will be as close to industry standard and expectations, as feasible, and will be tailored towards the specific areas of the individuals interest such as; Concept Art, Environment Art, Animation, UI design etc.This module is to support through mentoring the individual students on their professional journey.",
+      "level": "<strong>Level:</strong> 6",
+      "credits": "<strong>Credit Value:</strong> 60"
+    },
+    "CSY3059 \u2013 Modern Databases": {
+      "module_id": "CSY3059 \u2013 Modern Databases",
+      "title": "CSY3059 \u2013 Modern Databases",
+      "summary": "<strong>Description:</strong> The purpose of this module is to study advanced/latest database topics.  The module focuses primarily on NoSQL databases (e.g., graph and document databases), from designing and creating to querying the databases.",
+      "level": "<strong>Level:</strong> 6",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY3037 \u2013 IT Project Management": {
+      "module_id": "CSY3037 \u2013 IT Project Management",
+      "title": "CSY3037 \u2013 IT Project Management",
+      "summary": "<strong>Description:</strong> This purpose of this module is for students to absorb a considerable body of knowledge, which can then be reinforced by application of the theory. The module therefore employs a combination of theory and practice using real or simulated IT projects of diverse sizes. Content will be delivered by lecture and workshop sessions. Students? understanding of the theory will be tested by time-constrained assessment. Practical assignments will be based around a scenario (e.g. development of a database system requiring coordination of a diverse team comprising designers and programmers) and require students to work in groups, planning and controlling the project.",
+      "level": "<strong>Level:</strong> 6",
+      "credits": "<strong>Credit Value:</strong> 20"
+    },
+    "CSY3063 \u2013 Mobile Computing": {
+      "module_id": "CSY3063 \u2013 Mobile Computing",
+      "title": "CSY3063 \u2013 Mobile Computing",
+      "summary": "<strong>Description:</strong> The purpose of this module is to identify modern mobile computing in terms of its hardware and software and the networks that support mobile devices as well as to implement software to run in a mobile computing context.",
+      "level": "<strong>Level:</strong> 6",
+      "credits": "<strong>Credit Value:</strong> 20"
+    }
+  }
+}

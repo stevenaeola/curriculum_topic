@@ -1,0 +1,34 @@
+{
+    "institution": "Northampton",
+    "index": {"2023": [{"url": "https://www.northampton.ac.uk/awards/modules/computer-systems/4/",
+                        "actions": [
+                            {"ID": "CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll",
+                             "action": "click",
+                             "when": "first"}
+                        ]},
+                        {"url": "https://www.northampton.ac.uk/awards/modules/computer-systems/5/",
+                        "actions": [
+                            {"ID": "CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll",
+                             "action": "click",
+                             "when": "first"}
+                        ]},
+                        {"url": "https://www.northampton.ac.uk/awards/modules/computer-systems/6/",
+                        "actions": [
+                            {"ID": "CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll",
+                             "action": "click",
+                             "when": "first"}
+                        ]}
+                        ]},
+    "module": {
+        "moduleContainers": 
+            {"CSS_class": "panel",
+            "moduleLink": {"XPath": ".//h3/strong"},
+            "module_id": {"XPath": ".//h3/strong"},
+            "title": {"XPath": ".//h3/strong"},
+            "credits": {"XPath": ".//ol/li/p[3]"},
+            "level" : {"XPath": ".//ol/li/p[4]"},
+            "summary": {"XPath": ".//ol/li/p[10]"}
+        },
+        "no_clicking_required": true
+    }
+}
