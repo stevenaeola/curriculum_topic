@@ -1,0 +1,148 @@
+{
+  "2023": {
+    "CIS3039-N": {
+      "module_id": "CIS3039-N",
+      "credits": "30.00",
+      "title": "",
+      "summary": "",
+      "content": "",
+      "ilo": "",
+      "level": ""
+    },
+    "CIS3036-N": {
+      "module_id": "CIS3036-N",
+      "credits": "30.00",
+      "title": "",
+      "summary": "",
+      "content": "",
+      "ilo": "",
+      "level": ""
+    },
+    "CIS1073-N": {
+      "module_id": "CIS1073-N",
+      "credits": "30.00",
+      "title": "Secure Computers and Networks",
+      "summary": "This module covers a comprehensive range of issues relating to computer and network security. It includes systematic approaches to managing security risks, identification and authentication, elementary cryptography, network technology and relevant security issues.&nbsp;<div><br></div><div>The module will also introduce students to basic network technology including devices such as routers, switches, firewalls, cabling and servers deployed as well as communication protocols and topologies to understand how they are used and function in the real-world.&nbsp;</div><div><br></div><div>The module is assessed by a\nsingle in-course (100%) assessment involving a mixture of short and longer (scenario-based) questions\ndocumented in a 2500-3000 word report, and producing the output from\ncryptographic tools.</div>",
+      "content": "",
+      "ilo": "",
+      "level": "Level 4 (C) Certificates, NVQ4"
+    },
+    "CIS2050-N": {
+      "module_id": "CIS2050-N",
+      "credits": "30.00",
+      "title": "Enterprise Project",
+      "summary": "<font face=\"Arial\">This module will give students an opportunity to develop a solution, proposal, product or service in response to an enterprise challenge set by industry partners or business clients.&nbsp;</font><div><font face=\"Arial\"><br></font></div><div><font face=\"Arial\">Working in small teams, students will take responsibility for determining project aims, objectives, roles, tasks, deliverables, schedules and documentation.&nbsp;</font></div><div><font face=\"Arial\"><br></font></div><div><font face=\"Arial\">They will take a professional approach, informed by innovative industry practice, to deliver a successful project that meets the set challenge.&nbsp;</font></div><div><font face=\"Arial\"><br></font></div><div><font face=\"Arial\">The assessment will involve students developing a solution, proposal, product or service and pitching it to academics and/or industry experts. The assessment also requires learners to reflect on the project process as a whole and review sustainability, diversity, ethical and legal issues considered and evaluate team members\u2019 performance. Learners will identify their own strengths and weaknesses and relate those to their future career aspirations.</font></div>",
+      "content": "",
+      "ilo": "",
+      "level": "Level 5 (I) Intermediate, DipHE, FND, HND"
+    },
+    "CIS2037-N": {
+      "module_id": "CIS2037-N",
+      "credits": "40.00",
+      "title": "Professional Placement",
+      "summary": "<div>This module is available to all undergraduate students in the School of Science, Engineering and Digital Technologies.&nbsp; The Professional Placement is a year-long period of placement working outside the University in a host organisation.&nbsp; This module may form part of the learning and experience required for a Professional Development Scheme.</div>\n\t\t<div>&nbsp;</div>\n\t\t<div>The Placement is expected to be of 12 months duration, <b>normally </b>a duration of 36 weeks (excluding holidays).&nbsp; The Student Futures team may identify placements or the students may apply to organisations of their own choice.&nbsp; Placement Providers then interview and select students for placement. The Student Futures team in collaboration with academic colleagues evaluates the suitability of any proposed Placement and offers guidance and support throughout the placement process.&nbsp;</div>\n\t\t<div>\n\t\t\t\t<br>\n\t\t</div>\n\t\t<div>Host organisations provide placement students with relevant professional experience, under supervision in vocational environments.&nbsp; Undertaking a placement, allows students to use their existing academic knowledge, encourages them in developing professional attitudes, personal and key skills, and should improve their future employability.&nbsp; Students are normally visited once during the year plus a follow-up skype/phone call by appropriate staff who monitor student performance.&nbsp;&nbsp;</div>\n\t\t<div>&nbsp;</div>\n\t\t<div>The module is normally assessed via two elements; a presentation and a written report.&nbsp;</div>\n\t\t<div>\n\t\t\t\t<br>\n\t\t</div>",
+      "content": "",
+      "ilo": "",
+      "level": "Placement level"
+    },
+    "CIS0013-N": {
+      "module_id": "CIS0013-N",
+      "credits": "30.00",
+      "title": "Information Systems",
+      "summary": "Students will learn the tools, techniques and methods associated with information systems development, such as gathering requirements, requirements modelling, designing data models and implementing a solution. The module is assessed by a single individual in-course assessment requiring students to analyse, design and build a small-scale information system.",
+      "content": "",
+      "ilo": "",
+      "level": "Level 3 Access Level, A-Level, NVQ3"
+    },
+    "CIS2058-N": {
+      "module_id": "CIS2058-N",
+      "credits": "30.00",
+      "title": "",
+      "summary": "",
+      "content": "",
+      "ilo": "",
+      "level": ""
+    },
+    "CIS0011-N": {
+      "module_id": "CIS0011-N",
+      "credits": "30.00",
+      "title": "Development Project",
+      "summary": "This module will give students an opportunity to undertake a programming project. Working in small teams, students will design, develop and demonstrate a software solution that relates to an agreed requirements specification following an agile development methodology. The module is assessed by continuing in-course group assessment that requires the development of a software solution.",
+      "content": "",
+      "ilo": "",
+      "level": "Level 3 Access Level, A-Level, NVQ3"
+    },
+    "CIS1068-N": {
+      "module_id": "CIS1068-N",
+      "credits": "30.00",
+      "title": "Object-Oriented Programming",
+      "summary": "The module will introduce key aspects of the software development process (i.e. designing solutions, writing application code, developing documentation and formal approaches to testing).&nbsp;<div><br></div><div>Learners develop the essential skills required for software application development; this will include following best practices used by industry and the wider programming community.&nbsp;<div><br></div><div>For the assessment learners will need to build a simple application, demonstrate their understanding of programming fundamentals. Learners will also undertake a written reflection.</div></div>",
+      "content": "",
+      "ilo": "",
+      "level": "Level 4 (C) Certificates, NVQ4"
+    },
+    "CIS1071-N": {
+      "module_id": "CIS1071-N",
+      "credits": "30.00",
+      "title": "Algorithmic Problem Solving",
+      "summary": "This module introduces students to mathematics, algorithms and data structures essential for computer science and computer games. The subject is developed from first principles in an applied context. This module will enjoy a close relationship with programming modules and prepare the student with essential, transferrable problem solving skills.<div><br></div><div>&nbsp;The module will be assessed by an open-book exam and in-course assessment.</div>",
+      "content": "",
+      "ilo": "",
+      "level": "Level 4 (C) Certificates, NVQ4"
+    },
+    "CIS1074-N": {
+      "module_id": "CIS1074-N",
+      "credits": "30.00",
+      "title": "Systems Design and Databases",
+      "summary": "<div>The production of a successful, robust, user-friendly system or application begins with the analysis of the stakeholders\u2019 requirements and a detailed design.&nbsp;&nbsp;</div>\n\t\t<div>\n\t\t\t\t<br>\n\t\t</div>\n\t\t<div>This module introduces you to the concepts and techniques of systems analysis and design, enabling you to break down and simplify complex systems and represent these visually using industry standard approaches.&nbsp; In industry, the visual models are used to communicate designs to the developers and to the stakeholders prior to implementation.</div>\n\t\t<div>\n\t\t\t\t<br>\n\t\t</div>\n\t\t<div>Additional techniques will be taught to design and implement a relational databases part of an information system. Using data modelling techniques, you will be able to define how the system will store the data and interact with it.</div>\n\t\t<div>\n\t\t\t\t<br>\n\t\t</div>\n\t\t<div>A strong emphasis is placed on professional practice and transferrable practical skills, such as communicating design, structuring workflows with process models and requirements gathering, that will provide you with some of the essential skills you will need in industry.</div>\n\t\t<div>\n\t\t\t\t<br>\n\t\t</div>\n\t\t<div>The module assessments comprises two components: A 2,000 word requirements\ndocument (40%) with CV/online profile and a database solution with 3,000 word report (60%).</div>\n\t\t<div>\n\t\t\t\t<br>\n\t\t</div>",
+      "content": "",
+      "ilo": "",
+      "level": "Level 4 (C) Certificates, NVQ4"
+    },
+    "CIS0012-N": {
+      "module_id": "CIS0012-N",
+      "credits": "30.00",
+      "title": "Programming Fundamentals",
+      "summary": "An introduction to programming intended for those who have little or no experience in programming, using tools that are easily available, easy to use, and familiar to anyone who has used a computer.&nbsp;<div><br></div><div>Students will learn how the programming language constructs are applied to different problems of increasing complexity.&nbsp;</div><div><br></div><div>The module is assessed by continuing in-course assessment requiring students to demonstrate their ability to implement fundamental programming concepts in a given language.</div>",
+      "content": "",
+      "ilo": "",
+      "level": "Level 3 Access Level, A-Level, NVQ3"
+    },
+    "CIS2048-N": {
+      "module_id": "CIS2048-N",
+      "credits": "30.00",
+      "title": "Artificial Intelligence",
+      "summary": "Cognitive technologies, such as Artificial intelligence (AI), are increasingly being used to solve business problems. Artificial intelligence, or AI, is concerned with not just understanding but also building intelligent entities, machines that can compute how to act effectively and safely in a wide variety of novel situations.&nbsp;<div><br></div><div>This module provides students with a general introduction to artificial intelligence, discussing real-world applications of AI, and its transformative power in our daily life. Thus, this module includes the fundamental concepts of AI, common frameworks used in the analysis and design of intelligent systems, generic algorithms used for their implementation and major techniques used in problem solving. The target is to provide students with the knowledge that will allow you to understand how to address AI problems, studying a wide range of AI techniques, applications, and developing solutions.&nbsp;</div><div><br></div><div>This module also introduces popular applications of AI (for example, game design, virtual agents, robotics etc.) and benefits of using AI (for example, how to enhance efficiency, productivity, and reduce costs).&nbsp;</div><div><br></div><div>The module will be assessed by a single in course assessment that will require the evaluation of the use of AI in recent and well-known products, and the development of a framework solution using AI techniques.</div>",
+      "content": "",
+      "ilo": "",
+      "level": "Level 5 (I) Intermediate, DipHE, FND, HND"
+    },
+    "CIS2056-N": {
+      "module_id": "CIS2056-N",
+      "credits": "30.00",
+      "title": "",
+      "summary": "",
+      "content": "",
+      "ilo": "",
+      "level": ""
+    },
+    "CIS3040-N": {
+      "module_id": "CIS3040-N",
+      "credits": "60.00",
+      "title": "",
+      "summary": "",
+      "content": "",
+      "ilo": "",
+      "level": ""
+    },
+    "CIS0010-N": {
+      "module_id": "CIS0010-N",
+      "credits": "30.00",
+      "title": "Computational Thinking and Mathematics",
+      "summary": "<font size=\"3\">This module introduces students to fundamental concepts of problem-solving, algorithms and data structure. It explains how algorithms and data structure can be integrated to construct solutions that can be applied to resolve complex computational tasks. Classic puzzles and recreational games will be used to demonstrate the fundamental building blocks of algorithms. Knowledge of design principles and proficiency in creating algorithmic procedures is developed by cultivating an ability to think computationally in solving puzzles and creating routines for playing simple, computer-enabled games. Assessment for the module will require students to build a portfolio of artefacts demonstrating their knowledge and ability to apply computational thinking principles to problem-solving and the design of algorithmic solutions. This may involve designing and implementing suitable algorithms and data structure for solving a puzzle or implementing a simple board game.</font>",
+      "content": "",
+      "ilo": "",
+      "level": "Level 3 Access Level, A-Level, NVQ3"
+    }
+  }
+}

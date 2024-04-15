@@ -1,0 +1,28 @@
+{
+    "institution": "Teesside",
+    "index": {"2023": [
+        {
+            "url": "https://apps.tees.ac.uk/Programmes/Programme/Details/8525",
+            "actions": [
+                {
+                    "XPath": "/html/body/div[4]/div/div/div/div/div[6]/h2/button",
+                    "action": "click"
+            }
+            ]
+        }]},
+    "module": {
+        "moduleContainers": 
+        {
+            "XPath": "//*[@id='Details_Structure']/div[1]/div[2]/table[*]/tbody/tr[position()>1]",
+            "moduleLink": {"XPath": "td[1]/a"},
+            "module_id": {"XPath": "td[2]"},
+            "credits": {"XPath": "td[3]"}
+        },
+        "title": {"XPath": "//*[@id='ModuleDetails']/h4"},
+        "summary": {"XPath": "//*[@id='Details_Module_KeyInformation']/div[4]/div[2]"},
+        "content": {"XPath": ""},
+        "ilo": {"XPath": ""},
+        "level": {"XPath": "//*[@id='Details_Module_KeyInformation']/div[7]/div[2]/table/tbody/tr[2]/td[2]"},
+        "credits": {"XPath": ""}
+    }
+}
