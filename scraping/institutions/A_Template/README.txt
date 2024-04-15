@@ -22,6 +22,8 @@ This is a quick README for the data required in the institution.json file for a 
     }
 }
 
+If all of the data is held inside the index page then include '"no_clicking_required": true' in the spec (see Northampton)
+
 Actions to navigate from the index page to the list of modules can be specified in the "index" items e.g.
 
 "index": {"2023": {"url": "URL of starting point":
@@ -32,3 +34,6 @@ Actions to navigate from the index page to the list of modules can be specified 
                             "action": "click"}]}}
 
 If "when": "first" is included as an action property then it is only done the first time the page is loaded: helpful for accepting cookies
+
+Clicking on buttons can be specified via "ID" rather than "XPath". This is often helpful for accepting cookies.
+

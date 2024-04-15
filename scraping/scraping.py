@@ -243,9 +243,16 @@ def scrape(institution_name):
                 # print ("yearModuleLinks[ ", list(yearModuleLinks)[0:200])
 
                 for module_link in year_module_links:
+                    if "no_clicking_required" in module.keys():
+                        print ("No clicking required", module_link)
+                        results[year][module_link] = index_results[year][module_link]
+                        continue
+
                     load_content(driver1, year_index)
                     try:
                         print ("looking for link " + module_link)
+
+                        overview_dictionary = index_results[year][module_link]
 
                         if "link_to_click" in mmc.keys():
                             link_to_click_xpath = mmc['link_to_click']['XPath'].replace("%LINK%", module_link)
@@ -254,7 +261,6 @@ def scrape(institution_name):
                         else:
                             click_element(driver1, (By.PARTIAL_LINK_TEXT,  module_link))
 
-                        overview_dictionary = index_results[year][module_link]
 
                         for overview_field in overview_fields:
                             if not (overview_field in overview_dictionary.keys()):
