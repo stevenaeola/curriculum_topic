@@ -1,0 +1,19 @@
+{
+    "institution": "South_Wales",
+    "index": {"2023": [{"url": "https://curriculum.southwales.ac.uk/Course/Details?courseId=CRS000225"}]},
+    "module": {
+        "moduleContainers": 
+        {
+            "XPath": "//*[@id='content']/div[7]/div/div/table/tbody/tr[*]",
+            "moduleLink": {"XPath": "td[1]/a"},
+            "credits": {"XPath": "td[5]"}
+        },
+        "module_id": {"XPath": "//*[@id='content']/div[2]/div/div/table/tbody/tr[1]/td"},
+        "title": {"XPath": "//*[@id='content']/div[2]/div/div/table/tbody/tr[2]/td"},
+        "summary": {"XPath": "//*[preceding-sibling::*[@id='matitle']]"},
+        "content": {"XPath": "//*[@id='content-summary']"},
+        "ilo": {"XPath": ""},
+        "level": {"XPath": "//*[@id='content']/div[2]/div/div/table/tbody/tr[10]/td[2]"},
+        "credits": {"XPath": ""}
+    }
+}
