@@ -1,0 +1,22 @@
+{
+    "institution": "Nottingham",
+    "index": {"2023": [
+        {"url": "https://campus.nottingham.ac.uk/psc/csprd_pub/EMPLOYEE/HRMS/c/UN_PROG_AND_MOD_EXTRACT.UN_PLN_EXTRT_FL_CP.GBL",
+        "actions":[
+            {"ID": "UN_PLN_EXRT_WRK_UN_PUSH", "action": "click"},
+            {"ID": "UN_PLN_EXRT_WRK_ACAD_YEAR", "action": "select", "data": "2023 Academic Year"},
+            {"ID": "UN_PLN_EXRT_WRK_DESCRFORMAL", "action": "select", "data": "Computer Science"},
+            {"ID": "win0divUN_PLN_EXRT_WRK_SEARCH_BTN", "action": "click"}
+        ]
+    }]},
+    "module": {
+        "moduleContainers": {"XPath": "//tbody/tr/td[2]/div/div/p"},
+        "module_id": {"XPath": "//*[@id='UN_PLN_EXT2_WRK_SUBJECT_DESCR']"},
+        "title": {"ID": "UN_PLN_EXT2_WRK_PTS_LIST_TITLE"},
+        "summary": {"ID": "win0divUN_PLN_EXT2_WRK_HTMLAREA12"},
+        "content": {"ID": "win0divUN_PLN_EXT2_WRK_HTMLAREA11"},
+        "ilo": {"XPath": "//*[@id='UN_PLN_EXT2_WRK_UN_LEARN_OUTCOME']/ul[1]"},
+        "level": {"ID": "UN_PLN_EXT2_WRK_UN_LEVEL"},
+        "credits": {"XPath": "UN_PLN_EXT2_WRK_UNITS_MINIMUM"}
+    }
+}
