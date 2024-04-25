@@ -1,0 +1,71 @@
+{
+    "institution": "UCL",
+    "index": {"2023":
+    [
+        {
+            "url": "https://www.ucl.ac.uk/prospective-students/undergraduate/degrees/computer-science-bsc-2024",
+            "actions":
+            [
+                {"XPath": "//*[@id='sliding-popup']/div/div/div[1]/button[2]",
+                "action": "click",
+                "when": "first"},
+                {"Link": "Year 1",
+                "action": "click"}
+            ]
+        },
+        {
+            "url": "https://www.ucl.ac.uk/prospective-students/undergraduate/degrees/computer-science-bsc-2024",
+            "actions":
+            [
+                {"XPath": "//*[@id='sliding-popup']/div/div/div[1]/button[2]",
+                "action": "click",
+                "when": "first"},
+                {"Link": "Year 2",
+                "action": "click"}
+            ]
+        },
+        {
+            "url": "https://www.ucl.ac.uk/prospective-students/undergraduate/degrees/computer-science-bsc-2024",
+            "actions":
+            [
+                {"XPath": "//*[@id='sliding-popup']/div/div/div[1]/button[2]",
+                "action": "click",
+                "when": "first"},
+                {"Link": "Year 3",
+                "action": "click"}
+            ]
+        },
+        {
+            "url": "https://www.ucl.ac.uk/prospective-students/undergraduate/degrees/computer-science-meng-2024",
+            "actions":
+            [
+                {"XPath": "//*[@id='sliding-popup']/div/div/div[1]/button[2]",
+                "action": "click",
+                "when": "first"},
+                {"Link": "Year 3",
+                "action": "click"}
+            ]
+        },
+        {
+            "url": "https://www.ucl.ac.uk/prospective-students/undergraduate/degrees/computer-science-meng-2024",
+            "actions":
+            [
+                {"XPath": "//*[@id='sliding-popup']/div/div/div[1]/button[2]",
+                "action": "click",
+                "when": "first"},
+                {"Link": "Year 4",
+                "action": "click"}
+            ]
+        }
+    ]},
+    "module": {
+        "moduleContainers": {"CSS_selector": "div.active div div div a"},
+        "module_id": {"XPath": "//h1"},
+        "title": {"XPath": "//h1"},
+        "summary": {"CSS_class": "module-description"},
+        "content": {"XPath": ""},
+        "ilo": {"XPath": ""},
+        "level": {"XPath": ""},
+        "credits": {"XPath": "/html/body/div[2]/div/div/div[1]/article/div[1]/section/section[1]/dl/dd[3]"}
+    }
+}
