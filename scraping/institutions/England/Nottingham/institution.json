@@ -2,6 +2,7 @@
     "institution": "Nottingham",
     "index": {"2023": [
         {"url": "https://campus.nottingham.ac.uk/psc/csprd_pub/EMPLOYEE/HRMS/c/UN_PROG_AND_MOD_EXTRACT.UN_PLN_EXTRT_FL_CP.GBL",
+
         "actions":[
             {"ID": "UN_PLN_EXRT_WRK_UN_PUSH", "action": "click"},
             {"ID": "UN_PLN_EXRT_WRK_ACAD_YEAR", "action": "select", "data": "2023 Academic Year"},
@@ -10,13 +11,16 @@
         ]
     }]},
     "module": {
-        "moduleContainers": {"XPath": "//tbody/tr/td[2]/div/div/p"},
-        "module_id": {"XPath": "//*[@id='UN_PLN_EXT2_WRK_SUBJECT_DESCR']"},
+        "moduleContainers": {
+            "XPath": "//tbody/tr",
+            "moduleLink": {"XPath": "td[1]/div/span/a"},
+            "module_id": {"XPath": "td[1]/div/span/a"},
+            "level": {"XPath": "td[3]/div/span/a"}
+        },
         "title": {"ID": "UN_PLN_EXT2_WRK_PTS_LIST_TITLE"},
         "summary": {"ID": "win0divUN_PLN_EXT2_WRK_HTMLAREA12"},
         "content": {"ID": "win0divUN_PLN_EXT2_WRK_HTMLAREA11"},
-        "ilo": {"XPath": "//*[@id='UN_PLN_EXT2_WRK_UN_LEARN_OUTCOME']/ul[1]"},
-        "level": {"ID": "UN_PLN_EXT2_WRK_UN_LEVEL"},
-        "credits": {"XPath": "UN_PLN_EXT2_WRK_UNITS_MINIMUM"}
+        "ilo": {"XPath": "//*[@id='UN_PLN_EXT2_WRK_UN_LEARN_OUTCOME']/*"},
+        "credits": {"ID": "UN_PLN_EXT2_WRK_UNITS_MINIMUM"}
     }
 }
