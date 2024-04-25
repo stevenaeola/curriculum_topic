@@ -38,7 +38,10 @@ import re
 
 import argparse
 
+import traceback
+
 done_actions = []
+scraped_fields = set()
 
 driver = webdriver.Chrome()
 
@@ -74,6 +77,8 @@ def by_from_spec(selector_spec):
         by = By.ID
     elif "CSS_class" in selector_spec.keys():
         by = By.CLASS_NAME
+    elif "CSS_selector" in selector_spec.keys():
+        by = By.CSS_SELECTOR
     elif "Link" in selector_spec.keys():
         by = By.PARTIAL_LINK_TEXT
     else:
@@ -81,7 +86,7 @@ def by_from_spec(selector_spec):
     return by
 
 def val_from_spec(selector_spec):
-    for key in ["XPath", "ID", "CSS_class", "Link"]:
+    for key in ["XPath", "ID", "CSS_class", "CSS_selector", "Link"]:
         if key in selector_spec.keys():
             return selector_spec[key]
     raise ValueError("No selector spec in ", selector_spec)
@@ -169,6 +174,9 @@ def load_content(url_spec):
             
 
 def scrape(institution_name):
+
+    global DEBUG
+
     institution_json = "institution.json"
 
     print("Scraping " + institution_name)
@@ -285,6 +293,8 @@ def scrape(institution_name):
                                 if overview_field in mmc.keys():
                                     overview_field_elt = wait_find_element(mmc[overview_field], module_container)
                                     index_results[year][module_link][overview_field] = overview_field_elt.get_attribute('innerHTML').strip()
+                                    if index_results[year][module_link][overview_field]:
+                                        scraped_fields.add(overview_field)
 
                 # print ("yearModuleLinks[ ", list(yearModuleLinks)[0:200])
 
@@ -307,26 +317,31 @@ def scrape(institution_name):
                             click_element((By.PARTIAL_LINK_TEXT,  module_link))
 
                         for overview_field in overview_fields:
+                            if DEBUG:
+                                print ("looking for field", overview_field)
                             if not (overview_field in overview_dictionary.keys()):
                                 overview_dictionary[overview_field] = ""
                             try:
                                 overview_elts = wait_find_elements(module[overview_field])
                             except Exception:
-                                # print("Could not find field " + overview_field)
+                                if DEBUG:
+                                    print("Could not find field " + overview_field)
                                 continue
 
                             for elt in overview_elts:
-                                # print ("found elt for " + overview_field)
+                                if DEBUG:
+                                    print ("found elt for " + overview_field)
                                 innerHTML = elt.get_attribute('innerHTML').strip()
                                 if overview_field == "module_id":
                                     innerHTML = strip_tags(innerHTML)
                                 overview_dictionary[overview_field] += innerHTML
+                            if overview_dictionary[overview_field]:
+                                scraped_fields.add(overview_field)
                         results[year][overview_dictionary['module_id']] = overview_dictionary
                     except Exception as e:
                         print ("Could not find link " + module_link)
                         print (year_index)
-                        print (e)
-
+                        traceback.print_exc() 
 
                     #Save the contents of this URL as a HTML file. Use the module_id as the filename
                     #Remove any whitespace and punctuation from module_id
@@ -385,6 +400,14 @@ def scrape(institution_name):
 
         with open(Path(os.path.join(institution_name,"scrape_results.json")), "w") as outfile: 
             json.dump(results, outfile, indent=2)
+
+        # missing_fields = list(set(overview_fields) - scraped_fields)
+        # missing_results = {}
+        # for year in results:
+        #     missing_results[year] = {}
+        #     for module_id in results[year]:
+        #         missing_results[year][module_id] = results[year][module_id]
+
 
     except OSError as err:
         print("OS error:", err)
