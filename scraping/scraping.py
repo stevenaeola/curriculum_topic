@@ -26,7 +26,7 @@ from selenium.webdriver.support.ui import Select
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common import ElementClickInterceptedException
-
+from selenium.common import TimeoutException
 
 from pathlib import Path
 
@@ -60,10 +60,18 @@ def click_element(element_by):
         print("Waiting to click", element_by)
         input ("Hit enter")
 
-    elt = wait.until(EC.element_to_be_clickable(element_by))
+    try:
+        elt = wait.until(EC.element_to_be_clickable(element_by))
+    except TimeoutException:
+        elt = wait.until(EC.presence_of_element_located(element_by))
+    if DEBUG:
+        print ("Element is clickable")
+
     driver.execute_script("arguments[0].scrollIntoView();", elt)
     try:
         elt.click()
+        if DEBUG:
+            print ("Click succeeded")
     except ElementClickInterceptedException:
         try:
             elt.click()          
