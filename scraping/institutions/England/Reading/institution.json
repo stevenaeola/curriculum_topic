@@ -1,0 +1,19 @@
+{
+    "institution": "Reading",
+    "index": {"2023": [{"url": "https://www.reading.ac.uk/modules/module25c1.html?sacyr=2324&school=MPS"}]},
+    "module": {
+        "moduleContainers": {
+            "XPath": "//tbody/tr[position()>1]",
+            "moduleLink": {"XPath": "td[1]"},
+            "module_id": {"XPath": "td[1]"},
+            "title": {"XPath": "td[2]"},
+            "level": {"XPath": "td[3]"},
+            "link_to_click": {"XPath": "//td[contains(text(),'%LINK%')]/parent::tr/td[4]/a"},
+            "include": ["CS\\d[A-Z]{2}\\d{2}[^NU]*$"]
+        },
+        "summary": {"ID": "MODCAT-MDS"},
+        "content": {"ID": "MODCAT-OUTCO"},
+        "ilo": {"ID": "MODCAT-ALO2"},
+        "credits": {"XPath": "//*[@id='MODCAT-HED']/p[1]"}
+    }
+}
