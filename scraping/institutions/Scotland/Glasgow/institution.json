@@ -1,0 +1,26 @@
+{
+    "institution": "Glasgow",
+    "index": {"2023": [
+        {
+            "url": "https://www.gla.ac.uk/coursecatalogue/courselist/?code=COMPSCI&name=Computing+Science",
+            "actions": [
+                {"XPath": "//*[@id='editconsent']/p/button[2]",
+                "action": "click",
+                "when": "first"}
+            ]
+        }
+        ]},
+    "module": {
+        "moduleContainers": {
+            "XPath": "//*[@id='printForm']/div/ul/li/a",
+            "exclude": [".*1P.*"]
+        },
+        "module_id": {"XPath": "//*[@id='main-content-wrapper']//h2"},
+        "title": {"XPath": "//*[@id='main-content-wrapper']//h2"},
+        "summary": {"XPath": "//h3[. = 'Short Description']/following-sibling::div[1]"},
+        "content": {"XPath": "//h3[. = 'Course Aims']/following-sibling::div[1]"},
+        "ilo": {"XPath": "//h3[. = 'Intended Learning Outcomes of Course']/following-sibling::div[1]"},
+        "level": {"XPath": "//*[@id='main-content-wrapper']/div[1]/ul/li[4]"},
+        "credits": {"XPath": "//*[@id='main-content-wrapper']/div[1]/ul/li[3]"}
+    }
+}
