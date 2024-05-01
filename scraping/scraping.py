@@ -40,6 +40,8 @@ import argparse
 
 import traceback
 
+import copy
+
 done_actions = []
 scraped_fields = set()
 
@@ -242,6 +244,10 @@ def scrape(institution_name):
                 year_indexes = [year_indexes]
             for year_index in year_indexes:
                 year_module_links = set()
+                if "constants" in year_index.keys():
+                    year_index_constants = year_index['constants']
+                else:
+                    year_index_constants = {}
 
                 # print ("year ", year, "lURL", yearIndex)
                 load_content(year_index)
@@ -294,7 +300,8 @@ def scrape(institution_name):
                         year_module_links.add(module_link)
                         all_module_links.add(module_link)
 
-                        index_results[year][module_link] = {}
+                        index_results[year][module_link] = copy.deepcopy(year_index_constants)
+
 # look for module details in the index page
                         if 'moduleLink' in mmc.keys():
                             for overview_field in overview_fields:
