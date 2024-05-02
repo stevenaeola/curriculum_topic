@@ -1,0 +1,43 @@
+{
+    "institution": "QUB",
+    "index": {"2024": [
+        {
+        "url": "https://www.qub.ac.uk/courses/undergraduate/2024/computer-science-meng-g402/#modules",
+        "actions": [
+            {"ID": "ccc-notify-accept", "action": "click", "when": "first"},
+            {"XPath": "//*[@id='tap-pop-card']/div[1]/div/button", "action": "click", "when": "first"}
+        ]
+        },
+        {
+            "url": "https://www.qub.ac.uk/courses/undergraduate/2024/computer-science-meng-g402/#modules",
+            "actions": [
+                {"Link": "Year 2", "action": "click"}
+            ]
+        },
+        {
+            "url": "https://www.qub.ac.uk/courses/undergraduate/2024/computer-science-meng-g402/#modules",
+            "actions": [
+                {"Link": "Year 3", "action": "click"}
+            ]
+        },
+        {
+            "url": "https://www.qub.ac.uk/courses/undergraduate/2024/computer-science-meng-g402/#modules",
+            "actions": [
+                {"Link": "Year 4", "action": "click"}
+            ]
+        }
+        ]},
+    "module": {
+        "moduleContainers": {
+            "CSS_selector": "div[class='tabs-panel is-active'] .icon-list",
+            "moduleLink": {"XPath": "a"},
+            "title": {"XPath": "a"},
+            "credits": {"XPath": "span"}
+        },
+        "module_id": {"CSS_selector": "div.reveal-overlay[style='display: block;']  div:first-of-type[class='cell'] p"},
+        "summary": {"CSS_selector": "div.reveal-overlay[style='display: block;'] > div > :nth-child(1 of p)"},
+        "content": {"XPath": ""},
+        "ilo": {"CSS_selector": "div.reveal-overlay[style='display: block;'] > div > :nth-child(2 of p)"},
+        "level": {"CSS_selector": "div.reveal-overlay[style='display: block;'] > div> div:nth-child(9) > div.cell.large-3 > p:nth-child(2)"}
+    }
+}

@@ -1,11 +1,11 @@
 {
     "institution": "Cardiff",
-    "index": {"2023": [{"url": "https://www.cardiff.ac.uk/study/undergraduate/courses/course/computer-science-with-security-and-forensics-bsc",
+    "index": {"2023": [{"url": "https://www.cardiff.ac.uk/study/undergraduate/courses/course/computer-science-bsc",
                         "actions": [
                             {"XPath": "//*[@id='accept-cookie-message']",
                              "action": "click",
                              "when": "first"},
-                            {"XPath": "//*[@id='content']/section[4]/div/div/div/div/button/span",
+                            {"XPath": "//*[@id='content']/section[4]/div/div/div/div/button",
                               "action": "click"},
                             {"XPath": "//*[@id='moduleList-module-list-2']/div[3]/div[1]/a",
                              "action": "click"},
@@ -14,14 +14,15 @@
                             ]}]},
     "module": {
         "moduleContainers": 
-            {"CSS_class": "module-information",
-            "include": ["Computational Thinking"]},
-        "module_id": {"XPath": "//*[@id='module-information']/div/div/div[2]/div/div[1]/h2"},
-        "title": {"XPath": "//*[@id='module-information']/div/div/div[2]/div/div[1]/h2"},
-        "summary": {"XPath": "//*[@id='module-information']/div/div/div[2]/div/div[2]/p"},
+            {"XPath": "//h2[@id='structure']/following-sibling::div//tbody/tr",
+            "moduleLink": {"XPath": "td[1]/a"},
+            "module_id": {"XPath": "td[2]"},
+            "credits": {"XPath": "td[3]"},
+            "title": {"XPath": "td[1]/a"},
+            "level": {"XPath": "td[2]"}
+        },
+        "summary": {"XPath": "//*[@id='module-information']/div/div/div[2]/div/div[2]"},
         "content": {"XPath": ""},
-        "ilo": {"XPath": "//*[@id='module-modal-descriptions']/ol"},
-        "level": {"XPath": ""},
-        "credits": {"XPath": "//*[@id='module-information']/div/div/div[2]/div/div[3]/div/table/tbody/tr[1]/td"}
+        "ilo": {"XPath": "//*[@id='module-modal-descriptions']"}
     }
 }
