@@ -1,0 +1,34 @@
+{
+    "institution": "Stirling",
+    "index": {"2024": [
+        {
+            "url": "https://www.stir.ac.uk/courses/ug/computing-science/#panel_1_3",
+            "actions":
+            [
+                {"ID": "ccc-recommended-settings", "action": "click", "when": "first"},
+                {"ID": "accordion-control-22", "action": "click", "when": ""},
+                {"ID": "accordion-control-23", "action": "click", "when": ""},
+                {"ID": "accordion-control-24", "action": "click", "when": ""},
+                {"ID": "accordion-control-25", "action": "click", "when": ""},
+                {"ID": "accordion-control-26", "action": "click", "when": ""},
+                {"ID": "accordion-control-27", "action": "click", "when": ""},
+                {"ID": "accordion-control-28", "action": "click", "when": ""},
+                {"ID": "accordion-control-29", "action": "click", "when": ""}
+            ] 
+    }
+        
+        ]},
+    "module": {
+        "moduleContainers": {
+            "XPath": "//div[@id='moduleBrowser']//tr[contains(., '(CSCU')]",
+            "moduleLink": {"XPath": "td[1]/a"},
+            "credits": {"XPath": "td[2]"}
+        },
+        "module_id": {"XPath": "//*[@id='content']/div[2]/div/div[2]/div/div/div[1]/span[2]"},
+        "title": {"XPath": "//h1"},
+        "summary": {"XPath": "//*[@id='content']/div[3]/div/div[3]"},
+        "content": {"XPath": ""},
+        "ilo": {"XPath": ""},
+        "level": {"XPath": "//*[@id='content']/div[2]/div/div[2]/div/div/div[2]/span[2]"}
+    }
+}
