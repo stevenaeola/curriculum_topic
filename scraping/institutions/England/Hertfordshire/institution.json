@@ -1,0 +1,26 @@
+{
+    "institution": "Hertfordshire",
+    "index": {"2024": [
+        {
+          "url": "https://www.herts.ac.uk/courses/undergraduate/computer-science-software-engineering3",
+          "actions": 
+          [
+            {"ID": "onetrust-accept-btn-handler", "action": "click", "when": "first"},
+            {"XPath": "//*[@id='container']/div/div/div[1]/button","action": "click", "when": "first"},
+            {"XPath": "//span[. = 'Level 4']", "action": "click"}
+          ],
+          "constants": {"level": 4}
+        }
+        ]},
+    "module": {
+        "moduleContainers": {
+            "CSS-selector": "li[class='slidedown active'] tr:not(:first-child):not([style*='display: none;']):not([style*='display:none'])",
+            "moduleLink": {"XPath": "td[1]/a"},
+            "module_id": {"XPath": "td[1]/a"},
+            "title": {"XPath": "td[1]/a"},
+            "credits": {"XPath": "td[2]"}
+        },
+        "summary": {"CSS-selector": "tr.module-description:not([style*='display:none']) td"}
+ 
+    }
+}
