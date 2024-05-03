@@ -356,7 +356,8 @@ def scrape(institution_name):
                     except Exception as e:
                         print ("Could not find link " + module_link)
                         print (year_index)
-                        traceback.print_exc() 
+                        traceback.print_exc()
+                        continue 
 
                     #Save the contents of this URL as a HTML file. Use the module_id as the filename
                     #Remove any whitespace and punctuation from module_id
