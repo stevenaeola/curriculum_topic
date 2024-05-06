@@ -39,3 +39,7 @@ If "when": "first" is included as an action property then it is only done the fi
 
 Clicking on buttons can be specified via "ID" rather than "XPath". This is often helpful for accepting cookies.
 
+Can also identify content with "CSS_class" "CSS_selector" and "Link" (link text)
+
+URL can be specified with "file://..." but need to include placeholder for absolute path of instutition details. See Hertfordshire
+

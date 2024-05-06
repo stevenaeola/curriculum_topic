@@ -132,7 +132,8 @@ def wait_find_elements(selector_spec, root = None):
     return root.find_elements(by_from_spec(selector_spec), val_from_spec(selector_spec))
 
 # using the web driver load the page specified, possibly with actions to follow
-def load_content(url_spec):
+# need the institution file to get the path for a file:// url
+def load_content(url_spec, institution):
     global DEBUG
     # print ("loadContent from URLspec")
     # print (URLspec)
@@ -140,6 +141,10 @@ def load_content(url_spec):
         load_url = url_spec
     else:
         load_url = url_spec['url']
+    
+  # this is specifically for file:// urls  
+    load_url = load_url.replace('%INSTITUTION_DIR%', os.path.abspath(institution))
+
     driver.get(load_url)
     if ('actions' in url_spec.keys()) and (type(actions := url_spec['actions']) is list):
         for action_spec in actions:
@@ -250,7 +255,7 @@ def scrape(institution_name):
                     year_index_constants = {}
 
                 # print ("year ", year, "lURL", yearIndex)
-                load_content(year_index)
+                load_content(year_index, institution_name)
                                 
                 # print ("Loaded contents of index page for year ")
                 container_spec = module['moduleContainers']
@@ -319,7 +324,7 @@ def scrape(institution_name):
                         results[year][module_link] = index_results[year][module_link]
                         continue
 
-                    load_content(year_index)
+                    load_content(year_index, institution_name)
                     try:
                         print ("looking for link " + module_link)
 
