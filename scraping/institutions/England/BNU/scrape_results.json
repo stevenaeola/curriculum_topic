@@ -1,0 +1,144 @@
+{
+  "2023": {
+    "Networking": {
+      "level": "1",
+      "module_id": "Networking",
+      "title": "Networking",
+      "summary": "<div class=\"col-lg-12 col-md-12 px-4\">\n            <div class=\"col-lg-12 col-md-12\">\n            You'll study the architecture, structure, functions and models of the Internet and computer networks. You'll use models to examine protocols and services at the application, network, data link &amp; physical layers and will analyse the principles &amp; structure of IP addressing and the fundamentals of Ethernet concepts, network media &amp; network operations.\n                        </div>\n          </div>",
+      "credits": "20"
+    },
+    "Computer Architecture": {
+      "level": "1",
+      "module_id": "Computer Architecture",
+      "title": "Computer Architecture",
+      "summary": "<div class=\"col-lg-12 col-md-12 px-4\">\n            <div class=\"col-lg-12 col-md-12\">\n            You'll look at principles of computer organisation, the layered nature of systems structures &amp; the interfaces between them. You'll also study: components of a computer, the architecture, how they're organised, hardware, data representation, computer logic circuits, manipulation of data at the bit level &amp; the theory of computation and its paradigms.\n                        </div>\n          </div>",
+      "credits": "20"
+    },
+    "Web Development": {
+      "level": "1",
+      "module_id": "Web Development",
+      "title": "Web Development",
+      "summary": "<div class=\"col-lg-12 col-md-12 px-4\">\n            <div class=\"col-lg-12 col-md-12\">\n            You'll study key concepts of the Internet and WWW applications, like HTML, stylesheets and JavaScript, then more advanced Web scripting techniques such as: the Document Object Model; DHTML event-driven scripting for dynamic user experience; contemporary frameworks and standards for cross-platform operability, sophisticated layouts, SVGs (Scalable V...\n                          <p>\n                <a tabindex=\"-1\" class=\"read-more-link\" aria-label=\"Web Development Read more\" data-module-description-read-more=\"\" data-modal-trigger=\"\" data-modal-id=\"bnu-module-description--174066\">\n                    Read more\n                </a>\n              </p>\n                        </div>\n          </div>",
+      "credits": "20"
+    },
+    "Computational Fundamentals": {
+      "level": "1",
+      "module_id": "Computational Fundamentals",
+      "title": "Computational Fundamentals",
+      "summary": "<div class=\"col-lg-12 col-md-12 px-4\">\n            <div class=\"col-lg-12 col-md-12\">\n            This module introduces the mathematical language, knowledge and problem-solving skills that you'll need to study computing. You'll look at concepts such as set, relation, function and recursion/induction and principles of counting and finite probability. The fundamental notions of logic and their use for representation and proof are also explored.\n                        </div>\n          </div>",
+      "credits": "20"
+    },
+    "Programming Concepts": {
+      "level": "1",
+      "module_id": "Programming Concepts",
+      "title": "Programming Concepts",
+      "summary": "<div class=\"col-lg-12 col-md-12 px-4\">\n            <div class=\"col-lg-12 col-md-12\">\n            Discover the foundational principles for programming languages. You'll study variables, data types, assignment, conditionals, functions, data structures and the object-oriented paradigm. You'll work with other students on a project to simulate the working environment and will develop your problem-solving and computational thinking skills.\n                        </div>\n          </div>",
+      "credits": "20"
+    },
+    "Research Methods": {
+      "level": "2",
+      "module_id": "Research Methods",
+      "title": "Research Methods",
+      "summary": "<div class=\"col-lg-12 col-md-12 px-4\">\n            <div class=\"col-lg-12 col-md-12\">\n            This module aims to support you in gaining an understanding of the research process, including principles of research methods theory (ontology/epistemology) and practical elements. You'll be guided in how to plan and prepare for a research-based dissertation or work-based project or artefact-based project.\n                        </div>\n          </div>",
+      "credits": "20"
+    },
+    "Mobile Systems": {
+      "level": "2",
+      "module_id": "Mobile Systems",
+      "title": "Mobile Systems",
+      "summary": "<div class=\"col-lg-12 col-md-12 px-4\">\n            <div class=\"col-lg-12 col-md-12\">\n            This module looks at issues surrounding mobile &amp; ubiquitous computing systems. You'll examine the issues that arise in these systems from a technical perspective and in terms of user interaction and business aspects. The underlying theoretical and technological frameworks are introduced. You'll use development tools &amp; techniques for mobile systems.\n                        </div>\n          </div>",
+      "credits": "20"
+    },
+    "Algorithms and Data Structures": {
+      "level": "2",
+      "module_id": "Algorithms and Data Structures",
+      "title": "Algorithms and Data Structures",
+      "summary": "<div class=\"col-lg-12 col-md-12 px-4\">\n            <div class=\"col-lg-12 col-md-12\">\n            This module extends the Level 4 Programming module to introduce alternative data structures to arrays and lists in addition to a variety of algorithms that perform typical operations such as sort, search, insert, delete, and find on these data structures. You'll also look at how to evaluate storage structures and algorithms based on requirements.\n                        </div>\n          </div>",
+      "credits": "20"
+    },
+    "Data Essentials": {
+      "level": "2",
+      "module_id": "Data Essentials",
+      "title": "Data Essentials",
+      "summary": "<div class=\"col-lg-12 col-md-12 px-4\">\n            <div class=\"col-lg-12 col-md-12\">\n            This module aims to give you an understanding of how data is collected, stored and managed.&amp;nbsp; You'll look at different approaches to data and the reasons for choosing one approach or another.&amp;nbsp; You will also study issues of selecting an appropriate data solution aligned to real world use and application.\n                        </div>\n          </div>",
+      "credits": "20"
+    },
+    "Network Systems": {
+      "level": "2",
+      "module_id": "Network Systems",
+      "title": "Network Systems",
+      "summary": "<div class=\"col-lg-12 col-md-12 px-4\">\n            <div class=\"col-lg-12 col-md-12\">\n            This is an introduction to network systems. After covering networking fundamentals you'll discuss configuration issues relating to small, medium and large system networking technologies and topics. The main topics will include modern network systems, resource management, the hardware interface, network layers and network routing.\n                        </div>\n          </div>",
+      "credits": "20"
+    },
+    "Object Orientated Design and Development": {
+      "level": "2",
+      "module_id": "Object Orientated Design and Development",
+      "title": "Object Orientated Design and Development",
+      "summary": "<div class=\"col-lg-12 col-md-12 px-4\">\n            <div class=\"col-lg-12 col-md-12\">\n            Aimed at giving non-specialist software developers the chance to develop their programming capability, this module covers core techniques of the UML approach and how the resulting models are implemented in formal code in a practical Integrated Development environment using a modern OOP language.\n                        </div>\n          </div>",
+      "credits": "20"
+    },
+    "Advanced Mobile": {
+      "level": "3",
+      "module_id": "Advanced Mobile",
+      "title": "Advanced Mobile",
+      "summary": "<div class=\"col-lg-12 col-md-12 px-4\">\n            <div class=\"col-lg-12 col-md-12\">\n            This module is concerned with the issues surrounding mobile and ubiquitous computing systems. It examines mobile systems from various technical perspectives, and the underlying theoretical and technological frameworks. You'll study development tools and techniques for building mobile systems.\n                        </div>\n          </div>",
+      "credits": "20"
+    },
+    "Advanced Data Technologies": {
+      "level": "3",
+      "module_id": "Advanced Data Technologies",
+      "title": "Advanced Data Technologies",
+      "summary": "<div class=\"col-lg-12 col-md-12 px-4\">\n            <div class=\"col-lg-12 col-md-12\">\n            You'll study the development of data storage methods particularly aimed towards extensive data sets. You'll look at key data driven technologies which form part of the architecture, application and system and how to approach data analytics. Compute-and-store architecture and data-on-demand principles are a key part of this module.\n                        </div>\n          </div>",
+      "credits": "20"
+    },
+    "Digital Innovation": {
+      "level": "3",
+      "module_id": "Digital Innovation",
+      "title": "Digital Innovation",
+      "summary": "<div class=\"col-lg-12 col-md-12 px-4\">\n            <div class=\"col-lg-12 col-md-12\">\n            Building on material covered in Level 5 modules you'll study how to develop multi-tier web based and mobile-ready applications using distributed frameworks and components. You'll look at issues of web services, data access, event handling, security and caching and how to develop and deploy robust, secure, scalable web solutions for organisational n...\n                          <p>\n                <a tabindex=\"-1\" class=\"read-more-link\" aria-label=\"Digital Innovation Read more\" data-module-description-read-more=\"\" data-modal-trigger=\"\" data-modal-id=\"bnu-module-description--174116\">\n                    Read more\n                </a>\n              </p>\n                        </div>\n          </div>",
+      "credits": "20"
+    },
+    "Knowledge-Based Systems in Artificial Intelligence": {
+      "level": "3",
+      "module_id": "Knowledge-Based Systems in Artificial Intelligence",
+      "title": "Knowledge-Based Systems in Artificial Intelligence",
+      "summary": "<div class=\"col-lg-12 col-md-12 px-4\">\n            <div class=\"col-lg-12 col-md-12\">\n            This module introduces key aspects &amp; technologies of Artificial Intelligence, and how systems that employ these technologies are built. You'll study the history and philosophy of Artificial Intelligence and the kinds of problems that can and can't be solved using these techniques. You'll also examine the concept of intelligent in its various forms.\n                        </div>\n          </div>",
+      "credits": "20"
+    },
+    "Software Testing and QA": {
+      "level": "3",
+      "module_id": "Software Testing and QA",
+      "title": "Software Testing and QA",
+      "summary": "<div class=\"col-lg-12 col-md-12 px-4\">\n            <div class=\"col-lg-12 col-md-12\">\n            This module investigates and applies the successful combination of static verification techniques (inspection, walkthrough), alongside dynamic testing approaches (component, system, integration and acceptance), in the pursuit of creating software that is both fit for purpose and right first time, all within the framework of quality assurance.\n                        </div>\n          </div>",
+      "credits": "20"
+    },
+    "Extended Independent work": {
+      "level": "3",
+      "module_id": "Extended Independent work",
+      "title": "Extended Independent work",
+      "summary": "<div class=\"col-lg-12 col-md-12 px-4\">\n            <div class=\"col-lg-12 col-md-12\">\n            You'll carry out an individual in-depth investigation of a topic of interest, working on your skills in research, problem solving and critical analysis. The project will be selected in consultation with your supervisor and may involve a local company. You'll work on the project throughout the year, culminating in a final report and oral defence.\n                        </div>\n          </div>",
+      "credits": "40"
+    },
+    "Learning Machines & Intelligent Agents": {
+      "level": "3",
+      "module_id": "Learning Machines &amp; Intelligent Agents",
+      "title": "Learning Machines &amp; Intelligent Agents",
+      "summary": "<div class=\"col-lg-12 col-md-12 px-4\">\n            <div class=\"col-lg-12 col-md-12\">\n            You'll study a variety of AI techniques including fuzzy logic, machine learning &amp; multi-agent systems, amongst others. You'll consider which approaches may be appropriate for a given problem and examine AI in terms of legal &amp; ethical considerations, and the professional &amp; social implications that stem from the adoption of some of these techniques.\n                        </div>\n          </div>",
+      "credits": "20"
+    },
+    "Cloud Computing": {
+      "level": "3",
+      "module_id": "Cloud Computing",
+      "title": "Cloud Computing",
+      "summary": "<div class=\"col-lg-12 col-md-12 px-4\">\n            <div class=\"col-lg-12 col-md-12\">\n            This module explores the essential characteristics of Cloud Computing. This includes: the architectures associated with the provision of services (software, platforms and infrastructure services); the models for Cloud deployment (e.g. private, community, public and hybrid clouds); and emerging standards for interoperability.\n                        </div>\n          </div>",
+      "credits": "20"
+    },
+    "Design Patterns": {
+      "level": "3",
+      "module_id": "Design Patterns",
+      "title": "Design Patterns",
+      "summary": "<div class=\"col-lg-12 col-md-12 px-4\">\n            <div class=\"col-lg-12 col-md-12\">\n            Design Patterns provide robust, reusable software solutions to common problems in different types of application. This module examines those \u2018elegant\u2019 patterns most widely used within the industry. Having successfully completed this module you should have a firm grasp of the structures, intentions and implementations of the major Design Patterns.\n                        </div>\n          </div>",
+      "credits": "20"
+    }
+  }
+}
