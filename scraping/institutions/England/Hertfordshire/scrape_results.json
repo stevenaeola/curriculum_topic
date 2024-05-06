@@ -1,0 +1,179 @@
+{
+  "2024": {
+    "Computational Problem Solving": {
+      "level": 4,
+      "module_id": "Computational Problem Solving",
+      "title": "Computational Problem Solving",
+      "summary": "This module builds on concepts and practices taught in 4ECS2026 Introduction to Programming and Discrete Structures, continuing both strands but bringing them closer together.  It makes use of discrete mathematics and logic both as sources of example problems and as tools for describing and reasoning about programs.\n\n\u2022 In the programming strand the emphasis is on designing and implementing solutions to well-specified problems.  Students will be given guidance on problem representation and choice of data structure, and expected to choose / write appropriate algorithms for themselves, and to implement them in Python.\n\u2022 In the discrete structures strand the emphasis is on understanding how mathematical and logical structures and reasoning may be used in the service of programmatic problem-solving. This strand will also serve as a source of example problems for students to solve.",
+      "credits": "30 Credits"
+    },
+    "Data Modelling for Databases": {
+      "level": 4,
+      "module_id": "Data Modelling for Databases",
+      "title": "Data Modelling for Databases",
+      "summary": "This module introduces the concept of the relational model of database systems introduced by Codd [1]. It will focus on the principles of data modelling, from conceptual modelling through to physical, it will introduce techniques and tools to possibly include but not be limited to Requirements Gathering, Whiteboarding, Entity-Relationship Modelling, Normalisation, Relational Algebra, Physical Design and Querying via SQL.  The module also introduces some of the basic operational requirements of a modern enterprise RDBMS with topics supporting the students understanding of the physical design of the database, hence subjects such as Query Optimisation and Transaction Processing will be introduced.",
+      "credits": "15 Credits"
+    },
+    "From Silicon To C": {
+      "level": 4,
+      "module_id": "From Silicon To C",
+      "title": "From Silicon To C",
+      "summary": "This module focuses on the principles and practicalities of the multilevel organisation of computer systems. Students will have opportunities to investigate and build computational structures in hardware, and to program with machine instructions and a simplified dialect of the C programming language and see how they support one another.\n\nThe abstractions available at higher levels (programming languages) will be de-mystified by progressively bringing them down to lower levels all the way to the silicon structures that serve as the foundation of any computer system. This will help students to learn high-level programming (when they do) in an informed and efficient way by creating cost intuitions that cannot be developed while keeping solely to abstract constructs such programming normally deals with. Students will be offered a significant number of development exercises ranging from very basic to challenging and will be helped.  Independent learning by practicing is key to this.",
+      "credits": "30 Credits"
+    },
+    "Team Software Project": {
+      "level": 4,
+      "module_id": "Team Software Project",
+      "title": "Team Software Project",
+      "summary": "This module is designed to develop a range of employability skills using a guided project, undertaken as a team, as the vehicle. Each student will work on the project within their team. Project specifications will be provided that ensure the students have an opportunity to develop project and time management, professional, team communication and reporting, risk, presentation, and self-evaluation skills. \n\nThe projects are to be based on typical commercial/industrial scenarios and incorporate the concepts of specification, design, implementation, and testing. Where possible, the guided projects will be constructed with reference to the United Nations Sustainable Development Goals.",
+      "credits": "15 Credits"
+    },
+    "Introduction to Programming and Discrete Structures": {
+      "level": 4,
+      "module_id": "Introduction to Programming and Discrete Structures",
+      "title": "Introduction to Programming and Discrete Structures",
+      "summary": "This module will enable students to think programmatically about problems that are solved on a computer and help them develop problem-solving skills. There are two strands to the module.\n\n\u2022 The programming strand focuses largely on the practicalities of programming.  A programming language, Python 3, will be introduced, paying much attention to the fundamental elements of programming: algorithmic and functional decomposition, writing assignments, conditionals, loops and functions, and techniques for testing and debugging.  This will be illustrated with a progression of examples to help students develop good comprehension of code and the coding process.\n\n\u2022 The discrete structures strand focuses on understanding and reasoning about mathematical and logical structures that are of relevance to programmers.  It will introduce students to a coherent set of concepts from discrete mathematics and logic, including sets, relations, functions, propositions, predicates, and automata, and will illustrate how they may be applied in the modelling and solving of computational problems.",
+      "credits": "30 Credits"
+    },
+    "Computing Things": {
+      "level": 5,
+      "module_id": "Computing Things",
+      "title": "Computing Things",
+      "summary": "The presentation will focus on the macro architecture of an IoT device, processing of digital and analogue signals on GPIO pins, use of standard interfaces, such as UART, SPI, I2C with interrupts and processor sleep modes. Several sensors will be studied to demonstrate the data gathering facilities available.\n\nOne inexpensive and well-supported IoT platform will be chosen by the module leader as a running example for the content delivery. This can be ESP32 or Arduino or any similar evaluation module available at a small cost (the price of a good textbook), and which can be interfaced with a PC via a USB port. All teaching will be accompanied by exercises on the chosen platform.",
+      "credits": "15 Credits"
+    },
+    "Principles and Practices of Large-Scale Programming": {
+      "level": 5,
+      "module_id": "Principles and Practices of Large-Scale Programming",
+      "title": "Principles and Practices of Large-Scale Programming",
+      "summary": "This module provides the knowledge and skills needed for developing a large scale software system using object-oriented tools and techniques, and an appreciation of the professional issues involved in such development, including working in teams.\nAlthough correctness is the sine qua non of software development, good program design which provides for maintainability and re-use will be important elements of assessments. Desirable design principles which foster good design will be woven into the narrative of this module in order to emphasise:\n\u2022\tmodularisation\n\u2022\tabstraction\n\u2022\treduced code duplication\n\u2022\thigh cohesion\n\u2022\tlow coupling\nObject-oriented design guidelines such as the following will be used in early examples and exercises, and then made explicit at a later stage:\n\u2022\tLaw of Demeter \n\u2022\tProgram to an interface not an implementation\n\u2022\tMVC\n\u2022\tRe-factoring\n\u2022\tDesign patterns - a selection",
+      "credits": "30 Credits"
+    },
+    "Database Systems": {
+      "level": 5,
+      "module_id": "Database Systems",
+      "title": "Database Systems",
+      "summary": "This module assumes an understanding of fundamental relational database design, implementation, and use. It will introduce other database paradigms including, but not limited to Business Intelligence and Data Warehousing, \"Schema-free\"/NoSQL databases and Graph Databases. Teaching will be directed at both the practical design, implementation and use of these systems as well as understanding the key advantages of each, providing an ability to compare and critique their appropriateness in a range of scenarios. In using these systems, the module will consider the limitation and appropriateness of query languages and the interaction between query languages and programming languages.\nThe module will also provide insights into the key functional requirements of various database management systems covering topics such as Data Consistency, Transaction Management, Query Optimisation, Security and Scalability/Distribution.\nThis module will involve a large practical component, with a range of tools and case studies being utilised to develop practical skills and theoretical understanding.",
+      "credits": "15 Credits"
+    },
+    "Algorithms and Data Structures": {
+      "level": 5,
+      "module_id": "Algorithms and Data Structures",
+      "title": "Algorithms and Data Structures",
+      "summary": "This module focuses on the pre-coding stage of the programming process, studying and developing algorithms and data structures appropriate for a range of different types of problem. The module emphasises throughout the role of problems as an essential driver in the programming process and the design of algorithms and data structures in particular.",
+      "credits": "15 Credits"
+    },
+    "Operating Systems and Networks": {
+      "level": 5,
+      "module_id": "Operating Systems and Networks",
+      "title": "Operating Systems and Networks",
+      "summary": "This module covers both theory and significant practical content in the design, installation and configuration of operating systems and network services. The module helps to develop problem-solving skills in working with operating systems and networks, and builds confidence in using command line tools and configuration files in other areas of computer science and information technology.",
+      "credits": "15 Credits"
+    },
+    "Accessibility and Usability": {
+      "level": 5,
+      "module_id": "Accessibility and Usability",
+      "title": "Accessibility and Usability",
+      "summary": "This module is concerned with the accessibility and usability of computing applications. It presents these core\nconcepts in the broader context of legal, social, ethical and professional issues in computing and grounds them\non practical work. Concepts and theories on these themes will be presented and supported by examples to\ndemonstrate how they occur in practical scenarios. Students will be encouraged to identify existing problems,\nevaluate potential solutions, and communicate these in computing contexts.",
+      "credits": "15 Credits"
+    },
+    "Artificial Intelligence": {
+      "level": 5,
+      "module_id": "Artificial Intelligence",
+      "title": "Artificial Intelligence",
+      "summary": "This module will give a first introduction to the aims, scope, paradigms, notions, methods and algorithms of Artificial Intelligence (Al), enabling students to program basic Al algorithms and systems.\nIndicative topics include:\n\u2022\tLogic-based reasoning and representation extending to knowledge-based systems and probabilistic reasoning.\n\u2022\tProgramming for Al: recursion and recursive problem specification.\n\u2022\tBasic representation- and search-based problem-solving techniques\n\u2022\tIntroduction to systems that plan and act logically: making plans to achieve goals; making simple decisions\n\u2022\tIntroduction to Al systems that make decisions in interaction with the world: simple Embodied Al systems that make decisions based on limited sensorimotor information.\n\u2022\tBio-inspired computing methods and algorithms.",
+      "credits": "15 Credits"
+    },
+    "Year Abroad": {
+      "level": 6,
+      "module_id": "Year Abroad",
+      "title": "Year Abroad",
+      "summary": "Learning and teaching methods may include taught courses, a research programme, or a mixture of these.\n\ncomponents. The Year Abroad will be for TWO academic semesters or their equivalent. The student will follow a programme negotiated by the Study Abroad team or nominee, School Study Abroad Tutor and an equivalent representative of the host institution. Prior to the commencement of the Year Abroad, the student, the appropriate officers  from UH and from the host institution will agree a learning contract and mode of attendance.   In institutions where the language of instruction is not English, then the learning contract will take into account\nthe students ability in the language of instruction of the host institution.  The student will be required to provide evidence of appropriate attainment and ability in the language of instruction of the chosen institution when the language of instruction is not English.",
+      "credits": "0 Credits"
+    },
+    "Responsible Computing": {
+      "level": 6,
+      "module_id": "Responsible Computing",
+      "title": "Responsible Computing",
+      "summary": "This module is concerned with legal, social, ethical and professional issues that may affect the work of professionals in the computing and technology sectors.\n\nThe module is designed to enable students to make informed judgements in computing practice based on legal, social and ethical principles.",
+      "credits": "15 Credits"
+    },
+    "Software Engineering Project": {
+      "level": 6,
+      "module_id": "Software Engineering Project",
+      "title": "Software Engineering Project",
+      "summary": "This module is based around the identification and undertaking of an individual project.\nProject definitions will be provided covering a range of problems demanding Software Engineering principles to be explored and applied. The student is guided in their choice of project, based on their proven skills and interests. \nEach project is designed to support the student to develop deep and detailed learning in a subject are which develops Software Engineering principles and practice.\nThe project definition will also enable further development of skills for future employability in industry, including:\n\u2022\tproblem analysis and solution development\n\u2022\ttime management and planning\n\u2022\tcommunication\n\u2022\treport writing\n\u2022\tassessment of risk",
+      "credits": "30 Credits"
+    },
+    "Study Abroad": {
+      "level": 6,
+      "module_id": "Study Abroad",
+      "title": "Study Abroad",
+      "summary": "Learning and teaching methods may include taught courses, a research programme, or a mixture of these\n \ncomponents. The Study Abroad duration will be for ONE academic semester or its equivalent. The student will follow a programme negotiated by the Study Abroad team or nominee, School Study Abroad Tutor and an equivalent representative of the host institution. Prior to the commencement of the Study Abroad period, the student, the appropriate officers  from UH and from the host institution will agree a learning contract and mode of attendance.   In institutions where the language of instruction is not English, then the learning contract will take into account the students ability in the language of instruction of the host institution.  The student will be required to provide evidence of appropriate attainment and ability in the language of instruction of the chosen institution when the language of instruction is not English.",
+      "credits": "0 Credits"
+    },
+    "Professional Work Placement in Computer Science": {
+      "level": 6,
+      "module_id": "Professional Work Placement in Computer Science",
+      "title": "Professional Work Placement in Computer Science",
+      "summary": "Supervised work experience provides students with the opportunity to set their academic studies in a broader context, to gain practical experience in specific technical areas and to strengthen their communication and time-management skills. It greatly assists them in developing as independent learners, so that they will be able to gain maximum benefit from the learning opportunities afforded by their future study programme. It gives them opportunities, according to the nature of the placement experience, to acquire the basis of technical expertise in specialist areas, which they may be able to enhance through study after completion of the placement, especially in the final project.",
+      "credits": "0 Credits"
+    },
+    "Software Architecture": {
+      "level": 6,
+      "module_id": "Software Architecture",
+      "title": "Software Architecture",
+      "summary": "This module explores software architecture by examining architectural design patterns.  Using a conceptual definition as an anchor, the module examines different approaches to solving design problems, with practical examples and implementation exercises.\n\nThis module is based on a set of practical examples and exercises that show how to apply architectural patterns to design software systems.",
+      "credits": "15 Credits"
+    },
+    "Information Security Management": {
+      "level": 6,
+      "module_id": "Information Security Management",
+      "title": "Information Security Management",
+      "summary": "This module develops the concepts and principles of information security management including its organisational aspects such as security governance, policy procedures and security standards. It covers the relevant methods associated with risk assessment and management. In this module, various issues associated with information assurance, incident management and government legislation on data protection will be presented. This module introduces security controls that are used to protect information and underlying IT systems and infrastructure. Disaster recovery, business continuity management, investigation and digital forensics which are important aspects of information security management will be discussed in this module.",
+      "credits": "15 Credits"
+    },
+    "Machine Learning and Neural Computing": {
+      "level": 6,
+      "module_id": "Machine Learning and Neural Computing",
+      "title": "Machine Learning and Neural Computing",
+      "summary": "This module uses contemporary machine learning and neural network techniques to aid in the understanding and analysis of real world data and neural systems. Topics include supervised and unsupervised learning, data visualisation, and error-correction-based learning.",
+      "credits": "15 Credits"
+    },
+    "Advanced Programming Paradigms": {
+      "level": 6,
+      "module_id": "Advanced Programming Paradigms",
+      "title": "Advanced Programming Paradigms",
+      "summary": "This module exposes students to the wide range of programming concepts beyond simple procedural programming using conditionals, loops, functions, and objects.  Concepts will be illustrated using languages such as Haskell, Scheme, and Prolog, but examples and exercises will focus on solving practical problems.\n\nThis module is based on a set of practical examples and exercises that show how to apply advanced programming paradigms to solve problems, and compare those solutions to the typical approach taken in Python, Java, or C.",
+      "credits": "15 Credits"
+    },
+    "Advanced Database Topics": {
+      "level": 6,
+      "module_id": "Advanced Database Topics",
+      "title": "Advanced Database Topics",
+      "summary": "This module builds upon knowledge and skills acquired in the context of relational databases studied at Level 5.  Issues of complexity in databases arise when the scale of the database increases and the focus here is on firstly the design and implementation in a large multi-user database and secondly, selected current and emerging topics in databases. This module provides an in-depth study of the design and implementation of relational databases using a top-down approach.  There is a large practical element using a popular market leading product in the roles of database designer, database administrator and end user.  The module also raises awareness of areas where new types of database are emerging and provides practical experience in these areas.",
+      "credits": "15 Credits"
+    },
+    "Software Quality": {
+      "level": 6,
+      "module_id": "Software Quality",
+      "title": "Software Quality",
+      "summary": "This module provides both a theoretical and practical introduction to quality both in terms of the software development process and the products of that process. It also investigates how quality can be defined and measured, and by analysing actual program code to determine its quality according to pre-determined quality metrics.",
+      "credits": "15 Credits"
+    },
+    "Robotics": {
+      "level": 6,
+      "module_id": "Robotics",
+      "title": "Robotics",
+      "summary": "This module will provide an in-depth introduction to Intelligent Adaptive Systems (IAS) and the AI notions, methods, techniques, and algorithms underlying the design and implementation of a variety of artificial IAS. IAS can be defined as systems that adapt (change, improve) autonomously their sensorimotor, morphological,\nfunctional and/or cognitive capabilities as they interact with their environments to face in advantageous ways the dynamic changes and challenges that those environments pose.",
+      "credits": "15 Credits"
+    },
+    "Software Engineering Techniques": {
+      "level": 6,
+      "module_id": "Software Engineering Techniques",
+      "title": "Software Engineering Techniques",
+      "summary": "The following is an indicative list of topics. \n\n\u2022 Distributed version control: principles of distributed versioning, core operations, concurrent and collaborative workflows.  Concrete practice: e.g., Git \n\n\u2022 Practical software verification techniques \u2013 fundamental concepts: static/dynamic, syntactic/semantic, decidability/soundness/etc. trade-offs. \n- Static code analysis: syntactic analysis, design patterns and SE principles. Concrete practice: e.g., SpotBugs, Pmd \n- Static type checking: type safety (memory safety), subtyping, (subtype) polymorphism.  Concrete practice: e.g., Java \n- Testing (dynamic verification)\n\n\u2022 Black-box testing: specification-based (functional) testing, BB techniques (e.g., Boundary Value Analysis, Equivalence Class Partitioning). Concrete practice: e.g., JUnit \n\n\u2022 White-box testing: complementary to BB testing, Control Flow Graphs, code coverage metrics (e.g., Statement/Branch Coverage), \"complexity\" metrics.  Concrete practice: e.g., JaCoCo \n\n\u2022 Further programming topics:  concrete practice, e.g., Java using IntelliJ\n- Generics: collections, subtype/parametric polymorphism, implementations (e.g., erasure) and consequences.\n- Modern data processing patterns: first-class functions and lambdas.  E.g., Java Stream API. \n- Reflection: run-time introspection and modification of a program.",
+      "credits": "15 Credits"
+    }
+  }
+}

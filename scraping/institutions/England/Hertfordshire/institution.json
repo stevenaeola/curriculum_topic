@@ -2,25 +2,29 @@
     "institution": "Hertfordshire",
     "index": {"2024": [
         {
-          "url": "https://www.herts.ac.uk/courses/undergraduate/computer-science-software-engineering3",
-          "actions": 
-          [
-            {"ID": "onetrust-accept-btn-handler", "action": "click", "when": "first"},
-            {"XPath": "//*[@id='container']/div/div/div[1]/button","action": "click", "when": "first"},
-            {"XPath": "//span[. = 'Level 4']", "action": "click"}
-          ],
+          "url": "file://%INSTITUTION_DIR%/Computer%20Science%20(Software%20Engineering)%20_%20Courses%20_%20Uni%20of%20Herts.html",
+          "moduleContainers": {"XPath": "//span[contains(., 'Level 4')]/following-sibling::div//tr[position() mod 2 = 0]"},
           "constants": {"level": 4}
+        },
+        {
+          "url": "file://%INSTITUTION_DIR%/Computer%20Science%20(Software%20Engineering)%20_%20Courses%20_%20Uni%20of%20Herts.html",
+          "moduleContainers": {"XPath": "//span[contains(., 'Level 5')]/following-sibling::div//tr[position() mod 2 = 0]"},
+          "constants": {"level": 5}
+        },
+        {
+          "url": "file://%INSTITUTION_DIR%/Computer%20Science%20(Software%20Engineering)%20_%20Courses%20_%20Uni%20of%20Herts.html",
+          "moduleContainers": {"XPath": "//span[contains(., 'Level 6')]/following-sibling::div//tr[position() mod 2 = 0]"},
+          "constants": {"level": 6}
         }
         ]},
     "module": {
         "moduleContainers": {
-            "CSS-selector": "li[class='slidedown active'] tr:not(:first-child):not([style*='display: none;']):not([style*='display:none'])",
             "moduleLink": {"XPath": "td[1]/a"},
             "module_id": {"XPath": "td[1]/a"},
             "title": {"XPath": "td[1]/a"},
-            "credits": {"XPath": "td[2]"}
+            "credits": {"XPath": "td[2]"},
+            "summary": {"XPath": "following-sibling::tr[1]/td"}
         },
-        "summary": {"CSS-selector": "tr.module-description:not([style*='display:none']) td"}
- 
+        "no_clicking_required": true
     }
 }
