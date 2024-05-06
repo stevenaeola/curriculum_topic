@@ -1,0 +1,41 @@
+{
+    "institution": "Manchester_Metropolitan",
+    "index": {"2023": [
+        {
+            "url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-computer-science",
+            "constants": {"level": "1"},
+            "actions": [
+                {"ID": "ccc-notify-accept", "action": "click", "when": "first"},
+                {"CSS_class": "hide-pop-card", "action": "click", "when": "first"}
+            ],
+            "moduleContainers": {"XPath": "//*[@id='__layout']/div/div/div/div[6]/div/section/div[1]//h4/../.."}
+        },
+        {
+            "url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-computer-science",
+            "constants": {"level": "2"},
+            "actions": [
+                {"ID": "ccc-notify-accept", "action": "click", "when": "first"},
+                {"CSS_class": "hide-pop-card", "action": "click", "when": "first"}
+            ],
+            "moduleContainers": {"XPath": "//*[@id='__layout']/div/div/div/div[6]/div/section/div[2]//h4/../.."}
+        },
+        {
+            "url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-computer-science",
+            "constants": {"level": "3"},
+            "actions": [
+                {"ID": "ccc-notify-accept", "action": "click", "when": "first"},
+                {"CSS_class": "hide-pop-card", "action": "click", "when": "first"}
+            ],
+            "moduleContainers": {"XPath": "//*[@id='__layout']/div/div/div/div[6]/div/section/div[3]//h4/../.."}
+        }
+        ]},
+    "module": {
+        "moduleContainers":{
+            "moduleLink": {"XPath": "a/h4"},
+            "module_id": {"XPath": "a/h4"},
+            "title": {"XPath": "a/h4"},
+            "summary": {"XPath": "div[1]/div/div"}
+        },
+        "no_clicking_required": true
+    }
+}

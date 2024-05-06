@@ -1,0 +1,148 @@
+{
+  "2023": {
+    "Programming": {
+      "level": "1",
+      "module_id": "Programming",
+      "title": "Programming",
+      "summary": "<p>This unit introduces computer programming in a high-level programming language and includes principles and practice in problem-solving, program design, solution implementation and testing. You will gain practical experience in developing software using industry-standard programming languages and tools.</p>"
+    },
+    "Databases": {
+      "level": "1",
+      "module_id": "Databases",
+      "title": "Databases",
+      "summary": "<p>This unit introduces you to the use of the relational model to structure data for efficient storage and retrieval. You will gain practical experience in the construction and usage of relational databases in an industry-standard relational database management system.</p>"
+    },
+    "Computer Architecture": {
+      "level": "1",
+      "module_id": "Computer Architecture",
+      "title": "Computer Architecture",
+      "summary": "<p>This unit introduces you to the fundamental building blocks of digital systems, including the basic architecture of microprocessors and digital logic. You will learn how microprocessors are programmed at a low level and gain an appreciation for working with numeral systems commonly used in the computing domain (eg: binary).</p>"
+    },
+    "Team Project": {
+      "level": "1",
+      "module_id": "Team Project",
+      "title": "Team Project",
+      "summary": "<p>This unit offers you the opportunity to collaborate on a programme-specific team project, collecting ideas from across their first year of study. Working in a team offers you the chance to develop both independent and team working skills, project planning, and helps you prepare for the second year of study.</p>"
+    },
+    "Web Development": {
+      "level": "1",
+      "module_id": "Web Development",
+      "title": "Web Development",
+      "summary": "<p>This unit introduces you to the key concepts, standards and technologies that underpin the modern web. You will gain practical experience with contemporary client-side web programming tools and techniques to build websites compliant with widely adopted industry standards.</p>"
+    },
+    "Graduate Skills": {
+      "level": "1",
+      "module_id": "Graduate Skills",
+      "title": "Graduate Skills",
+      "summary": "<p>This unit introduces a range of skills required for you to succeed both on your degree and into graduate employment. The unit aims to help you to develop your own personal, independent, and proactive studying methodology to be effective life-long learners.</p>"
+    },
+    "Mathematics for Computing": {
+      "level": "1",
+      "module_id": "Mathematics for Computing",
+      "title": "Mathematics for Computing",
+      "summary": "<p>This unit provides the essential mathematical foundation for further study in computing, covering a variety of applied mathematical topics suitable for a range of computing disciplines.</p>"
+    },
+    "Networks": {
+      "level": "2",
+      "module_id": "Networks",
+      "title": "Networks",
+      "summary": "<p>This unit explores the theoretical and practical operation of computer networks, exploring different models and protocols of networking, and an exploration of contemporary problems and challenges in modern networking solutions.</p>"
+    },
+    "Thematic Project": {
+      "level": "2",
+      "module_id": "Thematic Project",
+      "title": "Thematic Project",
+      "summary": "<p>Building on the knowledge and skills that you have developed so far on the programme, the thematic project will allow you to further develop your project management, team working and communication skills by applying those skills to a given industry, or research, inspired project. Wider aspects such as social, security, ethical and legal issues will be embedded in the project work where appropriate.</p>"
+    },
+    "Ethical Hacking": {
+      "level": "2",
+      "module_id": "Ethical Hacking",
+      "title": "Ethical Hacking",
+      "summary": "<p>This unit focuses on infrastructure and web testing, based around \u2018capture the flag\u2019 (CTF) style exercises.</p>"
+    },
+    "Industry and Community Engagement": {
+      "level": "2",
+      "module_id": "Industry and Community Engagement",
+      "title": "Industry and Community Engagement",
+      "summary": "<p>This unit capitalises on the uniquely vibrant technology community in Manchester, challenging you to curate a portfolio of professional interests within the field by engaging with the local tech community at various events. Through self-reflection, you will develop new interests, and learn to see your course in a wider technological, social and ethical context.</p>"
+    },
+    "Software Development Processes": {
+      "level": "2",
+      "module_id": "Software Development Processes",
+      "title": "Software Development Processes",
+      "summary": "<p>You will study the software development lifecycle, including the analysis, modelling, specification, design, implementation, testing and maintenance of software systems. You will be able to contrast different project management methodologies, selecting individual techniques to suit the project at hand.</p>"
+    },
+    "Operating Systems": {
+      "level": "2",
+      "module_id": "Operating Systems",
+      "title": "Operating Systems",
+      "summary": "<p>This unit introduces the theory and practice of computational operating systems, with emphasis on the fundamental aspects concerning the structure and organisation of operating systems and study of associated problems.</p>"
+    },
+    "Computer Graphics": {
+      "level": "2",
+      "module_id": "Computer Graphics",
+      "title": "Computer Graphics",
+      "summary": "<p>This unit offers you an introduction to an industry-standard API for graphical programming, exploring both the theoretical underpinning of rendering graphical output, and the practical considerations and applications of rendering interactive 3D graphics.</p>"
+    },
+    "Algorithms and Data Structures": {
+      "level": "2",
+      "module_id": "Algorithms and Data Structures",
+      "title": "Algorithms and Data Structures",
+      "summary": "<p>This unit explores a range of fundamental algorithms and data structures used to solve a number of computational challenges fundamental to the study of computer science disciplines. Students will learn to consider and discuss algorithm complexity and efficiency through practical implementation.</p>"
+    },
+    "Mobile Computing": {
+      "level": "3",
+      "module_id": "Mobile Computing",
+      "title": "Mobile Computing",
+      "summary": "<p>This unit offers you the opportunity to explore the development of applications designed to run on mobile computing devices. You will gain practical experience of using device emulators, frameworks, APIs and libraries for the development of mobile apps that utilise specialist features of mobile devices.</p>"
+    },
+    "Rapid Applied Problem Solving": {
+      "level": "3",
+      "module_id": "Rapid Applied Problem Solving",
+      "title": "Rapid Applied Problem Solving",
+      "summary": "<p>This unit challenges you to develop your problem-solving skills under pressure. By participating in a series of rapid, applied problem solving challenges, you will develop core essential skills aimed at bridging the employment gap. You will become well-versed in analysing problems, identifying appropriate algorithms and data structures, creatively solving those problems, implementing and evaluating solutions. You will enhance your employability by practising assessment tasks commonly used in tech industry recruitment.</p>"
+    },
+    "Artificial Intelligence": {
+      "level": "3",
+      "module_id": "Artificial Intelligence",
+      "title": "Artificial Intelligence",
+      "summary": "<p>This unit presents the underlying theory and industrial applications of contemporary artificial intelligence (AI) paradigms, exploring the implementation of AI techniques and the open questions surrounding AI solutions.</p>"
+    },
+    "Research Methods": {
+      "level": "3",
+      "module_id": "Research Methods",
+      "title": "Research Methods",
+      "summary": "<p>This unit will prepare you for the synoptic project by introducing the scientific method and presenting the main approaches to perform, analyse, classify and communicate research.</p>"
+    },
+    "Distributed Computing": {
+      "level": "3",
+      "module_id": "Distributed Computing",
+      "title": "Distributed Computing",
+      "summary": "<p>This unit presents the fundamental concepts of distributed algorithms designed to run on distributed processing systems without a strong centralised control. The unit explores different examples of architectures, and suitability of algorithms for those architectures.</p>"
+    },
+    "Programming Languages and Paradigms": {
+      "level": "3",
+      "module_id": "Programming Languages and Paradigms",
+      "title": "Programming Languages and Paradigms",
+      "summary": "<p>This unit examines the design and evolution of programming languages with a focus on comparative analysis and critical evaluation of programming language concepts and paradigms.</p>"
+    },
+    "User Experience and Interaction Design": {
+      "level": "3",
+      "module_id": "User Experience and Interaction Design",
+      "title": "User Experience and Interaction Design",
+      "summary": "<p>Stressing the importance of a user-centred design approach from the outset, this unit affords you the chance to widen your knowledge of the ways in which humans interact with digital systems and services. It draws upon theories and principles from human-computer interaction, user experience, and interaction design, exploring how these can be applied and evaluated in a variety of technological contexts with the overarching aim of promoting an improved and impactful solution.</p>"
+    },
+    "Research in Computing": {
+      "level": "3",
+      "module_id": "Research in Computing",
+      "title": "Research in Computing",
+      "summary": "<p>The Research in Computing option cluster offers you the opportunity to engage with the Department of Computing and Mathematics\u2019 Centre for Advanced Computational Science, by choosing an option which relates to one of the centre\u2019s main themes. By undertaking a focused research study in a specialist area, you have the opportunity to engage in cutting-edge computational research informed by world-leading theoretical and applied research.</p>"
+    },
+    "Synoptic Project": {
+      "level": "3",
+      "module_id": "Synoptic Project",
+      "title": "Synoptic Project",
+      "summary": "<p>The synoptic project allows you to consolidate your learning from your degree programme into a final project, bringing together ideas and techniques from throughout your study. From this project, you will produce the centrepiece of their degree work portfolio.</p>"
+    }
+  }
+}
