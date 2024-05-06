@@ -1,0 +1,301 @@
+{
+  "2023": {
+    "CS11005": {
+      "level": "1",
+      "module_id": "CS11005",
+      "title": "Unix Systems module (CS11005)",
+      "summary": "In this module, you will have the opportunity to delve into the Unix operating system, which is a widely used computing system across industry.By exploring Unix, you will be able to catch a first glance at how an operating system works. It will also teach you valuable skills for your academic and professional career, such as automating tasks using Bash and proficient command-line usage.The module provides a solid foundation in these Unix principles and operations, enabling you to become a more effective and efficient programmer.",
+      "content": "",
+      "ilo": "<li>study the basic principles and operations of Unix</li>\n<li>learn about the Unix command-line interface, file system, permissions, and processes</li>\n<li>automate tasks using Bash scripting</li><li>demonstrate a deep understanding of Unix and its core features</li>\n<li>navigate the command-line interface with proficiency</li>\n<li>use common Unix tools professionally</li>\n<li>be able to develop scripts and programs in a Unix-like environment</li>",
+      "credits": "10"
+    },
+    "CS12002": {
+      "level": "1",
+      "module_id": "CS12002",
+      "title": "Introduction to Data Structures and Algorithms module (CS12002)",
+      "summary": "This introductory module is designed to teach you the fundamental concepts of the Java programming language, algorithm design and data structures.You will study the basics of Java syntax, its data types and control structures, and learn to develop using object-oriented programming (OOP) principles. With this knowledge, you will be able to write your own programs in Java.You will explore iterative and recursive algorithm design using Java, and implement commonly used data structures.These skills are essential to develop efficient and effective solutions to various problems.",
+      "content": "",
+      "ilo": "<li>explore the Java programming language and learn about its syntax, data types, and control structures</li>\n<li>study commonly used data structures, such as linked lists, stacks, queues, sets, and binary trees</li>\n<li>implement data structures from scratch</li>\n<li>learn about algorithm design and implementation, including recursive programming techniques</li>\n<li>explore multithreaded programming and Graphical User Interfaces (GUIs)</li><li>define and implement commonly used data structures in programming</li>\n<li>compare and contrast data structures</li>\n<li>compose efficient solutions to problems through appropriate data structure designs</li>\n<li>design and apply algorithms</li>\n<li>understand the difference between iterative and recursive algorithms, and use them appropriately</li>\n<li>develop multithreaded applications and GUIs</li>",
+      "credits": "20"
+    },
+    "CS11001": {
+      "level": "1",
+      "module_id": "CS11001",
+      "title": "Front End Website Development module (CS11001)",
+      "summary": "Being able to create modern web experiences is an important part of every Computer Scientist's toolbox.In this module, you will explore how to create front-ends for web experiences. These are the parts of web applications that users interact with directly. They encompass the layout, design, and interactivity of a page.Hypertext Markup Language (HTML) and Cascading Style Sheets (CSS) form the foundation of webpages and are used to create, structure, and style content. Together with knowledge of design principles, they allow you to create rich user experiences on the web.Learning about these core web technologies enables you to develop a better understanding of how websites work and how you can create your own.",
+      "content": "",
+      "ilo": "<li>learn about core technologies used to create web experiences</li>\n<li>explore HTML and Semantic Web Elements to create and structure web content</li>\n<li>study Cascading Style Sheets (CSS) to format webpages</li>\n<li>work with CSS libraries, such as Bootstrap, to streamline the website design process</li>\n<li>study important design principles such as contrast, repetition, alignment, and proximity</li>\n<li>explore the historical and social aspects of the web</li><li>understand and use web-based programming languages</li>\n<li>show your ability to use core web technologies</li>\n<li>reflect on historical, social, and potential future web developments</li>\n<li>consider legal, ethical, social, and accessibility issues in the design of webpages</li>",
+      "credits": "10"
+    },
+    "CS11003": {
+      "level": "1",
+      "module_id": "CS11003",
+      "title": "Mathematics for Computer Science module (CS11003)",
+      "summary": "Mathematics provides the underlying framework for many common problems in Computer Science, ranging from algorithm design to cryptography and machine learning.Studying the fundamental mathematical concepts behind various concepts in computing will allow you to improve your problem-solving skills and learn how to apply mathematics to approach these tasks.In addition to studying the theory behind these concepts, you will put them into practice programmatically using Python. This will teach you to perform complex calculations using code and to work with common libraries for mathematical programming, such as matplotlib or pandas.",
+      "content": "",
+      "ilo": "<li>functions and calculus, including 2D and 3D plotting, limits, differentiation, and vector calculus</li>\n<li>linear algebra, including vector and matrix operations, determination and properties, and 2D and 3D transformations</li>\n<li>optimisation, including least-squares and gradient-based methods</li>\n<li>probability and statistics, including probability calculus, distributions and densities, expectations, sampling, and Bayes' rule</li><li>demonstrate your understanding of the mathematical concepts relevant to Computer Science</li>\n<li>understand where in computing these mathematics are of importance</li>\n<li>apply your knowledge of mathematics in problem solving</li>\n<li>read and interpret mathematical descriptions underlying various methods in computing</li>",
+      "credits": "20"
+    },
+    "CS12003": {
+      "level": "1",
+      "module_id": "CS12003",
+      "title": "Computing and Society module (CS12003)",
+      "summary": "Computing technologies play an increasingly large role in modern society. It is important to understand the implications the use of technology has on society.In this module, you will learn how to analyse the use of computing technologies in society by working with various case studies.This will provide you with a solid foundation for exploring the relationship between computing technology and those that use computers daily.",
+      "content": "",
+      "ilo": "<li>explore how computing has developed, from its origins to current applications</li>\n<li>learn about different models of society</li>\n<li>investigate how computing has been integrated into society</li>\n<li>study how computing technology can impact people in various contexts</li>\n<li>explore how computing can benefit society and where it can go wrong</li>\n<li>consider the ethical implications of the use of different technologies in society</li><li>show a deep understanding of the use and impact of computing technology in society</li>\n<li>demonstrate your ability to analyse the use of computing technologies and their impact on different groups of people</li>",
+      "credits": "10"
+    },
+    "CS12001": {
+      "level": "1",
+      "module_id": "CS12001",
+      "title": "Embedded Systems Development and Networking module (CS12001)",
+      "summary": "Today, technology is all around us. Many devices and appliances we use in day-to-day life are connected through the Internet of Things (IoT), which allows them to communicate and work together.In this module, you will study the two underlying fields of IoT, Embedded Systems and Networking, and create tangible applications and interfaces first-hand using this knowledge.In Embedded Systems, you will learn to how computer systems within modern products and devices work, how to develop for them, and how you can create your own tangible experiences.In Networking, you will study the technology that allows these devices to communicate and the rules that network communications follow.",
+      "content": "",
+      "ilo": "<li>learn about the fundamentals of embedded systems</li>\n<li>explore key concepts in embedded system development and apply them using the Raspberry Pi platform</li>\n<li>study sensors and actuators, and learn how they can be used to create tangible experiences</li>\n<li>investigate the Internet of Things (IoT) and how it connects embedded systems to the wider Internet</li>\n<li>study fundamental networking concepts, including the Open Systems Interconnection (OSI) and TCP/IP network layer models</li>\n<li>learn how wired and wireless networks work</li>\n<li>explore various networking protocols used on local networks and the Internet</li><li>demonstrate your understanding of key concepts related to embedded systems development</li>\n<li>use the Raspberry Pi platform to create tangible applications, and evaluate them</li>\n<li>describe the layers of the OSI model and its relation to TCP/IP</li>\n<li>understand and investigate networking protocol operation and specification, including those used on the Internet</li>",
+      "credits": "20"
+    },
+    "CS11004": {
+      "level": "1",
+      "module_id": "CS11004",
+      "title": "Professional Skills in Computer Science module (CS11004)",
+      "summary": "Being able to work successfully as part of a team is an important skill for every developer.Many tools exist to help teams succeed and work together more efficiently. It is important for developers to know how to use these tools and to be able to assess their usage from a practical and ethical view.In this module, you will explore industry-standard tools and software that are used by development teams to successfully work together.",
+      "content": "",
+      "ilo": "<li>learn how groups are formed, developed and how to work in them</li>\n<li>develop active listening skills</li>\n<li>learn about version control and study the stages of Git and Git Flow</li>\n<li>learn how to write reports using LaTeX</li>\n<li>explore how to use AI systems and how they can be used to improve software development processes</li><li>work successfully as part of a software development team</li>\n<li>utilise version control to collaborate on projects</li>\n<li>appropriately and ethically use AI systems</li>",
+      "credits": "10"
+    },
+    "CS11002": {
+      "level": "1",
+      "module_id": "CS11002",
+      "title": "Introduction to Software Development module (CS11002)",
+      "summary": "Software development is the process of designing, building, testing, and maintaining software applications.The process typically involves several stages, including requirements gathering, design, implementation, testing, and maintenance.This introductory module will allow you to develop core skills in software development. This will make sure that everyone in the class is has a shared understanding of these skills, whether or not they have studied computing previously.",
+      "content": "",
+      "ilo": "<li>build the foundational skills to design and develop software</li>\n<li>learn about data types and variables</li>\n<li>study objects and classes</li>\n<li>learn the importance of considering users and their requirements in the software development process</li>\n<li>learn to identify user needs and design software that meets those needs effectively</li><li>demonstrate a strong understanding of software development fundamentals</li>\n<li>declare and assign values to variables, and use them correctly in your programs</li>\n<li>define classes, create objects from those classes, and use them in your programs</li>\n<li>understand the core concepts of object-oriented programming and its benefits</li>\n<li>demonstrate practical skills by creating your own Java software programs</li>\n<li>build upon valuable experience in software development</li>",
+      "credits": "20"
+    },
+    "CS22003": {
+      "level": "2",
+      "module_id": "CS22003",
+      "title": "User Interface Design module (CS22003)",
+      "summary": "User interfaces (UIs) are how users interact with our applications. It is vital to be able to present our applications in an appealing way to ensure that they are easy and appealing to use.This module explores contemporary user interface design and looks closely at how certain design elements affect the user experience.You will study important concepts of interface design, and put them into practice using prototyping tools like Figma.",
+      "content": "",
+      "ilo": "<li>explore the history and evolution of Graphical User Interfaces (GUIs)</li>\n<li>examine the role of common design components, such as icons, widgets, and menus</li>\n<li>learn about different interfaces and interactions, such as touch, gesture, voice, and haptic feedback</li>\n<li>examine the concept of \"Dark UX\" and how it can be used to manipulate user behaviour</li>\n<li>study atomic design principles used to create consistent and scalable UI design systems</li>\n<li>learn how to create reusable design components</li>\n<li>study scientific research articles relating to user interface design and critically analyse them</li>\n<li>learn how to use high-fidelity prototyping tools, such as Figma, to create design libraries for prototyping</li>\n<li>explore how to design and test user interfaces for different contexts, and compare the effectiveness of different interface elements</li><li>demonstrate your ability to create effective UI designs</li>\n<li>design libraries for high-fidelity prototyping</li>\n<li>discuss the development of user interface designs for different contexts and purposes</li>\n<li>explore how users interact with different types of interfaces</li>\n<li>critically analyse research papers</li>",
+      "credits": "20"
+    },
+    "CS22001": {
+      "level": "2",
+      "module_id": "CS22001",
+      "title": "Database Systems module (CS22001)",
+      "summary": "Data drives the modern world, with the amount of information in our databases growing exponentially each year. Whether you want to develop cutting-edge applications, extract valuable information from large datasets, or optimise business processes - a good understanding of database systems is key.This module will provide you with a solid foundation in the design and implementation of relational databases. The relational database model is one of the most prevalent database architectures in the industry.You will further study Structured Query Language (SQL), which is used to interact with and modify the data in your databases.",
+      "content": "",
+      "ilo": "<li>study the concepts of relational database models and their importance today</li>\n<li>learn how to design relational database solutions using ER diagrams</li>\n<li>learn about transaction management and how to write queries in SQL</li>\n<li>study how to evaluate a database solution</li>\n<li>investigate the concepts of data warehousing and data mining, and how to design and implement database solutions for them</li>\n<li>explore alternative database models, such as hypermedia or real-time databases</li>\n<li>investigate the legal and professional issues relating to databases</li>\n<li>use these skills to design and implement your own database solution</li><li>specify, design, and implement a professional database solution</li>\n<li>evaluate and address qualitative aspects of database solutions</li>\n<li>compare and contrast different database models</li>\n<li>demonstrate your understanding of legal and professional issues relation to databases, such as data protection legislation</li>\n<li>apply these skills to real-world scenarios</li>",
+      "credits": "20"
+    },
+    "CS22002": {
+      "level": "2",
+      "module_id": "CS22002",
+      "title": "Modern Web Stack Development module (CS22002)",
+      "summary": "Familiarity with the modern web stack is not just for \"making websites\" but benefits developers across the job market.The web is no longer just HTML and CSS. Modern websites combine a number of technologies and scripting languages to create web applications that are fast, reliable, and scalable.Apps which previously ran natively on desktop computers, such as Microsoft Excel, are now also web based. New Progressive Web Apps use web technology to create cross-platform apps faster and easier than compiling native code for many systems.The web development landscape is constantly evolving, with new technologies and frameworks being developed all the time. Understanding modern web stack development enables you to stay current with the latest technologies and take advantage of their benefits.",
+      "content": "",
+      "ilo": "<li>learn how to develop and test web applications using modern full-stack development techniques</li>\n<li>develop applications using cutting-edge web frameworks</li>\n<li>explore current trends in modern web development</li>\n<li>develop an understanding of how applications are made secure</li><li>understand how client-side, server-side, and storage solutions connect to form a full-stack web applications</li>\n<li>engage in the development of a dynamic web application using a modern full-stack development approach</li>\n<li>show your ability to apply problem-solving, communication, and team-working to create web applications</li>",
+      "credits": "20"
+    },
+    "CS21005": {
+      "level": "2",
+      "module_id": "CS21005",
+      "title": "Software Engineering module (CS21005)",
+      "summary": "In this module, you will gain a comprehensive understanding of important software engineering principles and practices. A particular focus is put on software specification and design techniques.Through practical assignments and projects, you will develop the skills necessary to apply these concepts in real-world scenarios.",
+      "content": "",
+      "ilo": "<li>learn about fundamental principles of software engineering, including standard practices and notations</li>\n<li>study software design principles such as abstraction, modularity, and separation of concerns</li>\n<li>apply software specification and design methods in projects</li>\n<li>learn about software design quality, how to measure and recognise it</li>\n<li>learn how to assess and address qualitative aspects in software engineering, such as maintainability, scalability, and usability</li>\n<li>explore tools to aid in software engineering processes, including design software and version control systems</li><li>demonstrate your understanding of software engineering processes</li>\n<li>use industry-standard notation and practices for software engineering</li>\n<li>apply software design principles to create high-quality software designs</li>\n<li>assess the qualitative aspects of software engineering and address them correctly</li>\n<li>appropriately select tools to aid in software engineering processes</li>",
+      "credits": "10"
+    },
+    "CS21002": {
+      "level": "2",
+      "module_id": "CS21002",
+      "title": "Introduction to Artificial Intelligence and Machine Learning module (CS21002)",
+      "summary": "The world is becoming increasingly reliant on intelligent systems. Learning and adapting technology is relevant for a diverse set of fields, including finance, healthcare, and cybersecurity.With artificial intelligence, we can unlock a wide range of new tools that can improve user experiences, help in pioneering research, and empower developers to create powerful applications.This module explores the fundamental concepts of artificial intelligence and machine learning. With this knowledge, you will be able to develop cutting-edge and innovative technology.",
+      "content": "",
+      "ilo": "<li>learn about the fundamental concepts surrounding artificial intelligence (AI)</li>\n<li>study the history of AI systems and how they have changed since their introduction</li>\n<li>explore the basics of machine learning (ML) and deep-learning systems and how they can be used</li>\n<li>use popular libraries for AI and ML program development</li><li>demonstrate your understanding of fundamental AI principles and its development over time</li>\n<li>apply the theory of searching, constraints, learning, and planning in AI problem-solving scenarios</li>\n<li>understand how ML techniques can be applied to solve real-world problems</li>\n<li>evaluate how recent developments in AI and ML have shaped software development in this field</li>",
+      "credits": "10"
+    },
+    "CS21004": {
+      "level": "2",
+      "module_id": "CS21004",
+      "title": "Operating Systems module (CS21004)",
+      "summary": "Operating systems manage and control a computer's resources, allowing users to run and interact with programs. Their job is to ensure programs run safely and facilitate access to files and input/output (I/O) devices.By studying the inner mechanisms of operating systems, you can learn to leverage advanced features such as concurrency, which enables multiple programs to run at the same time.These skills empower you to create more efficient, secure, and scalable programs and computing systems.",
+      "content": "",
+      "ilo": "<li>study how operating systems run programs using processes and threads</li>\n<li>learn about essential aspects of operating system design, such as CPU scheduling, pre-emption, and concurrency</li>\n<li>examine issues that arise from concurrency and learn about mechanisms to address them</li>\n<li>learn about distributed systems and I/O scheduling for networks, which are crucial in creating larger computing systems</li>\n<li>study how operating systems manage files, access to mass storage, and I/O devices</li><li>show a broad understanding of how operating systems function</li>\n<li>demonstrate your understanding of how programs are run and managed by operating systems</li>\n<li>understand and assess the various mechanisms allowing processes to run concurrently</li>\n<li>discuss the issues arising from concurrency and appraise mechanisms to address them</li>\n<li>understand how distributed systems function</li>\n<li>identify security concerns in computer systems</li>",
+      "credits": "10"
+    },
+    "CS21001": {
+      "level": "2",
+      "module_id": "CS21001",
+      "title": "Employability for Computing Professionals module (CS21001)",
+      "summary": "As a Computing professional, it is important to know how to best present yourself when you enter, work at, and leave a workplace environment.You will explore how to analyse employer requirements and how to best showcase your unique skillset and experience. This includes networking and building an online presence, CV building, professional interview conduct, and more.",
+      "content": "",
+      "ilo": "<li>explore how to build a professional social media presence that will be attractive to employers and present yourself in the best possible way</li>\n<li>develop an understanding of how to build a CV based on your experience</li>\n<li>learn about the different aspects vital to securing a job interview</li>\n<li>take part in mock interviews to develop your technical and behaviour-based interview skills</li>\n<li>explore how to create a portfolio of your previous work to present to potential employers, showcasing your abilities that will be valued in the workplace</li><li>analyse employer requirements from within job advertisements</li>\n<li>articulate your skills and experience in a way that makes you an attractive employee</li>\n<li>engage in the development of a portfolio that demonstrates skills across several computing areas</li>\n<li>participate in an interview and answer interview questions that highlight your experience</li>",
+      "credits": "10"
+    },
+    "CS21003": {
+      "level": "2",
+      "module_id": "CS21003",
+      "title": "Multi-Paradigm Programming module (CS21003)",
+      "summary": "Multi-paradigm programming refers to the ability to use different programming styles, such as procedural or object-oriented programming.In the first part of the module, you will study the C programming language, which supports the procedural programming paradigm.In the second part, you will move on to study the C++ programming language, which expands upon C and allows for object-oriented programming.Learning multiple programming paradigms enables you to approach problems from different perspectives, and allows you to choose the best way to solve them.",
+      "content": "",
+      "ilo": "<li>study two important programming paradigms, procedural and object-oriented programming</li>\n<li>develop programming skills in C and C++</li>\n<li>explore elements of C and C++ programming, such as pointers, structs, and dynamic memory allocation</li>\n<li>learn about data structures, such as stack, queues, trees, graphs, and hash tables</li><li>understand and apply both procedural and object-oriented programming concepts</li>\n<li>show a strong understanding of data structures and their capabilities</li>\n<li>identify and evaluate suitability of data structures to solve a given computational problem</li>\n<li>demonstrate your ability to program in C and C++</li>",
+      "credits": "20"
+    },
+    "CS31006": {
+      "level": "3",
+      "module_id": "CS31006",
+      "title": "Machine Learning module (CS31006)",
+      "summary": "Machine learning (ML) is a rapidly growing field that has the potential to revolutionise industries such as healthcare, finance, and transportation.With a solid foundation in machine learning, you can analyse vast amounts of data, make predictions, or create intelligent agents. This enables you to implement innovative solutions to solve real-world problems.Whether your passion is data science or software development, the ML skillset is highly sought after in both industries. A strong understanding of machine learning will help you future-proof your career and approach complex problem-solving settings.",
+      "content": "",
+      "ilo": "<li>study supervised machine learning and its applications</li>\n<li>learn about classification and regression problems</li>\n<li>learn about important principles such as generalisation, data splits, and cross-validation</li>\n<li>explore common machine learning algorithms, such as K-nearest neighbour, and linear regression</li>\n<li>discuss parameter optimisation and commonly used optimisation algorithms</li>\n<li>study how neural networks work and the algorithms used to train them</li>\n<li>discuss deep learning and regularisation</li><li>explain key theoretical concepts from machine learning such as generalisation and regularisation</li>\n<li>discuss well-known supervised learning algorithms</li>\n<li>train and evaluate machine learning methods using an industry standard software framework</li>\n<li>describe how to estimate predictive performance of supervised learning methods on a given dataset</li>\n<li>design and conduct machine learning experiments</li>",
+      "credits": "10"
+    },
+    "CS31001": {
+      "level": "3",
+      "module_id": "CS31001",
+      "title": "Data Visualisation Analytics module (CS31001)",
+      "summary": "In today's data-driven world, the ability to effectively analyse and visualise data is becoming increasingly important across a wide range of industries, such as healthcare, finance, and digital marketing.This module provides you with the skills and knowledge needed to make sense of complex datasets and communicate insights effectively.By studying statistical methods, exploring data visualisation techniques, and learning how to mine data from vast datasets, you will be able to tackle real-world problems and make data-driven decisions.&nbsp;<br>&nbsp;",
+      "content": "",
+      "ilo": "<li>study basic frequentist statistics</li>\n<li>explore how to visualise data and information effectively</li>\n<li>learn about the methodologies of the Cross-Industry Standard Process for Data Mining (CRISP-DM)</li>\n<li>explore various data mining algorithms and their use cases</li>\n<li>work with industry standards and techniques for data visualisation and analytics</li><li>understand and explain the importance of statistics in today's world</li>\n<li>select appropriate statistical techniques and data visualisations</li>\n<li>discuss various data mining techniques</li>\n<li>select appropriate data mining techniques for real-world problems</li>",
+      "credits": "10"
+    },
+    "CS32001": {
+      "level": "3",
+      "module_id": "CS32001",
+      "title": "Data Engineering module (CS32001)",
+      "summary": "Data-driven decision making is vital for businesses and organisations today. With the exponential growth of data available to us, it has become crucial to have professionals who can design, build, and maintain data warehouses that can store and process large amounts of data efficiently.This enables faster and more efficient querying and reporting of data from multiple sources and systems, as well as better data quality and consistency.Data engineers are responsible for creating the infrastructure and pipelines that enable data to be collected, transformed, and loaded into data warehouses. This data can then be used by analysts and data scientists to extract insights and make informed decisions.A strong understanding of data warehousing methodology will enable you to develop professional, data-driven solutions. Together with modern developments, such as continuous deployment and microservice architecture, this forms a highly sought-after skillset.",
+      "content": "",
+      "ilo": "<li>learn about the concept of data warehousing and its processes</li>\n<li>learn how to create physical models for data warehouse systems using the Star schema</li>\n<li>study the types of slowly changing dimensions, which are collections of related facts</li>\n<li>examine the Extract-Transform-Load (ETL) process</li>\n<li>gain experience using NoSQL systems</li>\n<li>study the principles of continuous deployment and immutable services</li>\n<li>learn methods for developing continuous deployment solutions</li>\n<li>examine the role of the Cloud in continuous deployment</li>\n<li>explore technologies used in microservices systems</li><li>compare and contrast online transaction processing and data warehousing</li>\n<li>demonstrate a strong understanding of data warehousing development and operation processes</li>\n<li>understand the importance of dimensional modelling and explain the principles of dimensional design</li>\n<li>explain the role of ETL in data warehouse construction</li>\n<li>compare and contrast technologies used in microservices systems development</li>\n<li>demonstrate your understanding of continuous deployment</li>\n<li>design, implement, and operate a data warehouse</li>\n<li>develop a NoSQL system</li>\n<li>implement services to develop a cloud-based ETL microservices system</li>",
+      "credits": "20"
+    },
+    "CS31004": {
+      "level": "3",
+      "module_id": "CS31004",
+      "title": "Games Programming module (CS31004)",
+      "summary": "Games programming is a significant field within the realm of software development. It has a diverse and thriving industry, with a particular focus on new technologies and innovation.Game developers cooperate with designers, writers, and many more to create interactive digital experiences that are enjoyed by millions around the world.Whether you are passionate about computer games, or want to improve your software development skills, studying games programming will introduce you to many important concepts and methodologies for large development projects.Over the course of this module, you will apply these skills to create your own computer game from scratch. You will also explore Scotland's place in the games industry and learn more about what it is like to be a game developer.",
+      "content": "",
+      "ilo": "<li>discuss hardware and software considerations for games</li>\n<li>explore graphics and audio design considerations</li>\n<li>study event-driven programming and important design patterns in games development, and how to use them effectively</li>\n<li>explore the use of physics engines and artificial intelligence in games</li>\n<li>discuss moral and ethical considerations of game design</li>\n<li>investigate security considerations in games programming</li><li>demonstrate your ability to create a computer game from conceptual design to implementation of the game</li>\n<li>document your project using industry-proven methods such as game design documents</li>\n<li>critically evaluate game designs</li>\n<li>apply ethical and accessibility considerations to game design and implementation</li>",
+      "credits": "20"
+    },
+    "CS32002": {
+      "level": "3",
+      "module_id": "CS32002",
+      "title": "Industrial Team Project module (CS32002)",
+      "summary": "Software engineering projects are often vast and complex. Good project management and teamwork are crucial in successful execution of a project.You will learn about agile methodology in software development and teamwork practices. These will allow you to approach software engineering more systematically and use industry standard processes throughout planning, designing, and implementation of a project.In today's fast-paced and changing environment, mastering agile methodology and teamwork can help you deliver high-quality software products on time and within budget.",
+      "content": "",
+      "ilo": "<li>learn about software requirement gathering and analysis</li>\n<li>study agile practices and methodologies, focussing on the Scrum framework</li>\n<li>explore tools and techniques for agile software development</li>\n<li>discuss software quality standards</li>\n<li>investigate legal, social, ethical, and professional issues (LSEPI) in software development projects</li><li>plan and execute a project applying agile methods to develop a user-centred system</li>\n<li>demonstrate a proficient understanding of agile methods and concepts in software engineering</li>\n<li>demonstrate full understanding of the software development lifecycle</li>\n<li>show awareness of professional codes of conduct and understand the legal and professional responsibilities of software engineers</li>\n<li>make informed judgments on complex ethical and professional issues relating to software engineering</li>\n<li>demonstrate strong client interaction and management skills, including fulfilling regular reporting requirements</li>\n<li>present a software solution for appraisal</li>",
+      "credits": "40"
+    },
+    "CS31002": {
+      "level": "3",
+      "module_id": "CS31002",
+      "title": "Information and Network Security module (CS31002)",
+      "summary": "Many modern information systems handle sensitive or personal data. It is the responsibility of the developers to ensure that this data is protected against malicious actors.Just as technology itself, the security threats against information systems are always evolving. By studying the fundamental principles of cryptography and communication security, you can learn how to identify these threats and how to mitigate them.&nbsp;<br>&nbsp;",
+      "content": "",
+      "ilo": "<li>study fundamental security principles, such as confidentiality, integrity, and availability</li>\n<li>learn about basic cryptography and communication security</li>\n<li>explore secure application development principles, such as security requirement analysis, threat modelling, and risk analysis</li>\n<li>investigate common security vulnerabilities in information systems</li>\n<li>discuss human factors in information and network security</li>\n<li>learn about the specification and implementation of security protocols</li><li>demonstrate a solid understanding of cryptography and communication security</li>\n<li>conduct risk analysis and threat modelling to develop secure applications</li>\n<li>identify and address security vulnerabilities in information systems</li>\n<li>show awareness of legal, ethical, and technical issues regarding cybersecurity</li>\n<li>explore and interpret protocol specifications</li>\n<li>implement, troubleshoot, and validate a protocol in a secure client-server architecture</li>",
+      "credits": "20"
+    },
+    "CS31003": {
+      "level": "3",
+      "module_id": "CS31003",
+      "title": "Logic and Discrete Mathematics module (CS31003)",
+      "summary": "Logical and mathematical theory are at the core of computer science. Research in both formal logic and discrete mathematics increased significantly from the latter half of the twentieth century, and is paramount for the innovative advancements in the development of digital computers.The key principles of these fields can be found at the lowest level of computing, where boolean algebra dictates the basic instructions for processors. Other concepts, such as graph theory and recursion, are immensely useful in algorithm and software design.Studying the logical and mathematical backbone of computer science will not only improve your understanding of how computers function on the lowest level, but also enable you to improve your problem-solving skills and approach complex computational problems.",
+      "content": "",
+      "ilo": "<li>explore key theoretical concepts in logic and discrete mathematics</li>\n<li>study the relation between logic and mathematics on the one hand, and computer science on the other</li>\n<li>learn how to apply formal notation and key concepts, including proofs</li><li>boolean algebra</li>\n<li>propositional logic</li>\n<li>predicate calculus</li>\n<li>deduction, induction, abduction</li>\n<li>recursion</li>\n<li>number theory</li>\n<li>graph theory</li>\n<li>game theory</li><li>demonstrate your understanding of logic and discrete mathematics and apply your knowledge in the context of computer science</li>",
+      "credits": "20"
+    },
+    "CS32004": {
+      "level": "3",
+      "module_id": "CS32004",
+      "title": "Theory of Computation module (CS32004)",
+      "summary": "This module will help you develop an understanding of fundamental concepts for computation that help us understand the capabilities and limits of computing systems.By studying general models of computers, we can gain an understanding of which types of problems can be solved by a computer and which cannot be solved. You will also learn about the complexity of algorithms, which describes how fast and with how much memory an algorithm solves a problem.Equipped with this knowledge, you will be able to discuss some of the biggest, unanswered questions in computer science, such as the \"P versus NP\" problem.Additionally, a strong understanding of computational theory is helpful in many branches of computer science, such as algorithm design and compiler construction. It also has practical applications in fields such as cryptography, artificial intelligence, and programming languages.",
+      "content": "",
+      "ilo": "<li>study finite state automata, regular languages, and regular expressions</li>\n<li>learn about Turing machines as a model for computers</li>\n<li>explore the decidability of Turing machines and the halting problem</li>\n<li>look at time-bounded deterministic and non-deterministic Turing machines</li>\n<li>study the complexity classes P and NP</li><li>describe common models of computation and their powers</li>\n<li>demonstrate an understanding of the theoretical limits of computing power and their underlying proofs</li>\n<li>explain the connection between formal languages and machines</li>\n<li>relate the theoretical ideas of complexity and decidability to real-world situations in computer science, such as algorithm design</li>",
+      "credits": "20"
+    },
+    "CS41002": {
+      "level": "4",
+      "module_id": "CS41002",
+      "title": "Information Analysis and Reporting module (CS41002)",
+      "summary": "As the world becomes increasingly reliant on technology, it is important for computer scientists to understand how these aspects fit together. Through research, we can explore the effects and consequences of technology at the centre of society, discover new and innovative solutions, and find ways to make our technology more efficient.Information gathering and analysis provides you with a framework to design and execute experiments, collect and analyse data, and draw conclusions. These skills are essential whether you want to pursue a career in academia, industry, or research. In addition, studying research methods allows you to develop your critical thinking skills and teaches you to work with existing research papers, which are valuable skills in in any field.",
+      "content": "",
+      "ilo": "<li>explore both quantitative and qualitative methods of research</li>\n<li>study empirical research methods</li>\n<li>learn how to prepare a research project</li>\n<li>look at ethical considerations in research</li>\n<li>explore ways to publish and disseminate research results</li>\n<li>conduct your own research experiment applying the methods learned</li><li>compare and contrast different scientific research methods</li>\n<li>design and conduct reliable and valid research</li>\n<li>implement statistical methods to analyse data</li>\n<li>identify, read, analyse, and reference reliable research literature</li>\n<li>evaluate the legal, social, ethical, and professional responsibilities of performing research in science</li>\n<li>describe methods to disseminate research results</li>",
+      "credits": "20"
+    },
+    "": {
+      "level": "4",
+      "module_id": "",
+      "title": "Work Placement module (CS43001)",
+      "summary": "",
+      "content": "",
+      "ilo": "",
+      "credits": ""
+    },
+    "CS41005": {
+      "level": "4",
+      "module_id": "CS41005",
+      "title": "Programming Language Design and Implementation module (CS41005)",
+      "summary": "Programming languages form a bridge between natural languages and machine code.They allow developers to write programs and algorithms in a human-readable format, without the need for detailed knowledge of the computer's instructions.&nbsp;<br>&nbsp;In order for these programs to run, they need to first be translated into machine code.This is done by compilers and interpreters, which can understand a specific programming language and convert it into machine instructions that a computer can execute.The development of a compiler or interpreter is a core part of designing a new programming language.Understanding how these tools work does not only help in the development of programming language, but is also useful in working on language-specific tools or frameworks.Furthermore, it can help you write more efficient and optimised code, and aid in troubleshooting and debugging of your programs.",
+      "content": "",
+      "ilo": "<li>study the Chomsky hierarchy and its relation to programming languages</li>\n<li>learn about regular expressions and automata, and their relation to different types of parsers</li>\n<li>explore the lexical, syntax, and semantic analysis of source code</li>\n<li>study how compilers and interpreters convert source code into machine interpretable code</li><li>demonstrate your understanding of how source code can be parsed and tokenised by different types of automata</li>\n<li>explain the processes of lexical, syntax, and semantic analysis of source code</li>\n<li>demonstrate your understanding of how compilers and interpreters work</li>\n<li>implement a language parser</li>\n<li>implement syntax and semantic analysis of source code languages</li>",
+      "credits": "20"
+    },
+    "CS41001": {
+      "level": "4",
+      "module_id": "CS41001",
+      "title": "Honours Project module (CS41001)",
+      "summary": "The aim of your Honours project is to give you experience in carrying out a large, independent software development project. This is the culmination of your years of study in computer science and brings together the knowledge and skills you have gained throughout your studies.There is a wide range of project topics to choose from, which will allow you to select a project that is relevant to your future career plans or personal interests. Some projects may be more technical or research-oriented, while others are more user-centred. Every effort will be made to allocate you the project of your choice but this is not always possible.A typical project consists of all stages of the software development lifecycle. You are responsible for the day-to-day management of your project. Your academic supervisor will offer guidance and monitor your progress in regular meetings.",
+      "content": "",
+      "ilo": "<li>identify and describe the aims, objectives, and requirements of your project</li>\n<li>review any prior or related work related to your project</li>\n<li>select and apply the tools and technologies needed for your project</li>\n<li>develop a product, methodology, or solution to address the project objectives</li>\n<li>test, evaluate, and critically appraise your solution</li>\n<li>critically reflect upon your work</li>\n<li>communicate the objectives, development process, and outcomes of your work</li>",
+      "credits": "60"
+    },
+    "CS42001": {
+      "level": "4",
+      "module_id": "CS42001",
+      "title": "Principles of Programming Languages module (CS42001)",
+      "summary": "Programming paradigms form the fundamental principles of programming languages. They refer to a specific style or approach to writing computer programs, such as procedural or functional programming.You will already be familiar with procedural and object-oriented programming. While these are powerful paradigms suitable for many software development contexts, other paradigms might be better suited to more specialist applications.Logic programming languages, such as Prolog, are popular in fields such as theorem proving, pattern matching, and natural language processing. Functional programming languages, like Haskell, are preferred when code optimisation and correctness are of high importance.A strong understanding of programming principles and paradigms will enable you to understand the capabilities and limits of specific programming languages. This will allow you to make educated decisions on which programming language to use for certain problems and help you write more optimised solutions.",
+      "content": "",
+      "ilo": "<li>study basic abstraction mechanisms in programming languages, such as variables, expressions, recursion, and macros</li>\n<li>explore procedural programming using C</li>\n<li>explore lambda calculus and functional programming using Haskell</li>\n<li>explore logic programming using Prolog</li>\n<li>explore concurrent and parallel programming using Erlang</li>\n<li>study the fundamentals of type theory</li>\n<li>look at formal reasoning about programs</li><li>understand the differences between various programming paradigms and their representative languages</li>\n<li>understand principles of formal reasoning about properties of programs</li>\n<li>explain the common building blocks of programming languages</li>\n<li>demonstrate an understanding of basic type theory</li>\n<li>apply the fundamentals of parallel programming to write simple parallel programs</li>\n<li>relate the theoretical ideas around programming languages to practical problems in computing</li>",
+      "credits": "20"
+    },
+    "CS31005": {
+      "level": "3",
+      "module_id": "CS31005",
+      "title": "Design Methods module (CS31005)",
+      "summary": "Sophisticated design of user interfaces and interactions is essential for creating user-friendly and visually appealing digital products that enhance user experience and drive engagement.In order to create effective designs, you will study different approaches to design development. You will explore the various processes within these approaches, and develop an intuitive and creative thinking for design considerations.Equipped with this knowledge, you will be able to design experiences that meet the needs of your users and steer engagement with your product.",
+      "content": "",
+      "ilo": "<li>study different design paradigms</li>\n<li>learn how to formulate a problem definition for design problems</li>\n<li>explore different methods to facilitate creative thinking</li>\n<li>explore human considerations in experience design</li>\n<li>study industry standard design practices for user interfaces, experience, and interactions<br>&nbsp;</li>\n<li>learn how to critically evaluate design of existing user interfaces, experience, and interactions</li><li>explain the methods, tools, and techniques used across UI, UX, and interaction design industries</li>\n<li>recognise design paradigms and approaches to solving various design problems</li>\n<li>demonstrate your ability to determine and apply the most appropriate design approach to a problem</li>\n<li>execute relevant methods within each design approach, such as interviews, observations, prototyping, and user testing</li>\n<li>critically evaluate the design of existing user interfaces, experiences, and interactions, and suggest appropriate improvements</li>\n<li>show your ability to approach a broad range of design challenges with creative and critical thinking</li>",
+      "credits": "20"
+    },
+    "CS32003": {
+      "level": "3",
+      "module_id": "CS32003",
+      "title": "Accessible User Experience module (CS32003)",
+      "summary": "With society becoming increasingly reliant on digital products for everyday tasks, it is essential that these products are designed with accessibility in mind.As computer scientists and UX designers, understanding accessibility is crucial for creating products that are inclusive and usable by everyone. You will learn about different types of disabilities and how they affect user experience, as well as techniques for designing and testing accessible products.This knowledge will not only help you to create solutions that meet legal requirements, but also create products that are more user-friendly and have a wider reach.",
+      "content": "",
+      "ilo": "<li>study the definition of a user, their abilities, and their disabilities</li>\n<li>explore various models of accessibility</li>\n<li>study influential research papers in accessibility</li>\n<li>learn how accessibility is considered in the design and development of computing technology</li><li>critically evaluate key contributions to accessible computing</li>\n<li>assess accessibility consideration in the development of new technologies</li>\n<li>conduct accessibility evaluations of user experiences and products to an industry standard</li>\n<li>critically appraise the impact of contemporary experiences on technology</li>",
+      "credits": "20"
+    },
+    "CS42002": {
+      "level": "4",
+      "module_id": "CS42002",
+      "title": "Contemporary UX and Interactions module (CS42002)",
+      "summary": "In the study of contemporary user experience (UX), we look at the current state-of-the-art practices in the design of user interfaces and explore future trends and changes to the field.While graphical user interfaces (GUIs) are the most common way to control applications and experience digital content, more novel technologies have gained popularity in recent years, such as voice user interfaces and wearable technology.Together with new ways to interact with our devices, such as gestures and haptic technology, they form a new branch of user experience design.In this module, you will explore the opportunities and limitations of this state-of-the-art UX technology and discuss the challenges of creating user-centred experiences in novel contexts.",
+      "content": "",
+      "ilo": "<li>study UX design considerations for novel technologies, such as voice user interfaces, wearable technology, and artificial intelligence</li>\n<li>learn how to use haptic technology and gesture interaction in user experience design</li>\n<li>learn how to develop interfaces for end-user programming</li>\n<li>explore the effects and challenges of new interaction types for end users</li><li>explain how the principles of UX are applied to contemporary technologies that disrupt the traditional notion of a user interface</li>\n<li>discuss the challenges of creating a positive user experience for novel interaction modes and contexts</li>\n<li>critique state-of-the-art applications for different user groups and suggest appropriate improvements</li>\n<li>adapt a user-centred design process to the development of UX with novel interactions</li>",
+      "credits": "20"
+    },
+    "CS41003": {
+      "level": "4",
+      "module_id": "CS41003",
+      "title": "Data Visualisation module (CS41003)",
+      "summary": "Data visualisation is the representation of data and information in a visual format, such as charts, graphs, maps, and infographics. It is a way to communicate complex data in a clear and concise manner, making it easier to understand and interpret.By using effective data visualisation, you can convey a narrative and highlight your key messages using data storytelling. Throughout the module, you will explore how effective different types of data and charts are. You will also work with analysis and presentation tools and explore how you can use programming for data visualisation.",
+      "content": "",
+      "ilo": "<li>understand the definition of data and different data types</li>\n<li>learn how to gather data effectively</li>\n<li>study techniques for basic data analysis and create descriptive statistics</li>\n<li>look at the importance of key messages and storytelling in data presentation</li>\n<li>examine different chart types to present data</li>\n<li>learn how to use industry standard analysis and presentation tools</li>\n<li>explore data visualisation programming</li><li>demonstrate your understanding of different data types and how they can be recorded effectively</li>\n<li>analyse different data types correctly</li>\n<li>create data visualisation sketches to communicate a message</li>\n<li>implement interactive data visualisations using modern web technologies</li>\n<li>critically reflect on contextual data tools presented in research papers</li>",
+      "credits": "20"
+    }
+  }
+}

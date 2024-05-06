@@ -1,49 +1,181 @@
 {
-    "institution": "Dundee",
-    "index": {"2023": 
-    [{"url": "https://www.dundee.ac.uk/undergraduate/computer-science-data-science-ai/teaching-and-assessment#id_1",
-      "actions":
-      [
-        {"ID": "ccc-notify-accept",
-        "action": "click",
-        "when": "first"},
-        {"XPath": "//*[@id='id_1']/article/div/div[1]/button",
-        "action": "click",
-      "when": "first"}
-      ]},
-      {"url": "https://www.dundee.ac.uk/undergraduate/computer-science-data-science-ai/teaching-and-assessment#id_1",
-      "actions":
-      [
-        {"ID": "label_id_2",
-        "action": "click"},
-        {"XPath": "//*[@id='id_2']/article/div/div[1]/button",
-        "action": "click"}
-      ]},
-      {"url": "https://www.dundee.ac.uk/undergraduate/computer-science-data-science-ai/teaching-and-assessment#id_1",
-      "actions":
-      [
-        {"ID": "label_id_3",
-        "action": "click"},
-        {"XPath": "//*[@id='id_3']/article/div/div[1]/button",
-        "action": "click"}
-      ]},
-      {"url": "https://www.dundee.ac.uk/undergraduate/computer-science-data-science-ai/teaching-and-assessment#id_1",
-      "actions":
-      [
-        {"ID": "label_id_4",
-        "action": "click"},
-        {"XPath": "//*[@id='id_4']/article/div/div[1]/button",
-        "action": "click"}
-      ]}
-      ]},
-    "module": {
-        "moduleContainers": {"XPath": "//*[@id='id_1']/article//a/span[1] | //*[@id='id_2']/article//a/span[1] | //*[@id='id_3']/article//a/span[1] | //*[@id='id_4']/article//a/span[1]"},
-        "module_id": {"XPath": "/html/body/div[4]/div/main/div/div/article/div/div[2]/div/div/div[1]/div[2]/p/strong"},
-        "title": {"XPath": "//h1"},
-        "summary": {"XPath": "//*[@id='what-you-will-learn']/preceding-sibling::p"},
-        "content": {"XPath": ""},
-        "ilo": {"XPath": "//*[@id='assignments---assessment']/preceding-sibling::ul"},
-        "level": {"XPath": ""},
-        "credits": {"XPath": "/html/body/div[4]/div/main/div/div/article/div/div[2]/div/div/div[1]/div[1]/p/strong"}
+  "institution": "Dundee",
+  "index": {
+    "2023": [
+      {
+        "url": "https://www.dundee.ac.uk/undergraduate/computer-science-data-science-ai/teaching-and-assessment#id_1",
+        "actions": [
+          {
+            "ID": "ccc-notify-accept",
+            "action": "click",
+            "when": "first"
+          }
+        ],
+        "moduleContainers": {
+          "XPath": "//*[@id='id_1']/article//a"
+        },
+        "constants": {
+          "level": "1"
+        }
+      },
+      {
+        "url": "https://www.dundee.ac.uk/undergraduate/computer-science-data-science-ai/teaching-and-assessment#id_1",
+        "actions": [
+          {
+            "ID": "ccc-notify-accept",
+            "action": "click",
+            "when": "first"
+          }
+        ],
+        "moduleContainers": {
+          "XPath": "//*[@id='id_2']/article//a"
+        },
+        "constants": {
+          "level": "2"
+        }
+      },
+      {
+        "url": "https://www.dundee.ac.uk/undergraduate/computer-science-data-science-ai/teaching-and-assessment#id_1",
+        "actions": [
+          {
+            "ID": "ccc-notify-accept",
+            "action": "click",
+            "when": "first"
+          }
+        ],
+        "moduleContainers": {
+          "XPath": "//*[@id='id_3']/article//a"
+        },
+        "constants": {
+          "level": "3"
+        }
+      },
+      {
+        "url": "https://www.dundee.ac.uk/undergraduate/computer-science/teaching-and-assessment",
+        "actions": [
+          {
+            "ID": "ccc-notify-accept",
+            "action": "click",
+            "when": "first"
+          }
+        ],
+        "moduleContainers": {
+          "XPath": "//*[@id='id_1']/article//a"
+        },
+        "constants": {
+          "level": "1"
+        }
+      },
+      {
+        "url": "https://www.dundee.ac.uk/undergraduate/computer-science/teaching-and-assessment",
+        "actions": [
+          {
+            "ID": "ccc-notify-accept",
+            "action": "click",
+            "when": "first"
+          }
+        ],
+        "moduleContainers": {
+          "XPath": "//*[@id='id_2']/article//a"
+        },
+        "constants": {
+          "level": "2"
+        }
+      },
+      {
+        "url": "https://www.dundee.ac.uk/undergraduate/computer-science/teaching-and-assessment",
+        "actions": [
+          {
+            "ID": "ccc-notify-accept",
+            "action": "click",
+            "when": "first"
+          }
+        ],
+        "moduleContainers": {
+          "XPath": "//*[@id='id_3']/article//a"
+        },
+        "constants": {
+          "level": "3"
+        }
+      },
+      {
+        "url": "https://www.dundee.ac.uk/undergraduate/computer-science/teaching-and-assessment",
+        "actions": [
+          {
+            "ID": "ccc-notify-accept",
+            "action": "click",
+            "when": "first"
+          }
+        ],
+        "moduleContainers": {
+          "XPath": "//*[@id='id_4']/article//a"
+        },
+        "constants": {
+          "level": "4"
+        }
+      },
+      {
+        "url": "https://www.dundee.ac.uk/undergraduate/computer-science-ux-design/teaching-and-assessment",
+        "actions": [
+          {
+            "ID": "ccc-notify-accept",
+            "action": "click",
+            "when": "first"
+          }
+        ],
+        "moduleContainers": {
+          "XPath": "//*[@id='id_3']/article//a"
+        },
+        "constants": {
+          "level": "3"
+        }
+      },
+      {
+        "url": "https://www.dundee.ac.uk/undergraduate/computer-science-ux-design/teaching-and-assessment",
+        "actions": [
+          {
+            "ID": "ccc-notify-accept",
+            "action": "click",
+            "when": "first"
+          }
+        ],
+        "moduleContainers": {
+          "XPath": "//*[@id='id_4']/article//a"
+        },
+        "constants": {
+          "level": "4"
+        }
+      }
+    ]
+  },
+  "module": {
+    "moduleContainers": {
+      "moduleLink": {
+        "XPath": ".",
+        "Attr": "href"
+      },
+      "link_is_url": true
+    },
+    "module_id": {
+      "XPath": "/html/body/div[4]/div/main/div/div/article/div/div[2]/div/div/div[1]/div[2]/p/strong"
+    },
+    "title": {
+      "XPath": "//h1"
+    },
+    "summary": {
+      "XPath": "//*[@id='what-you-will-learn']/preceding-sibling::p"
+    },
+    "content": {
+      "XPath": ""
+    },
+    "ilo": {
+      "XPath": "//*[@id='assignments---assessment']/preceding-sibling::ul"
+    },
+    "level": {
+      "XPath": ""
+    },
+    "credits": {
+      "XPath": "/html/body/div[4]/div/main/div/div/article/div/div[2]/div/div/div[1]/div[1]/p/strong"
     }
+  }
 }
