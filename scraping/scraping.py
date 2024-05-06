@@ -119,10 +119,16 @@ def wait_find_element(selector_spec, root = None):
             print ("using specified root element")
             print (root)
 
+
     wait = WebDriverWait(root, 5)
     wait.until(EC.presence_of_element_located((by_from_spec(selector_spec), val_from_spec(selector_spec))))
 
-    return root.find_element(by_from_spec(selector_spec), val_from_spec(selector_spec))
+    element = root.find_element(by_from_spec(selector_spec), val_from_spec(selector_spec))
+
+    if 'Attr' in selector_spec.keys():
+        return element.get_attribute(selector_spec['Attr'])
+    
+    return element
 
 
 def wait_find_elements(selector_spec, root = None):
@@ -217,7 +223,10 @@ def scrape(institution_name):
 
         index = institution_config['index']     
         module = institution_config['module']
-        mmc = module['moduleContainers']
+        if 'moduleContainers' in module.keys():
+            mmc = module['moduleContainers']
+        else:
+            mmc = {}
 
 
 
@@ -282,7 +291,12 @@ def scrape(institution_name):
                         module_link_elt = wait_find_element(mmc['moduleLink'], module_container)
                     else:
                         module_link_elt = module_container
-                    module_link = html.unescape(module_link_elt.get_attribute('innerHTML').strip())
+
+# If wait_find_element has been asked for an Attr value then it will return a string
+                    if type(module_link_elt) == str:
+                        module_link = module_link_elt
+                    else:
+                        module_link = html.unescape(module_link_elt.get_attribute('innerHTML').strip())
                     if (type(module_link) is str) and (len(module_link) > 0) and  (not (module_link in all_module_links)):
                         if 'exclude' in mmc.keys():
                             exclude = False
@@ -336,6 +350,8 @@ def scrape(institution_name):
                         if "link_to_click" in mmc.keys():
                             link_to_click_xpath = mmc['link_to_click']['XPath'].replace("%LINK%", module_link)
                             click_element((By.XPATH, link_to_click_xpath))
+                        elif "link_is_url" in mmc.keys():
+                            driver.get(module_link)
                         else:
                             click_element((By.PARTIAL_LINK_TEXT,  module_link))
 

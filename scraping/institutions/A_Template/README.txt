@@ -44,3 +44,6 @@ Can also identify content with "CSS_class" "CSS_selector" and "Link" (link text)
 URL can be specified with "file://..." but need to include placeholder for absolute path of instutition details. See Hertfordshire
 
 moduleContainers XPath etc can be specified inside "index" rather than "module" for selecting parts of the page at a particular level e.g. button
+
+Links to visit can be scraped from a page by specifying "Attr" in the moduleLink spec. Then also include "link_is_url": true in the moduleContainer. See Dundee.
+
