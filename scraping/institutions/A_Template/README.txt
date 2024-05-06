@@ -43,3 +43,4 @@ Can also identify content with "CSS_class" "CSS_selector" and "Link" (link text)
 
 URL can be specified with "file://..." but need to include placeholder for absolute path of instutition details. See Hertfordshire
 
+moduleContainers XPath etc can be specified inside "index" rather than "module" for selecting parts of the page at a particular level e.g. button

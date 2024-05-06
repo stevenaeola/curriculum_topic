@@ -258,7 +258,10 @@ def scrape(institution_name):
                 load_content(year_index, institution_name)
                                 
                 # print ("Loaded contents of index page for year ")
-                container_spec = module['moduleContainers']
+                if 'moduleContainers' in year_index.keys():
+                    container_spec = year_index['moduleContainers']
+                else:
+                    container_spec = module['moduleContainers']
                 module_containers = wait_find_elements(container_spec)
                 
                 # input ("Press enter")
