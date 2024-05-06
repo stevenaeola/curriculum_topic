@@ -13,7 +13,7 @@ vectorizer_model = CountVectorizer(stop_words="english")
 
 topic_model = BERTopic(vectorizer_model=vectorizer_model)
 topics, probs = topic_model.fit_transform(topic_texts)
-topic_model.get_topic_info().to_json("topic_model_info.json")
+topic_model.get_topic_info().to_json("scraping/topic_model_info.json")
 
 with open("scraping/topic_assignment.json", "w") as file:
     json.dump(topics, file)
