@@ -1,0 +1,63 @@
+{
+    "institution": "Glasgow_Caledonian",
+    "index": {
+        "2023": [
+            {
+                "url": "https://www.gcu.ac.uk/currentstudents/essentials/modules/by-subject?f.Year%7Cgcu-sits-module-current-year=Current+Year&form=website-table-search&query=%21FunDoesNotExist%3APadreNull&profile=_default&f.Subject%7CfbSubjectName=Computing&collection=gcu-sits-module-meta&sort=metafbModuleTitle",
+                "actions": [
+                    {
+                        "ID": "CybotCookiebotDialogBodyLevelButtonAccept",
+                        "action": "click",
+                        "when": "first"
+                    }
+                ]
+            },
+            {
+                "url": "https://www.gcu.ac.uk/currentstudents/essentials/modules/by-subject?f.Year%7Cgcu-sits-module-current-year=Current+Year&form=website-table-search&query=%21FunDoesNotExist%3APadreNull&profile=_default&f.Subject%7CfbSubjectName=Computing&collection=gcu-sits-module-meta&sort=metafbModuleTitle&start_rank=26"
+            },
+            {
+                "url": "https://www.gcu.ac.uk/currentstudents/essentials/modules/by-subject?f.Year%7Cgcu-sits-module-current-year=Current+Year&form=website-table-search&query=%21FunDoesNotExist%3APadreNull&profile=_default&f.Subject%7CfbSubjectName=Computing&collection=gcu-sits-module-meta&sort=metafbModuleTitle&start_rank=51"
+            },
+            {
+                "url": "https://www.gcu.ac.uk/currentstudents/essentials/modules/by-subject?f.Year%7Cgcu-sits-module-current-year=Current+Year&form=website-table-search&query=%21FunDoesNotExist%3APadreNull&profile=_default&f.Subject%7CfbSubjectName=Computing&collection=gcu-sits-module-meta&sort=metafbModuleTitle&start_rank=76"
+            },
+            {
+                "url": "https://www.gcu.ac.uk/currentstudents/essentials/modules/by-subject?f.Year%7Cgcu-sits-module-current-year=Current+Year&form=website-table-search&query=%21FunDoesNotExist%3APadreNull&profile=_default&f.Subject%7CfbSubjectName=Computing&collection=gcu-sits-module-meta&sort=metafbModuleTitle&start_rank=101"
+            },
+            {
+                "url": "https://www.gcu.ac.uk/currentstudents/essentials/modules/by-subject?f.Year%7Cgcu-sits-module-current-year=Current+Year&form=website-table-search&query=%21FunDoesNotExist%3APadreNull&profile=_default&f.Subject%7CfbSubjectName=Computing&collection=gcu-sits-module-meta&sort=metafbModuleTitle&start_rank=126"
+            }
+        ]
+    },
+    "module": {
+        "moduleContainers": {
+            "XPath": "//table[@class='module-table ']/tbody/tr/td/a[1]",
+            "moduleLink": {
+                "XPath": ".",
+                "Attr": "href"
+              },
+              "link_is_url": true
+        },
+        "module_id": {
+            "XPath": "//h1"
+        },
+        "title": {
+            "XPath": "//h1"
+        },
+        "summary": {
+            "XPath": "//h2[contains(.,'Summary of content')]/following-sibling::p"
+        },
+        "content": {
+            "XPath": "//h3[contains(.,'Syllabus')]/following-sibling::div[1]"
+        },
+        "ilo": {
+            "XPath": "//h3[contains(.,'Learning outcomes')]/following-sibling::div[1]"
+        },
+        "level": {
+            "XPath": "//*[@id='content']/div[3]/table/tbody/tr[1]/td"
+        },
+        "credits": {
+            "XPath": "//*[@id='content']/div[3]/table/tbody/tr[2]/td"
+        }
+    }
+}
