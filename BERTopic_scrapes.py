@@ -14,8 +14,8 @@ with open("iticse2023_wg6_electives_non_uk.json", "r") as file:
 vectorizer_model = CountVectorizer(stop_words="english", ngram_range = (1, 2))
 
 topic_model = BERTopic(vectorizer_model=vectorizer_model, min_topic_size=5)
-topics, probs = topic_model.fit_transform(topic_texts)
-topic_model.get_topic_info().to_json("scraping/topic_model_info.json")
+topics, probs = topic_model.fit_transform(topic_texts + iticse_texts)
+topic_model.get_topic_info().to_json("topic_model_info.json")
 
 with open("scraping/topic_assignment.json", "w") as file:
     json.dump(topics, file)
