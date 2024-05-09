@@ -18,4 +18,7 @@ topics, probs = topic_model.fit_transform(topic_texts + iticse_texts)
 topic_model.get_topic_info().to_json("topic_model_info.json")
 
 with open("scraping/topic_assignment.json", "w") as file:
-    json.dump(topics, file)
+    json.dump(topics[:len(topic_texts)], file)
+
+with open("iticse_topic_assignment.json", "w") as file:
+    json.dump(topics[len(topic_texts):], file)
