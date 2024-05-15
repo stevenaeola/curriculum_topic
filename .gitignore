@@ -1,3 +1,6 @@
+# nc slurm output
+slurm-*.out
+
 # ignore virtualenv contents
 topic_env
 
