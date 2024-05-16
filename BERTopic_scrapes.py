@@ -33,7 +33,7 @@ with open("scraping/topic_text.json", "r") as file:
 with open("iticse2023_wg6_electives_non_uk.json", "r") as file:
     iticse_texts = json.load(file)
 
-stop_words = text.ENGLISH_STOP_WORDS.union(my_additional_stop_words)
+stop_words = list(text.ENGLISH_STOP_WORDS) + my_additional_stop_words
 
 vectorizer_model = CountVectorizer(stop_words=stop_words, ngram_range = (1, 2))
 
