@@ -7,7 +7,7 @@ from sklearn.feature_extraction import text
 import json
 import pandas as pd
 
-my_additional_stop_words = [
+my_additional_stop_words_v1 = [
     'andor',
     'assessment',
     'bschons',
@@ -34,13 +34,21 @@ my_additional_stop_words = [
     'using'
     ]
 
+my_additional_stop_words_v2 = [
+  "understanding",
+  "principles",
+  "specific",
+  "degree",
+  "allow",
+]
 with open("scraping/topic_text.json", "r") as file:
     topic_texts = json.load(file)
 
 with open("iticse2023_wg6_electives_non_uk.json", "r") as file:
     iticse_texts = json.load(file)
 
-stop_words = list(text.ENGLISH_STOP_WORDS) + my_additional_stop_words
+stop_words = list(text.ENGLISH_STOP_WORDS) + my_additional_stop_words_v1 + my_additional_stop_words_v2
+
 
 vectorizer_model = CountVectorizer(stop_words=stop_words, ngram_range = (1, 2))
 
